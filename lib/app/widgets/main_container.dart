@@ -17,7 +17,7 @@ class MainContainer extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           iconTheme: const IconThemeData(
-            color: Colors.black54, //change your color here
+            color: Colors.black87, //change your color here
           ),
           actions: [
             IconButton(
@@ -31,7 +31,7 @@ class MainContainer extends StatelessWidget {
               onPressed: () {},
               child: const Text("ADITHYA CLOTHING COMPANY",
                   style: TextStyle(
-                      fontWeight: FontWeight.w900, color: Colors.black54)),
+                      fontWeight: FontWeight.w900, color: Colors.black87)),
             ),
             const SizedBox(
               width: 35,
@@ -46,7 +46,7 @@ class MainContainer extends StatelessWidget {
                     child: const Text(
                       "A",
                       style: TextStyle(
-                          color: Colors.black54,
+                          color: Colors.black87,
                           fontWeight: FontWeight.w900,
                           fontSize: 20),
                     ),
@@ -57,7 +57,7 @@ class MainContainer extends StatelessWidget {
                   const Text(
                     "ADMIN",
                     style: TextStyle(
-                        fontWeight: FontWeight.w900, color: Colors.black54),
+                        fontWeight: FontWeight.w900, color: Colors.black87),
                   ),
                 ],
               ),

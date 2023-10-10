@@ -14,6 +14,8 @@ class AppColors {
   static Color brown = const Color(0xffa55858);
   static Color sandal = const Color(0xfffac652);
   static Color lViolet = const Color(0xffB9B6E5);
+  static Color dBlue = const Color(0xff14192f);
+  static Color lBlue = const Color(0xff838195);
   static Color indigo = Colors.indigo;
   static LinearGradient gradientBackGround = const LinearGradient(
       begin: Alignment.topLeft,
@@ -21,6 +23,6 @@ class AppColors {
       tileMode: TileMode.mirror,
       colors: [
         Color(0xffe7f0fd),
-        Color(0xffaccbee),
+        Color(0xff4bbeff), //Color(0xffaccbee),
       ]);
 }

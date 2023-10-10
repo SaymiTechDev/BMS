@@ -5,6 +5,7 @@ class ContactsController extends GetxController {
   var vCardData = "".obs;
   final vCardForm = FormGroup(
     {
+      'type': FormControl<bool>(),
       'firstName': FormControl<String>(),
       'isGst': FormControl<bool>(),
       'middleName': FormControl<String>(),
@@ -22,7 +23,6 @@ class ContactsController extends GetxController {
       'tel': FormControl<String>(),
       'url': FormControl<String>(),
       'workUrl': FormControl<String>(),
-      'gender': FormControl<String>(),
     },
   );
 }
