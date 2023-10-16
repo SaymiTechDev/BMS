@@ -30,14 +30,6 @@ class NewContact extends GetView<ContactsController> {
                 formGroup: controller.vCardForm,
                 child: Row(
                   children: [
-                    const Text(
-                      "Individual",
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
                     ReactiveRadio(
                       value: false,
                       formControlName: 'isIndividual',
