@@ -51,8 +51,14 @@ class Dashboard extends StatelessWidget {
       "page": Routes.dashboard,
     },
     {
-      "name": "Settings",
+      "name": "Production",
       "color": AppColors.brown,
+      "icon": Icons.precision_manufacturing_rounded,
+      "page": Routes.dashboard,
+    },
+    {
+      "name": "Settings",
+      "color": AppColors.lBlue,
       "icon": Icons.settings,
       "page": Routes.dashboard,
     },
