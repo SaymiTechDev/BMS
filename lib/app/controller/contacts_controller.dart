@@ -11,7 +11,6 @@ class ContactsController extends GetxController {
       'phone': FormControl<String>(),
       'mobile': FormControl<String>(),
       'email': FormControl<String>(),
-      'email': FormControl<String>(),
       'gstTreatment': FormControl<String>(),
       'gstNo': FormControl<String>(),
       'panNo': FormControl<String>(),

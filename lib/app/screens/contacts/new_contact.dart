@@ -1,4 +1,5 @@
 import 'package:bms/app/controller/contacts_controller.dart';
+import 'package:bms/app/data/app_colors.dart';
 import 'package:bms/app/widgets/screen_container.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -30,24 +31,37 @@ class NewContact extends GetView<ContactsController> {
                 formGroup: controller.vCardForm,
                 child: Row(
                   children: [
-                    ReactiveRadio(
-                      value: false,
-                      formControlName: 'isIndividual',
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    const Text(
-                      "Company",
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    ReactiveRadio(
-                      value: false,
-                      formControlName: 'isCompany',
+                    SizedBox(
+                      height: 35,
+                      width: 250,
+                      child: Material(
+                        elevation: 2,
+                        borderRadius: BorderRadius.circular(10),
+                        shadowColor: AppColors.blue,
+                        child: ReactiveTextField(
+                          formControlName: 'company',
+                          cursorColor: AppColors.lBlue,
+                          cursorHeight: 20,
+                          textAlignVertical: TextAlignVertical.center,
+                          validationMessages: {
+                            'required': (error) => 'The user must not be empty'
+                          },
+                          decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                              borderSide: BorderSide(color: AppColors.blue),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                              borderSide: BorderSide(color: AppColors.blue),
+                            ),
+                            //   filled: true,
+                            // labelStyle: TextStyle(color: AppColors.lBlue),
+                            // labelText: "Company",
+                            //   fillColor: Colors.white70,
+                          ),
+                        ),
+                      ),
                     )
                   ],
                 ),

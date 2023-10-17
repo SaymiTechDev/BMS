@@ -61,7 +61,7 @@ class Login extends GetView<LoginController> {
                     child: Material(
                       elevation: 2.0,
                       shadowColor: Colors.grey.shade600,
-                      borderRadius: BorderRadius.circular(20.0),
+                      borderRadius: BorderRadius.circular(15.0),
                       child: ReactiveTextField(
                         formControlName: 'user',
                         cursorColor: AppColors.blue,
@@ -74,23 +74,21 @@ class Login extends GetView<LoginController> {
                             color: AppColors.blue,
                           ),
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(20.0),
+                            borderRadius: BorderRadius.circular(15.0),
                             borderSide: BorderSide(
-                                width: 2,
-                                color: AppColors.blue,
-                                strokeAlign: 10),
+                              color: AppColors.blue,
+                            ),
                           ),
                           focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(20.0),
+                            borderRadius: BorderRadius.circular(15.0),
                             borderSide: BorderSide(
-                                width: 2,
-                                color: AppColors.blue,
-                                strokeAlign: 10),
+                              color: AppColors.blue,
+                            ),
                           ),
-                          filled: true,
+                          //filled: true,
                           hintStyle: TextStyle(color: Colors.grey[500]),
                           hintText: "Username",
-                          fillColor: Colors.white70,
+                          // fillColor: Colors.white70,
                         ),
                       ),
                     ),
@@ -100,8 +98,8 @@ class Login extends GetView<LoginController> {
                     padding: const EdgeInsets.only(right: 15, left: 15),
                     child: Material(
                       elevation: 2.0,
-                      shadowColor: Colors.grey.shade600,
-                      borderRadius: BorderRadius.circular(20.0),
+                      shadowColor: AppColors.shadowBlue,
+                      borderRadius: BorderRadius.circular(15.0),
                       child: Obx(() {
                         return ReactiveTextField(
                           formControlName: 'password',
@@ -129,23 +127,21 @@ class Login extends GetView<LoginController> {
                               },
                             ),
                             border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(20.0),
+                              borderRadius: BorderRadius.circular(15.0),
                               borderSide: BorderSide(
-                                  width: 2,
-                                  color: AppColors.blue,
-                                  strokeAlign: 10),
+                                color: AppColors.blue,
+                              ),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(20.0),
+                              borderRadius: BorderRadius.circular(15.0),
                               borderSide: BorderSide(
-                                  width: 2,
-                                  color: AppColors.blue,
-                                  strokeAlign: 10),
+                                color: AppColors.blue,
+                              ),
                             ),
-                            filled: true,
+                            //filled: true,
                             hintStyle: TextStyle(color: Colors.grey[500]),
                             hintText: "Password",
-                            fillColor: Colors.white70,
+                            // fillColor: Colors.white70,
                           ),
                         );
                       }),
