@@ -1,5 +1,6 @@
 import 'package:bms/app/controller/contacts_controller.dart';
 import 'package:bms/app/data/app_colors.dart';
+import 'package:bms/app/data/contacts/contacts.dart';
 import 'package:bms/app/widgets/screen_container.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -29,40 +30,272 @@ class NewContact extends GetView<ContactsController> {
               padding: const EdgeInsets.all(10),
               child: ReactiveForm(
                 formGroup: controller.vCardForm,
-                child: Row(
+                child: Column(
                   children: [
-                    SizedBox(
-                      height: 35,
-                      width: 250,
-                      child: Material(
-                        elevation: 2,
-                        borderRadius: BorderRadius.circular(10),
-                        shadowColor: AppColors.blue,
-                        child: ReactiveTextField(
-                          formControlName: 'company',
-                          cursorColor: AppColors.lBlue,
-                          cursorHeight: 20,
-                          textAlignVertical: TextAlignVertical.center,
-                          validationMessages: {
-                            'required': (error) => 'The user must not be empty'
-                          },
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10.0),
-                              borderSide: BorderSide(color: AppColors.blue),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            const Text("CompanyType ",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w500, fontSize: 16)),
+                            const SizedBox(
+                              width: 20,
                             ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10.0),
-                              borderSide: BorderSide(color: AppColors.blue),
-                            ),
-                            //   filled: true,
-                            // labelStyle: TextStyle(color: AppColors.lBlue),
-                            // labelText: "Company",
-                            //   fillColor: Colors.white70,
-                          ),
+                            SizedBox(
+                              height: 35,
+                              width: 300,
+                              child: Material(
+                                elevation: 2,
+                                borderRadius: BorderRadius.circular(10),
+                                shadowColor: AppColors.blue,
+                                child: ReactiveRadioListTile<ContactType>(
+                                  title: const Text('Company'),
+                                  value: ContactType.company,
+                                  onChanged: (v) {
+                                    controller.contactType = v.value!;
+                                  },
+                                ),
+                              ),
+                            )
+                          ],
                         ),
-                      ),
-                    )
+                        // Row(
+                        //   children: [
+                        //     const Text("Company* ",
+                        //         style: TextStyle(
+                        //             fontWeight: FontWeight.w500, fontSize: 16)),
+                        //     const SizedBox(
+                        //       width: 20,
+                        //     ),
+                        //     SizedBox(
+                        //       height: 35,
+                        //       width: 300,
+                        //       child: Material(
+                        //         elevation: 2,
+                        //         borderRadius: BorderRadius.circular(10),
+                        //         shadowColor: AppColors.blue,
+                        //         child: ReactiveTextField(
+                        //           formControlName: 'company',
+                        //           cursorColor: AppColors.lBlue,
+                        //           cursorHeight: 20,
+                        //           textAlignVertical: TextAlignVertical.center,
+                        //           validationMessages: {
+                        //             'required': (error) =>
+                        //                 'The company must not be empty'
+                        //           },
+                        //           decoration: InputDecoration(
+                        //             border: OutlineInputBorder(
+                        //               borderRadius: BorderRadius.circular(10.0),
+                        //               borderSide:
+                        //                   BorderSide(color: AppColors.blue),
+                        //             ),
+                        //             focusedBorder: OutlineInputBorder(
+                        //               borderRadius: BorderRadius.circular(10.0),
+                        //               borderSide:
+                        //                   BorderSide(color: AppColors.blue),
+                        //             ),
+                        //             //   filled: true,
+                        //             // labelStyle: TextStyle(color: AppColors.lBlue),
+                        //             // labelText: "Company",
+                        //             //   fillColor: Colors.white70,
+                        //           ),
+                        //         ),
+                        //       ),
+                        //     )
+                        //   ],
+                        // ),
+                        // Row(
+                        //   children: [
+                        //     const Text("Company* ",
+                        //         style: TextStyle(
+                        //             fontWeight: FontWeight.w500, fontSize: 16)),
+                        //     const SizedBox(
+                        //       width: 20,
+                        //     ),
+                        //     SizedBox(
+                        //       height: 35,
+                        //       width: 300,
+                        //       child: Material(
+                        //         elevation: 2,
+                        //         borderRadius: BorderRadius.circular(10),
+                        //         shadowColor: AppColors.blue,
+                        //         child: ReactiveTextField(
+                        //           formControlName: 'company',
+                        //           cursorColor: AppColors.lBlue,
+                        //           cursorHeight: 20,
+                        //           textAlignVertical: TextAlignVertical.center,
+                        //           validationMessages: {
+                        //             'required': (error) =>
+                        //                 'The company must not be empty'
+                        //           },
+                        //           decoration: InputDecoration(
+                        //             border: OutlineInputBorder(
+                        //               borderRadius: BorderRadius.circular(10.0),
+                        //               borderSide:
+                        //                   BorderSide(color: AppColors.blue),
+                        //             ),
+                        //             focusedBorder: OutlineInputBorder(
+                        //               borderRadius: BorderRadius.circular(10.0),
+                        //               borderSide:
+                        //                   BorderSide(color: AppColors.blue),
+                        //             ),
+                        //             //   filled: true,
+                        //             // labelStyle: TextStyle(color: AppColors.lBlue),
+                        //             // labelText: "Company",
+                        //             //   fillColor: Colors.white70,
+                        //           ),
+                        //         ),
+                        //       ),
+                        //     )
+                        //   ],
+                        // ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            const Text("Company* ",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w500, fontSize: 16)),
+                            const SizedBox(
+                              width: 20,
+                            ),
+                            SizedBox(
+                              height: 35,
+                              width: 300,
+                              child: Material(
+                                elevation: 2,
+                                borderRadius: BorderRadius.circular(10),
+                                shadowColor: AppColors.blue,
+                                child: ReactiveTextField(
+                                  formControlName: 'company',
+                                  cursorColor: AppColors.lBlue,
+                                  cursorHeight: 20,
+                                  textAlignVertical: TextAlignVertical.center,
+                                  validationMessages: {
+                                    'required': (error) =>
+                                        'The company must not be empty'
+                                  },
+                                  decoration: InputDecoration(
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10.0),
+                                      borderSide:
+                                          BorderSide(color: AppColors.blue),
+                                    ),
+                                    focusedBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10.0),
+                                      borderSide:
+                                          BorderSide(color: AppColors.blue),
+                                    ),
+                                    //   filled: true,
+                                    // labelStyle: TextStyle(color: AppColors.lBlue),
+                                    // labelText: "Company",
+                                    //   fillColor: Colors.white70,
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                        // Row(
+                        //   children: [
+                        //     const Text("Company* ",
+                        //         style: TextStyle(
+                        //             fontWeight: FontWeight.w500, fontSize: 16)),
+                        //     const SizedBox(
+                        //       width: 20,
+                        //     ),
+                        //     SizedBox(
+                        //       height: 35,
+                        //       width: 300,
+                        //       child: Material(
+                        //         elevation: 2,
+                        //         borderRadius: BorderRadius.circular(10),
+                        //         shadowColor: AppColors.blue,
+                        //         child: ReactiveTextField(
+                        //           formControlName: 'company',
+                        //           cursorColor: AppColors.lBlue,
+                        //           cursorHeight: 20,
+                        //           textAlignVertical: TextAlignVertical.center,
+                        //           validationMessages: {
+                        //             'required': (error) =>
+                        //             'The company must not be empty'
+                        //           },
+                        //           decoration: InputDecoration(
+                        //             border: OutlineInputBorder(
+                        //               borderRadius: BorderRadius.circular(10.0),
+                        //               borderSide:
+                        //               BorderSide(color: AppColors.blue),
+                        //             ),
+                        //             focusedBorder: OutlineInputBorder(
+                        //               borderRadius: BorderRadius.circular(10.0),
+                        //               borderSide:
+                        //               BorderSide(color: AppColors.blue),
+                        //             ),
+                        //             //   filled: true,
+                        //             // labelStyle: TextStyle(color: AppColors.lBlue),
+                        //             // labelText: "Company",
+                        //             //   fillColor: Colors.white70,
+                        //           ),
+                        //         ),
+                        //       ),
+                        //     )
+                        //   ],
+                        // ),
+                        // Row(
+                        //   children: [
+                        //     const Text("Company* ",
+                        //         style: TextStyle(
+                        //             fontWeight: FontWeight.w500, fontSize: 16)),
+                        //     const SizedBox(
+                        //       width: 20,
+                        //     ),
+                        //     SizedBox(
+                        //       height: 35,
+                        //       width: 300,
+                        //       child: Material(
+                        //         elevation: 2,
+                        //         borderRadius: BorderRadius.circular(10),
+                        //         shadowColor: AppColors.blue,
+                        //         child: ReactiveTextField(
+                        //           formControlName: 'company',
+                        //           cursorColor: AppColors.lBlue,
+                        //           cursorHeight: 20,
+                        //           textAlignVertical: TextAlignVertical.center,
+                        //           validationMessages: {
+                        //             'required': (error) =>
+                        //             'The company must not be empty'
+                        //           },
+                        //           decoration: InputDecoration(
+                        //             border: OutlineInputBorder(
+                        //               borderRadius: BorderRadius.circular(10.0),
+                        //               borderSide:
+                        //               BorderSide(color: AppColors.blue),
+                        //             ),
+                        //             focusedBorder: OutlineInputBorder(
+                        //               borderRadius: BorderRadius.circular(10.0),
+                        //               borderSide:
+                        //               BorderSide(color: AppColors.blue),
+                        //             ),
+                        //             //   filled: true,
+                        //             // labelStyle: TextStyle(color: AppColors.lBlue),
+                        //             // labelText: "Company",
+                        //             //   fillColor: Colors.white70,
+                        //           ),
+                        //         ),
+                        //       ),
+                        //     )
+                        //   ],
+                        // ),
+                      ],
+                    ),
                   ],
                 ),
               )

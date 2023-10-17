@@ -1,6 +1,6 @@
 import 'package:bms/app/controller/contacts_controller.dart';
 import 'package:bms/app/controller/login_controller.dart';
-import 'package:bms/app/screens/contacts/contacts.dart';
+import 'package:bms/app/screens/contacts/contacts_page.dart';
 import 'package:bms/app/screens/contacts/new_contact.dart';
 import 'package:bms/app/screens/dashboard.dart';
 import 'package:bms/app/screens/login.dart';

@@ -1,0 +1,42 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+part 'contacts.freezed.dart';
+part 'contacts.g.dart';
+
+@freezed
+class Contacts with _$Contacts {
+  const factory Contacts(
+    int contactId,
+    ContactType contactType,
+    String companyName,
+    String displayName,
+    String phone,
+    String mobile,
+    String email,
+    String website,
+    String gstTreatment,
+    String gstNo,
+    String panNo,
+    String paymentTerms,
+    double discount,
+    RelationShip relationShipType,
+    String bankName,
+    String benificiaryName,
+    String accountNo,
+    String ifscCode,
+    String upiId,
+    String accountPayable,
+    String accountReceivable,
+    String uniqueCode,
+    int createdBy,
+    DateTime createdDate,
+    bool isActive,
+  ) = _Contacts;
+
+  factory Contacts.fromJson(Map<String, Object?> json) =>
+      _$ContactsFromJson(json);
+}
+
+enum RelationShip { customer, vendor, employee, relatives }
+
+enum ContactType { company, individual }

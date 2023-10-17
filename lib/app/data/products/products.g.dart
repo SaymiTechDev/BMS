@@ -1,0 +1,43 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'products.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$ProductsImpl _$$ProductsImplFromJson(Map<String, dynamic> json) =>
+    _$ProductsImpl(
+      json['productId'] as int,
+      json['productName'] as String,
+      json['sku'] as String,
+      $enumDecode(_$ProductTypeEnumMap, json['productType']),
+      json['productGroup'] as String,
+      json['uom'] as String,
+      json['spu'] as int,
+      json['hsnCode'] as String,
+      json['createdBy'] as int,
+      DateTime.parse(json['createdDate'] as String),
+      json['isActive'] as bool,
+    );
+
+Map<String, dynamic> _$$ProductsImplToJson(_$ProductsImpl instance) =>
+    <String, dynamic>{
+      'productId': instance.productId,
+      'productName': instance.productName,
+      'sku': instance.sku,
+      'productType': _$ProductTypeEnumMap[instance.productType]!,
+      'productGroup': instance.productGroup,
+      'uom': instance.uom,
+      'spu': instance.spu,
+      'hsnCode': instance.hsnCode,
+      'createdBy': instance.createdBy,
+      'createdDate': instance.createdDate.toIso8601String(),
+      'isActive': instance.isActive,
+    };
+
+const _$ProductTypeEnumMap = {
+  ProductType.item: 'item',
+  ProductType.service: 'service',
+  ProductType.process: 'process',
+};
