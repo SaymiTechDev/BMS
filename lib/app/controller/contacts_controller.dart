@@ -13,9 +13,11 @@ class ContactsController extends GetxController {
       'phone': FormControl<String>(),
       'mobile': FormControl<String>(),
       'email': FormControl<String>(),
+      'website': FormControl<String>(),
       'gstTreatment': FormControl<String>(),
       'gstNo': FormControl<String>(),
       'panNo': FormControl<String>(),
+      'paymentTerms': FormControl<String>(),
     },
   );
 }

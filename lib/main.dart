@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: AppColors.blue,
         useMaterial3: true,
-        textTheme: GoogleFonts.sourceSans3TextTheme(),
+        textTheme: GoogleFonts.exo2TextTheme(),
       ),
       debugShowCheckedModeBanner: false,
       initialRoute: Routes.login,
