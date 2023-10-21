@@ -9,7 +9,7 @@ class Dashboard extends StatelessWidget {
 
   static List<dynamic> menus = [
     {
-      "name": "Administrator",
+      "name": "Admin",
       "color": AppColors.blue,
       "icon": Icons.article,
       "page": Routes.dashboard,

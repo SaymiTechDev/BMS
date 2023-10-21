@@ -33,7 +33,7 @@ mixin _$Contacts {
   String get panNo => throw _privateConstructorUsedError;
   String get paymentTerms => throw _privateConstructorUsedError;
   double get discount => throw _privateConstructorUsedError;
-  RelationShip get relationShipType => throw _privateConstructorUsedError;
+  String get relationShipType => throw _privateConstructorUsedError;
   String get bankName => throw _privateConstructorUsedError;
   String get benificiaryName => throw _privateConstructorUsedError;
   String get accountNo => throw _privateConstructorUsedError;
@@ -71,7 +71,7 @@ abstract class $ContactsCopyWith<$Res> {
       String panNo,
       String paymentTerms,
       double discount,
-      RelationShip relationShipType,
+      String relationShipType,
       String bankName,
       String benificiaryName,
       String accountNo,
@@ -180,7 +180,7 @@ class _$ContactsCopyWithImpl<$Res, $Val extends Contacts>
       relationShipType: null == relationShipType
           ? _value.relationShipType
           : relationShipType // ignore: cast_nullable_to_non_nullable
-              as RelationShip,
+              as String,
       bankName: null == bankName
           ? _value.bankName
           : bankName // ignore: cast_nullable_to_non_nullable
@@ -251,7 +251,7 @@ abstract class _$$ContactsImplCopyWith<$Res>
       String panNo,
       String paymentTerms,
       double discount,
-      RelationShip relationShipType,
+      String relationShipType,
       String bankName,
       String benificiaryName,
       String accountNo,
@@ -358,7 +358,7 @@ class __$$ContactsImplCopyWithImpl<$Res>
       null == relationShipType
           ? _value.relationShipType
           : relationShipType // ignore: cast_nullable_to_non_nullable
-              as RelationShip,
+              as String,
       null == bankName
           ? _value.bankName
           : bankName // ignore: cast_nullable_to_non_nullable
@@ -467,7 +467,7 @@ class _$ContactsImpl implements _Contacts {
   @override
   final double discount;
   @override
-  final RelationShip relationShipType;
+  final String relationShipType;
   @override
   final String bankName;
   @override
@@ -606,7 +606,7 @@ abstract class _Contacts implements Contacts {
       final String panNo,
       final String paymentTerms,
       final double discount,
-      final RelationShip relationShipType,
+      final String relationShipType,
       final String bankName,
       final String benificiaryName,
       final String accountNo,
@@ -649,7 +649,7 @@ abstract class _Contacts implements Contacts {
   @override
   double get discount;
   @override
-  RelationShip get relationShipType;
+  String get relationShipType;
   @override
   String get bankName;
   @override

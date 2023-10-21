@@ -19,7 +19,7 @@ class Contacts with _$Contacts {
     String panNo,
     String paymentTerms,
     double discount,
-    RelationShip relationShipType,
+    String relationShipType,
     String bankName,
     String benificiaryName,
     String accountNo,
@@ -36,7 +36,5 @@ class Contacts with _$Contacts {
   factory Contacts.fromJson(Map<String, Object?> json) =>
       _$ContactsFromJson(json);
 }
-
-enum RelationShip { customer, vendor, employee, relatives }
 
 enum ContactType { company, individual }

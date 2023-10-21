@@ -18,6 +18,15 @@ class ContactsController extends GetxController {
       'gstNo': FormControl<String>(),
       'panNo': FormControl<String>(),
       'paymentTerms': FormControl<String>(),
+      'discount': FormControl<int>(),
+      'relationShipType': FormControl<String>(),
+      'bankName': FormControl<String>(),
+      'benificiaryName': FormControl<String>(),
+      'accountNo': FormControl<String>(),
+      'ifscCode': FormControl<String>(),
+      'upiId': FormControl<String>(),
+      'accountPayable': FormControl<String>(),
+      'accountReceivable': FormControl<String>(),
     },
   );
 }

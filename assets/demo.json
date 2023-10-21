@@ -1,0 +1,36 @@
+[
+  {
+    "REPORT_DETAIL": [
+      {
+        "firstName": "Shiv",
+        "lastName": "A",
+        "docNo": "0",
+        "docDate": "05-Jan-2021",
+        "address": "Bangalore",
+        "stateName": "35-ANDAMAN & NICOBAR ISLANDS",
+        "panNumber": "AAAPZ1234C",
+        "adharNumber": "678954321234"
+      },
+      {
+        "firstName": "Bala",
+        "lastName": "A",
+        "docNo": "0",
+        "docDate": "05-Jan-2021",
+        "address": "Bangalore",
+        "stateName": "35-ANDAMAN & NICOBAR ISLANDS",
+        "panNumber": "AAAPZ1234C",
+        "adharNumber": "678954321234"
+      },
+      {
+        "firstName": "Deva",
+        "lastName": "A",
+        "docNo": "0",
+        "docDate": "05-Jan-2021",
+        "address": "Bangalore",
+        "stateName": "35-ANDAMAN & NICOBAR ISLANDS",
+        "panNumber": "AAAPZ1234C",
+        "adharNumber": "678954321234"
+      }
+    ]
+  }
+]

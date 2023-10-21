@@ -21,7 +21,7 @@ _$ContactsImpl _$$ContactsImplFromJson(Map<String, dynamic> json) =>
       json['panNo'] as String,
       json['paymentTerms'] as String,
       (json['discount'] as num).toDouble(),
-      $enumDecode(_$RelationShipEnumMap, json['relationShipType']),
+      json['relationShipType'] as String,
       json['bankName'] as String,
       json['benificiaryName'] as String,
       json['accountNo'] as String,
@@ -50,7 +50,7 @@ Map<String, dynamic> _$$ContactsImplToJson(_$ContactsImpl instance) =>
       'panNo': instance.panNo,
       'paymentTerms': instance.paymentTerms,
       'discount': instance.discount,
-      'relationShipType': _$RelationShipEnumMap[instance.relationShipType]!,
+      'relationShipType': instance.relationShipType,
       'bankName': instance.bankName,
       'benificiaryName': instance.benificiaryName,
       'accountNo': instance.accountNo,
@@ -67,11 +67,4 @@ Map<String, dynamic> _$$ContactsImplToJson(_$ContactsImpl instance) =>
 const _$ContactTypeEnumMap = {
   ContactType.company: 'company',
   ContactType.individual: 'individual',
-};
-
-const _$RelationShipEnumMap = {
-  RelationShip.customer: 'customer',
-  RelationShip.vendor: 'vendor',
-  RelationShip.employee: 'employee',
-  RelationShip.relatives: 'relatives',
 };
