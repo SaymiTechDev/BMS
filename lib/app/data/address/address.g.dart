@@ -9,7 +9,7 @@ part of 'address.dart';
 _$AddressImpl _$$AddressImplFromJson(Map<String, dynamic> json) =>
     _$AddressImpl(
       json['addressId'] as int,
-      $enumDecode(_$AddressTypeEnumMap, json['addressType']),
+      json['addressType'] as String,
       json['addressName'] as String,
       json['doorNo'] as String,
       json['building'] as String,
@@ -26,7 +26,7 @@ _$AddressImpl _$$AddressImplFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$AddressImplToJson(_$AddressImpl instance) =>
     <String, dynamic>{
       'addressId': instance.addressId,
-      'addressType': _$AddressTypeEnumMap[instance.addressType]!,
+      'addressType': instance.addressType,
       'addressName': instance.addressName,
       'doorNo': instance.doorNo,
       'building': instance.building,
@@ -39,9 +39,3 @@ Map<String, dynamic> _$$AddressImplToJson(_$AddressImpl instance) =>
       'createdDate': instance.createdDate.toIso8601String(),
       'isActive': instance.isActive,
     };
-
-const _$AddressTypeEnumMap = {
-  AddressType.ship: 'ship',
-  AddressType.bill: 'bill',
-  AddressType.general: 'general',
-};

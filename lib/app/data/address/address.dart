@@ -7,7 +7,7 @@ part 'address.g.dart';
 class Address with _$Address {
   const factory Address(
     int addressId,
-    AddressType addressType,
+    String addressType,
     String addressName,
     String doorNo,
     String building,
@@ -24,5 +24,3 @@ class Address with _$Address {
   factory Address.fromJson(Map<String, Object?> json) =>
       _$AddressFromJson(json);
 }
-
-enum AddressType { ship, bill, general }

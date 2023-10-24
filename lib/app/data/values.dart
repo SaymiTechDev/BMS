@@ -16,4 +16,10 @@ class DataList {
     'Consumer',
     'Relative',
   ];
+
+  static const List<String> addressType = [
+    'Ship',
+    'Bill',
+    'General',
+  ];
 }

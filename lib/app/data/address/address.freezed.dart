@@ -21,7 +21,7 @@ Address _$AddressFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Address {
   int get addressId => throw _privateConstructorUsedError;
-  AddressType get addressType => throw _privateConstructorUsedError;
+  String get addressType => throw _privateConstructorUsedError;
   String get addressName => throw _privateConstructorUsedError;
   String get doorNo => throw _privateConstructorUsedError;
   String get building => throw _privateConstructorUsedError;
@@ -46,7 +46,7 @@ abstract class $AddressCopyWith<$Res> {
   @useResult
   $Res call(
       {int addressId,
-      AddressType addressType,
+      String addressType,
       String addressName,
       String doorNo,
       String building,
@@ -95,7 +95,7 @@ class _$AddressCopyWithImpl<$Res, $Val extends Address>
       addressType: null == addressType
           ? _value.addressType
           : addressType // ignore: cast_nullable_to_non_nullable
-              as AddressType,
+              as String,
       addressName: null == addressName
           ? _value.addressName
           : addressName // ignore: cast_nullable_to_non_nullable
@@ -153,7 +153,7 @@ abstract class _$$AddressImplCopyWith<$Res> implements $AddressCopyWith<$Res> {
   @useResult
   $Res call(
       {int addressId,
-      AddressType addressType,
+      String addressType,
       String addressName,
       String doorNo,
       String building,
@@ -200,7 +200,7 @@ class __$$AddressImplCopyWithImpl<$Res>
       null == addressType
           ? _value.addressType
           : addressType // ignore: cast_nullable_to_non_nullable
-              as AddressType,
+              as String,
       null == addressName
           ? _value.addressName
           : addressName // ignore: cast_nullable_to_non_nullable
@@ -273,7 +273,7 @@ class _$AddressImpl implements _Address {
   @override
   final int addressId;
   @override
-  final AddressType addressType;
+  final String addressType;
   @override
   final String addressName;
   @override
@@ -365,7 +365,7 @@ class _$AddressImpl implements _Address {
 abstract class _Address implements Address {
   const factory _Address(
       final int addressId,
-      final AddressType addressType,
+      final String addressType,
       final String addressName,
       final String doorNo,
       final String building,
@@ -383,7 +383,7 @@ abstract class _Address implements Address {
   @override
   int get addressId;
   @override
-  AddressType get addressType;
+  String get addressType;
   @override
   String get addressName;
   @override

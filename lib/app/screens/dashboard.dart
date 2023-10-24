@@ -21,6 +21,12 @@ class Dashboard extends StatelessWidget {
       "page": Routes.contacts,
     },
     {
+      "name": "Products",
+      "color": AppColors.oGreen,
+      "icon": Icons.card_giftcard_rounded,
+      "page": Routes.contacts,
+    },
+    {
       "name": "Finance",
       "color": AppColors.gBlue,
       "icon": Icons.pie_chart,

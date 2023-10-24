@@ -5,7 +5,8 @@ import 'package:pluto_grid/pluto_grid.dart';
 class PlutoGridDemo extends StatefulWidget {
   final List<PlutoColumn> columns;
   final List<PlutoRow> rows;
-  const PlutoGridDemo(this.columns, this.rows, {super.key});
+  final bool isReadOnly;
+  const PlutoGridDemo(this.columns, this.rows, this.isReadOnly, {super.key});
 
   @override
   State<PlutoGridDemo> createState() => _PlutoGridDemoState();
@@ -20,7 +21,7 @@ class _PlutoGridDemoState extends State<PlutoGridDemo> {
     return PlutoGrid(
       columns: widget.columns,
       rows: widget.rows,
-      mode: PlutoGridMode.readOnly,
+      mode: widget.isReadOnly ? PlutoGridMode.readOnly : PlutoGridMode.normal,
 
       // columnGroups: columnGroups,
       onLoaded: (PlutoGridOnLoadedEvent event) {
