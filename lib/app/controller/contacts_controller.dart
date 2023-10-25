@@ -245,4 +245,6 @@ class ContactsController extends GetxController {
     vCardForm.control("accountPayable").value = "";
     vCardForm.control("accountReceivable").value = "";
   }
+
+  header(PlutoGridStateManager stateManager) {}
 }

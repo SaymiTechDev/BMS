@@ -600,8 +600,8 @@ class NewContact extends GetView<ContactsController> {
         SizedBox(
             height: 175,
             width: Get.width,
-            child: PlutoGridDemo(
-                controller.addressColumns, controller.addressRows, false)),
+            child: PlutoGridDemo(controller.addressColumns,
+                controller.addressRows, false, "Address")),
         const SizedBox(
           height: 15,
         ),

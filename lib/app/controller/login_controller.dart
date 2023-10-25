@@ -16,9 +16,9 @@ class LoginController extends GetxController {
   );
   logIn() async {
     if (!loginForm.touched) loginForm.markAllAsTouched();
-    // var resp = await _loginApiService.authLogin(
-    //     loginForm.control('user').value, loginForm.control('password').value);
-    var resp = loginForm.control('user').value;
+    var resp = await _loginApiService.authLogin(
+        loginForm.control('user').value, loginForm.control('password').value);
+    //var resp = loginForm.control('user').value;
     if (resp != null) {
       Get.offAndToNamed(Routes.dashboard);
     } else {

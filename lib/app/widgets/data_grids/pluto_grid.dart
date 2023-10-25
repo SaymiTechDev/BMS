@@ -6,8 +6,10 @@ class PlutoGridDemo extends StatefulWidget {
   final List<PlutoColumn> columns;
   final List<PlutoRow> rows;
   final bool isReadOnly;
+  final String gridName;
 
-  const PlutoGridDemo(this.columns, this.rows, this.isReadOnly, {super.key});
+  const PlutoGridDemo(this.columns, this.rows, this.isReadOnly, this.gridName,
+      {super.key});
 
   @override
   State<PlutoGridDemo> createState() => _PlutoGridDemoState();
