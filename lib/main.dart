@@ -1,17 +1,18 @@
 import 'package:bms/app/data/app_colors.dart';
 import 'package:bms/app/routes/routes.dart';
+import 'package:bms/app/services/api_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-void main() {
+void main() async {
+  await initServices();
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -26,4 +27,8 @@ class MyApp extends StatelessWidget {
       getPages: Routes.routesList,
     );
   }
+}
+
+initServices() async {
+  Get.put<ApiService>(ApiService());
 }

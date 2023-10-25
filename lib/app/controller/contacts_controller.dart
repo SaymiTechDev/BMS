@@ -155,7 +155,7 @@ class ContactsController extends GetxController {
       field: 'pinCode',
       enableContextMenu: false,
       width: PlutoGridSettings.columnWidth,
-      type: PlutoColumnType.number(),
+      type: PlutoColumnType.text(),
     ),
     PlutoColumn(
       title: 'Active',

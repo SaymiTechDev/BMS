@@ -1,10 +1,12 @@
 import 'package:bms/app/routes/routes.dart';
+import 'package:bms/app/services/api_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
 class LoginController extends GetxController {
   var isObscure = true.obs;
+  final _loginApiService = Get.find<ApiService>();
 
   final loginForm = FormGroup(
     {
@@ -12,10 +14,12 @@ class LoginController extends GetxController {
       'password': FormControl<String>(validators: [Validators.required]),
     },
   );
-  logIn() {
+  logIn() async {
     if (!loginForm.touched) loginForm.markAllAsTouched();
-    if ((loginForm.control('user').value == "admin") &&
-        (loginForm.control('password').value == "admin")) {
+    var resp = await _loginApiService.authLogin(
+        loginForm.control('user').value, loginForm.control('password').value);
+    print(resp);
+    if (resp != null) {
       Get.offAndToNamed(Routes.dashboard);
     } else {
       Get.dialog(
