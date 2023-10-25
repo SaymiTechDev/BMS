@@ -59,10 +59,9 @@ class ContactsPage extends GetView<ContactsController> {
         ),
         const Divider(),
         Flexible(
-          flex: 1,
-          child: PlutoGridDemo(
-              controller.contactColumns, controller.contactRows, true),
-        ),
+            flex: 1,
+            child: PlutoGridDemo(
+                controller.contactColumns, controller.contactRows, true))
       ],
     ));
   }

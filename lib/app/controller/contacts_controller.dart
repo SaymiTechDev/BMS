@@ -32,6 +32,8 @@ class ContactsController extends GetxController {
     },
   );
 
+  var contactList = <Contacts>[].obs;
+
   final List<PlutoColumn> contactColumns = <PlutoColumn>[
     PlutoColumn(
       title: 'Id',
@@ -166,4 +168,81 @@ class ContactsController extends GetxController {
     ),
   ];
   List<PlutoRow> addressRows = [];
+
+  @override
+  onInit() {
+    super.onInit();
+  }
+
+  addContacts() {
+    contactType = vCardForm.control("type").value;
+    var contact = Contacts(
+        null,
+        contactType,
+        vCardForm.control("company").value,
+        vCardForm.control("displayName").value,
+        vCardForm.control("phone").value,
+        vCardForm.control("mobile").value,
+        vCardForm.control("email").value,
+        vCardForm.control("website").value,
+        vCardForm.control("gstTreatment").value,
+        vCardForm.control("gstNo").value,
+        vCardForm.control("panNo").value,
+        vCardForm.control("paymentTerms").value,
+        vCardForm.control("discount").value,
+        vCardForm.control("relationShipType").value,
+        vCardForm.control("bankName").value,
+        vCardForm.control("benificiaryName").value,
+        vCardForm.control("accountNo").value,
+        vCardForm.control("ifscCode").value,
+        vCardForm.control("upiId").value,
+        vCardForm.control("accountPayable").value,
+        vCardForm.control("accountReceivable").value,
+        null,
+        1,
+        null,
+        true);
+    contactList.add(contact);
+
+    contactRows = contactList
+        .map((row) => PlutoRow(
+              cells: {
+                'contactId': PlutoCell(value: row.contactId),
+                'companyName': PlutoCell(value: row.companyName),
+                'contactType': PlutoCell(value: row.contactType),
+                'displayName': PlutoCell(value: row.displayName),
+                'phone': PlutoCell(value: row.phone),
+                'mobile': PlutoCell(value: row.mobile),
+                'email': PlutoCell(value: row.email),
+                'website': PlutoCell(value: row.website),
+                'gstNo': PlutoCell(value: row.gstNo),
+                'panNo': PlutoCell(value: row.panNo),
+              },
+            ))
+        .toList();
+    // handleAddRowsContacts(contactRows);
+    clearForm();
+  }
+
+  clearForm() {
+    vCardForm.control("company").value = "";
+    vCardForm.control("displayName").value = "";
+    vCardForm.control("phone").value = "";
+    vCardForm.control("mobile").value = "";
+    vCardForm.control("email").value = "";
+    vCardForm.control("website").value = "";
+    vCardForm.control("gstTreatment").value = "";
+    vCardForm.control("gstNo").value = "";
+    vCardForm.control("panNo").value = "";
+    vCardForm.control("paymentTerms").value = "";
+    vCardForm.control("discount").value = 0;
+    vCardForm.control("relationShipType").value = "";
+    vCardForm.control("bankName").value = "";
+    vCardForm.control("benificiaryName").value = "";
+    vCardForm.control("accountNo").value = "";
+    vCardForm.control("ifscCode").value = "";
+    vCardForm.control("upiId").value = "";
+    vCardForm.control("accountPayable").value = "";
+    vCardForm.control("accountReceivable").value = "";
+  }
 }

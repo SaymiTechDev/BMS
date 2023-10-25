@@ -12,7 +12,7 @@ class Dashboard extends StatelessWidget {
       "name": "Admin",
       "color": AppColors.blue,
       "icon": Icons.article,
-      "page": Routes.dashboard,
+      "page": Routes.admin,
     },
     {
       "name": "Contacts",

@@ -20,31 +20,31 @@ Contacts _$ContactsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Contacts {
-  int get contactId => throw _privateConstructorUsedError;
-  ContactType get contactType => throw _privateConstructorUsedError;
-  String get companyName => throw _privateConstructorUsedError;
-  String get displayName => throw _privateConstructorUsedError;
-  String get phone => throw _privateConstructorUsedError;
-  String get mobile => throw _privateConstructorUsedError;
-  String get email => throw _privateConstructorUsedError;
-  String get website => throw _privateConstructorUsedError;
-  String get gstTreatment => throw _privateConstructorUsedError;
-  String get gstNo => throw _privateConstructorUsedError;
-  String get panNo => throw _privateConstructorUsedError;
-  String get paymentTerms => throw _privateConstructorUsedError;
-  double get discount => throw _privateConstructorUsedError;
-  String get relationShipType => throw _privateConstructorUsedError;
-  String get bankName => throw _privateConstructorUsedError;
-  String get benificiaryName => throw _privateConstructorUsedError;
-  String get accountNo => throw _privateConstructorUsedError;
-  String get ifscCode => throw _privateConstructorUsedError;
-  String get upiId => throw _privateConstructorUsedError;
-  String get accountPayable => throw _privateConstructorUsedError;
-  String get accountReceivable => throw _privateConstructorUsedError;
-  String get uniqueCode => throw _privateConstructorUsedError;
-  int get createdBy => throw _privateConstructorUsedError;
-  DateTime get createdDate => throw _privateConstructorUsedError;
-  bool get isActive => throw _privateConstructorUsedError;
+  int? get contactId => throw _privateConstructorUsedError;
+  ContactType? get contactType => throw _privateConstructorUsedError;
+  String? get companyName => throw _privateConstructorUsedError;
+  String? get displayName => throw _privateConstructorUsedError;
+  String? get phone => throw _privateConstructorUsedError;
+  String? get mobile => throw _privateConstructorUsedError;
+  String? get email => throw _privateConstructorUsedError;
+  String? get website => throw _privateConstructorUsedError;
+  String? get gstTreatment => throw _privateConstructorUsedError;
+  String? get gstNo => throw _privateConstructorUsedError;
+  String? get panNo => throw _privateConstructorUsedError;
+  String? get paymentTerms => throw _privateConstructorUsedError;
+  double? get discount => throw _privateConstructorUsedError;
+  String? get relationShipType => throw _privateConstructorUsedError;
+  String? get bankName => throw _privateConstructorUsedError;
+  String? get benificiaryName => throw _privateConstructorUsedError;
+  String? get accountNo => throw _privateConstructorUsedError;
+  String? get ifscCode => throw _privateConstructorUsedError;
+  String? get upiId => throw _privateConstructorUsedError;
+  String? get accountPayable => throw _privateConstructorUsedError;
+  String? get accountReceivable => throw _privateConstructorUsedError;
+  String? get uniqueCode => throw _privateConstructorUsedError;
+  int? get createdBy => throw _privateConstructorUsedError;
+  DateTime? get createdDate => throw _privateConstructorUsedError;
+  bool? get isActive => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -58,31 +58,31 @@ abstract class $ContactsCopyWith<$Res> {
       _$ContactsCopyWithImpl<$Res, Contacts>;
   @useResult
   $Res call(
-      {int contactId,
-      ContactType contactType,
-      String companyName,
-      String displayName,
-      String phone,
-      String mobile,
-      String email,
-      String website,
-      String gstTreatment,
-      String gstNo,
-      String panNo,
-      String paymentTerms,
-      double discount,
-      String relationShipType,
-      String bankName,
-      String benificiaryName,
-      String accountNo,
-      String ifscCode,
-      String upiId,
-      String accountPayable,
-      String accountReceivable,
-      String uniqueCode,
-      int createdBy,
-      DateTime createdDate,
-      bool isActive});
+      {int? contactId,
+      ContactType? contactType,
+      String? companyName,
+      String? displayName,
+      String? phone,
+      String? mobile,
+      String? email,
+      String? website,
+      String? gstTreatment,
+      String? gstNo,
+      String? panNo,
+      String? paymentTerms,
+      double? discount,
+      String? relationShipType,
+      String? bankName,
+      String? benificiaryName,
+      String? accountNo,
+      String? ifscCode,
+      String? upiId,
+      String? accountPayable,
+      String? accountReceivable,
+      String? uniqueCode,
+      int? createdBy,
+      DateTime? createdDate,
+      bool? isActive});
 }
 
 /// @nodoc
@@ -98,133 +98,133 @@ class _$ContactsCopyWithImpl<$Res, $Val extends Contacts>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? contactId = null,
-    Object? contactType = null,
-    Object? companyName = null,
-    Object? displayName = null,
-    Object? phone = null,
-    Object? mobile = null,
-    Object? email = null,
-    Object? website = null,
-    Object? gstTreatment = null,
-    Object? gstNo = null,
-    Object? panNo = null,
-    Object? paymentTerms = null,
-    Object? discount = null,
-    Object? relationShipType = null,
-    Object? bankName = null,
-    Object? benificiaryName = null,
-    Object? accountNo = null,
-    Object? ifscCode = null,
-    Object? upiId = null,
-    Object? accountPayable = null,
-    Object? accountReceivable = null,
-    Object? uniqueCode = null,
-    Object? createdBy = null,
-    Object? createdDate = null,
-    Object? isActive = null,
+    Object? contactId = freezed,
+    Object? contactType = freezed,
+    Object? companyName = freezed,
+    Object? displayName = freezed,
+    Object? phone = freezed,
+    Object? mobile = freezed,
+    Object? email = freezed,
+    Object? website = freezed,
+    Object? gstTreatment = freezed,
+    Object? gstNo = freezed,
+    Object? panNo = freezed,
+    Object? paymentTerms = freezed,
+    Object? discount = freezed,
+    Object? relationShipType = freezed,
+    Object? bankName = freezed,
+    Object? benificiaryName = freezed,
+    Object? accountNo = freezed,
+    Object? ifscCode = freezed,
+    Object? upiId = freezed,
+    Object? accountPayable = freezed,
+    Object? accountReceivable = freezed,
+    Object? uniqueCode = freezed,
+    Object? createdBy = freezed,
+    Object? createdDate = freezed,
+    Object? isActive = freezed,
   }) {
     return _then(_value.copyWith(
-      contactId: null == contactId
+      contactId: freezed == contactId
           ? _value.contactId
           : contactId // ignore: cast_nullable_to_non_nullable
-              as int,
-      contactType: null == contactType
+              as int?,
+      contactType: freezed == contactType
           ? _value.contactType
           : contactType // ignore: cast_nullable_to_non_nullable
-              as ContactType,
-      companyName: null == companyName
+              as ContactType?,
+      companyName: freezed == companyName
           ? _value.companyName
           : companyName // ignore: cast_nullable_to_non_nullable
-              as String,
-      displayName: null == displayName
+              as String?,
+      displayName: freezed == displayName
           ? _value.displayName
           : displayName // ignore: cast_nullable_to_non_nullable
-              as String,
-      phone: null == phone
+              as String?,
+      phone: freezed == phone
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
-              as String,
-      mobile: null == mobile
+              as String?,
+      mobile: freezed == mobile
           ? _value.mobile
           : mobile // ignore: cast_nullable_to_non_nullable
-              as String,
-      email: null == email
+              as String?,
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      website: null == website
+              as String?,
+      website: freezed == website
           ? _value.website
           : website // ignore: cast_nullable_to_non_nullable
-              as String,
-      gstTreatment: null == gstTreatment
+              as String?,
+      gstTreatment: freezed == gstTreatment
           ? _value.gstTreatment
           : gstTreatment // ignore: cast_nullable_to_non_nullable
-              as String,
-      gstNo: null == gstNo
+              as String?,
+      gstNo: freezed == gstNo
           ? _value.gstNo
           : gstNo // ignore: cast_nullable_to_non_nullable
-              as String,
-      panNo: null == panNo
+              as String?,
+      panNo: freezed == panNo
           ? _value.panNo
           : panNo // ignore: cast_nullable_to_non_nullable
-              as String,
-      paymentTerms: null == paymentTerms
+              as String?,
+      paymentTerms: freezed == paymentTerms
           ? _value.paymentTerms
           : paymentTerms // ignore: cast_nullable_to_non_nullable
-              as String,
-      discount: null == discount
+              as String?,
+      discount: freezed == discount
           ? _value.discount
           : discount // ignore: cast_nullable_to_non_nullable
-              as double,
-      relationShipType: null == relationShipType
+              as double?,
+      relationShipType: freezed == relationShipType
           ? _value.relationShipType
           : relationShipType // ignore: cast_nullable_to_non_nullable
-              as String,
-      bankName: null == bankName
+              as String?,
+      bankName: freezed == bankName
           ? _value.bankName
           : bankName // ignore: cast_nullable_to_non_nullable
-              as String,
-      benificiaryName: null == benificiaryName
+              as String?,
+      benificiaryName: freezed == benificiaryName
           ? _value.benificiaryName
           : benificiaryName // ignore: cast_nullable_to_non_nullable
-              as String,
-      accountNo: null == accountNo
+              as String?,
+      accountNo: freezed == accountNo
           ? _value.accountNo
           : accountNo // ignore: cast_nullable_to_non_nullable
-              as String,
-      ifscCode: null == ifscCode
+              as String?,
+      ifscCode: freezed == ifscCode
           ? _value.ifscCode
           : ifscCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      upiId: null == upiId
+              as String?,
+      upiId: freezed == upiId
           ? _value.upiId
           : upiId // ignore: cast_nullable_to_non_nullable
-              as String,
-      accountPayable: null == accountPayable
+              as String?,
+      accountPayable: freezed == accountPayable
           ? _value.accountPayable
           : accountPayable // ignore: cast_nullable_to_non_nullable
-              as String,
-      accountReceivable: null == accountReceivable
+              as String?,
+      accountReceivable: freezed == accountReceivable
           ? _value.accountReceivable
           : accountReceivable // ignore: cast_nullable_to_non_nullable
-              as String,
-      uniqueCode: null == uniqueCode
+              as String?,
+      uniqueCode: freezed == uniqueCode
           ? _value.uniqueCode
           : uniqueCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdBy: null == createdBy
+              as String?,
+      createdBy: freezed == createdBy
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
-              as int,
-      createdDate: null == createdDate
+              as int?,
+      createdDate: freezed == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      isActive: null == isActive
+              as DateTime?,
+      isActive: freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ) as $Val);
   }
 }
@@ -238,31 +238,31 @@ abstract class _$$ContactsImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int contactId,
-      ContactType contactType,
-      String companyName,
-      String displayName,
-      String phone,
-      String mobile,
-      String email,
-      String website,
-      String gstTreatment,
-      String gstNo,
-      String panNo,
-      String paymentTerms,
-      double discount,
-      String relationShipType,
-      String bankName,
-      String benificiaryName,
-      String accountNo,
-      String ifscCode,
-      String upiId,
-      String accountPayable,
-      String accountReceivable,
-      String uniqueCode,
-      int createdBy,
-      DateTime createdDate,
-      bool isActive});
+      {int? contactId,
+      ContactType? contactType,
+      String? companyName,
+      String? displayName,
+      String? phone,
+      String? mobile,
+      String? email,
+      String? website,
+      String? gstTreatment,
+      String? gstNo,
+      String? panNo,
+      String? paymentTerms,
+      double? discount,
+      String? relationShipType,
+      String? bankName,
+      String? benificiaryName,
+      String? accountNo,
+      String? ifscCode,
+      String? upiId,
+      String? accountPayable,
+      String? accountReceivable,
+      String? uniqueCode,
+      int? createdBy,
+      DateTime? createdDate,
+      bool? isActive});
 }
 
 /// @nodoc
@@ -276,133 +276,133 @@ class __$$ContactsImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? contactId = null,
-    Object? contactType = null,
-    Object? companyName = null,
-    Object? displayName = null,
-    Object? phone = null,
-    Object? mobile = null,
-    Object? email = null,
-    Object? website = null,
-    Object? gstTreatment = null,
-    Object? gstNo = null,
-    Object? panNo = null,
-    Object? paymentTerms = null,
-    Object? discount = null,
-    Object? relationShipType = null,
-    Object? bankName = null,
-    Object? benificiaryName = null,
-    Object? accountNo = null,
-    Object? ifscCode = null,
-    Object? upiId = null,
-    Object? accountPayable = null,
-    Object? accountReceivable = null,
-    Object? uniqueCode = null,
-    Object? createdBy = null,
-    Object? createdDate = null,
-    Object? isActive = null,
+    Object? contactId = freezed,
+    Object? contactType = freezed,
+    Object? companyName = freezed,
+    Object? displayName = freezed,
+    Object? phone = freezed,
+    Object? mobile = freezed,
+    Object? email = freezed,
+    Object? website = freezed,
+    Object? gstTreatment = freezed,
+    Object? gstNo = freezed,
+    Object? panNo = freezed,
+    Object? paymentTerms = freezed,
+    Object? discount = freezed,
+    Object? relationShipType = freezed,
+    Object? bankName = freezed,
+    Object? benificiaryName = freezed,
+    Object? accountNo = freezed,
+    Object? ifscCode = freezed,
+    Object? upiId = freezed,
+    Object? accountPayable = freezed,
+    Object? accountReceivable = freezed,
+    Object? uniqueCode = freezed,
+    Object? createdBy = freezed,
+    Object? createdDate = freezed,
+    Object? isActive = freezed,
   }) {
     return _then(_$ContactsImpl(
-      null == contactId
+      freezed == contactId
           ? _value.contactId
           : contactId // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == contactType
+              as int?,
+      freezed == contactType
           ? _value.contactType
           : contactType // ignore: cast_nullable_to_non_nullable
-              as ContactType,
-      null == companyName
+              as ContactType?,
+      freezed == companyName
           ? _value.companyName
           : companyName // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == displayName
+              as String?,
+      freezed == displayName
           ? _value.displayName
           : displayName // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == phone
+              as String?,
+      freezed == phone
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == mobile
+              as String?,
+      freezed == mobile
           ? _value.mobile
           : mobile // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == email
+              as String?,
+      freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == website
+              as String?,
+      freezed == website
           ? _value.website
           : website // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == gstTreatment
+              as String?,
+      freezed == gstTreatment
           ? _value.gstTreatment
           : gstTreatment // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == gstNo
+              as String?,
+      freezed == gstNo
           ? _value.gstNo
           : gstNo // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == panNo
+              as String?,
+      freezed == panNo
           ? _value.panNo
           : panNo // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == paymentTerms
+              as String?,
+      freezed == paymentTerms
           ? _value.paymentTerms
           : paymentTerms // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == discount
+              as String?,
+      freezed == discount
           ? _value.discount
           : discount // ignore: cast_nullable_to_non_nullable
-              as double,
-      null == relationShipType
+              as double?,
+      freezed == relationShipType
           ? _value.relationShipType
           : relationShipType // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == bankName
+              as String?,
+      freezed == bankName
           ? _value.bankName
           : bankName // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == benificiaryName
+              as String?,
+      freezed == benificiaryName
           ? _value.benificiaryName
           : benificiaryName // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == accountNo
+              as String?,
+      freezed == accountNo
           ? _value.accountNo
           : accountNo // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == ifscCode
+              as String?,
+      freezed == ifscCode
           ? _value.ifscCode
           : ifscCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == upiId
+              as String?,
+      freezed == upiId
           ? _value.upiId
           : upiId // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == accountPayable
+              as String?,
+      freezed == accountPayable
           ? _value.accountPayable
           : accountPayable // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == accountReceivable
+              as String?,
+      freezed == accountReceivable
           ? _value.accountReceivable
           : accountReceivable // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == uniqueCode
+              as String?,
+      freezed == uniqueCode
           ? _value.uniqueCode
           : uniqueCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == createdBy
+              as String?,
+      freezed == createdBy
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == createdDate
+              as int?,
+      freezed == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      null == isActive
+              as DateTime?,
+      freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ));
   }
 }
@@ -441,55 +441,55 @@ class _$ContactsImpl implements _Contacts {
       _$$ContactsImplFromJson(json);
 
   @override
-  final int contactId;
+  final int? contactId;
   @override
-  final ContactType contactType;
+  final ContactType? contactType;
   @override
-  final String companyName;
+  final String? companyName;
   @override
-  final String displayName;
+  final String? displayName;
   @override
-  final String phone;
+  final String? phone;
   @override
-  final String mobile;
+  final String? mobile;
   @override
-  final String email;
+  final String? email;
   @override
-  final String website;
+  final String? website;
   @override
-  final String gstTreatment;
+  final String? gstTreatment;
   @override
-  final String gstNo;
+  final String? gstNo;
   @override
-  final String panNo;
+  final String? panNo;
   @override
-  final String paymentTerms;
+  final String? paymentTerms;
   @override
-  final double discount;
+  final double? discount;
   @override
-  final String relationShipType;
+  final String? relationShipType;
   @override
-  final String bankName;
+  final String? bankName;
   @override
-  final String benificiaryName;
+  final String? benificiaryName;
   @override
-  final String accountNo;
+  final String? accountNo;
   @override
-  final String ifscCode;
+  final String? ifscCode;
   @override
-  final String upiId;
+  final String? upiId;
   @override
-  final String accountPayable;
+  final String? accountPayable;
   @override
-  final String accountReceivable;
+  final String? accountReceivable;
   @override
-  final String uniqueCode;
+  final String? uniqueCode;
   @override
-  final int createdBy;
+  final int? createdBy;
   @override
-  final DateTime createdDate;
+  final DateTime? createdDate;
   @override
-  final bool isActive;
+  final bool? isActive;
 
   @override
   String toString() {
@@ -593,85 +593,85 @@ class _$ContactsImpl implements _Contacts {
 
 abstract class _Contacts implements Contacts {
   const factory _Contacts(
-      final int contactId,
-      final ContactType contactType,
-      final String companyName,
-      final String displayName,
-      final String phone,
-      final String mobile,
-      final String email,
-      final String website,
-      final String gstTreatment,
-      final String gstNo,
-      final String panNo,
-      final String paymentTerms,
-      final double discount,
-      final String relationShipType,
-      final String bankName,
-      final String benificiaryName,
-      final String accountNo,
-      final String ifscCode,
-      final String upiId,
-      final String accountPayable,
-      final String accountReceivable,
-      final String uniqueCode,
-      final int createdBy,
-      final DateTime createdDate,
-      final bool isActive) = _$ContactsImpl;
+      final int? contactId,
+      final ContactType? contactType,
+      final String? companyName,
+      final String? displayName,
+      final String? phone,
+      final String? mobile,
+      final String? email,
+      final String? website,
+      final String? gstTreatment,
+      final String? gstNo,
+      final String? panNo,
+      final String? paymentTerms,
+      final double? discount,
+      final String? relationShipType,
+      final String? bankName,
+      final String? benificiaryName,
+      final String? accountNo,
+      final String? ifscCode,
+      final String? upiId,
+      final String? accountPayable,
+      final String? accountReceivable,
+      final String? uniqueCode,
+      final int? createdBy,
+      final DateTime? createdDate,
+      final bool? isActive) = _$ContactsImpl;
 
   factory _Contacts.fromJson(Map<String, dynamic> json) =
       _$ContactsImpl.fromJson;
 
   @override
-  int get contactId;
+  int? get contactId;
   @override
-  ContactType get contactType;
+  ContactType? get contactType;
   @override
-  String get companyName;
+  String? get companyName;
   @override
-  String get displayName;
+  String? get displayName;
   @override
-  String get phone;
+  String? get phone;
   @override
-  String get mobile;
+  String? get mobile;
   @override
-  String get email;
+  String? get email;
   @override
-  String get website;
+  String? get website;
   @override
-  String get gstTreatment;
+  String? get gstTreatment;
   @override
-  String get gstNo;
+  String? get gstNo;
   @override
-  String get panNo;
+  String? get panNo;
   @override
-  String get paymentTerms;
+  String? get paymentTerms;
   @override
-  double get discount;
+  double? get discount;
   @override
-  String get relationShipType;
+  String? get relationShipType;
   @override
-  String get bankName;
+  String? get bankName;
   @override
-  String get benificiaryName;
+  String? get benificiaryName;
   @override
-  String get accountNo;
+  String? get accountNo;
   @override
-  String get ifscCode;
+  String? get ifscCode;
   @override
-  String get upiId;
+  String? get upiId;
   @override
-  String get accountPayable;
+  String? get accountPayable;
   @override
-  String get accountReceivable;
+  String? get accountReceivable;
   @override
-  String get uniqueCode;
+  String? get uniqueCode;
   @override
-  int get createdBy;
+  int? get createdBy;
   @override
-  DateTime get createdDate;
+  DateTime? get createdDate;
   @override
-  bool get isActive;
+  bool? get isActive;
   @override
   @JsonKey(ignore: true)
   _$$ContactsImplCopyWith<_$ContactsImpl> get copyWith =>

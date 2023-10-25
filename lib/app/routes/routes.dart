@@ -1,5 +1,6 @@
 import 'package:bms/app/controller/contacts_controller.dart';
 import 'package:bms/app/controller/login_controller.dart';
+import 'package:bms/app/screens/admin/admin.dart';
 import 'package:bms/app/screens/contacts/contacts_page.dart';
 import 'package:bms/app/screens/contacts/new_contact.dart';
 import 'package:bms/app/screens/dashboard.dart';
@@ -9,6 +10,7 @@ import 'package:get/get.dart';
 class Routes {
   static const String login = '/login';
   static const String dashboard = '/home';
+  static const String admin = '/admin';
   static const String contacts = '/contacts';
   static const String newContact = '/contacts/new';
 
@@ -37,6 +39,10 @@ class Routes {
       binding: BindingsBuilder(() {
         Get.put<ContactsController>(ContactsController());
       }),
+    ),
+    GetPage(
+      name: admin,
+      page: () => const Admin(),
     ),
   ];
 }
