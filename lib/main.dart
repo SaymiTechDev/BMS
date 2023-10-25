@@ -1,6 +1,7 @@
 import 'package:bms/app/data/app_colors.dart';
 import 'package:bms/app/routes/routes.dart';
 import 'package:bms/app/services/api_service.dart';
+import 'package:bms/app/widgets/data_grids/pluto_grid_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -31,4 +32,6 @@ class MyApp extends StatelessWidget {
 
 initServices() async {
   Get.put<ApiService>(ApiService());
+
+  Get.put<PlutoGridController>(PlutoGridController());
 }

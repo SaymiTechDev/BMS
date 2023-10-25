@@ -1,10 +1,11 @@
 import 'package:bms/app/data/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:pluto_grid/pluto_grid.dart';
 
 class PlutoGridDemo extends StatefulWidget {
   final List<PlutoColumn> columns;
-  final List<PlutoRow> rows;
+  final RxList<PlutoRow> rows;
   final bool isReadOnly;
   final String gridName;
 
@@ -35,13 +36,18 @@ class _PlutoGridDemoState extends State<PlutoGridDemo> {
         stateManager.notifyListeners();
       },
       configuration: PlutoGridConfiguration(
+        columnSize: const PlutoGridColumnSizeConfig(
+            autoSizeMode: PlutoAutoSizeMode.scale),
         style: PlutoGridStyleConfig(
           enableGridBorderShadow: true,
           gridBorderColor: AppColors.lBlue,
           gridBorderRadius: BorderRadius.circular(10),
         ),
       ),
-      createHeader: (stateManager) => _Header(stateManager: stateManager),
+      createHeader: (stateManager) => _Header(
+        stateManager: stateManager,
+        read: widget.isReadOnly,
+      ),
     );
   }
 }
@@ -49,10 +55,12 @@ class _PlutoGridDemoState extends State<PlutoGridDemo> {
 class _Header extends StatefulWidget {
   const _Header({
     required this.stateManager,
+    required this.read,
     Key? key,
   }) : super(key: key);
 
   final PlutoGridStateManager stateManager;
+  final bool read;
 
   @override
   State<_Header> createState() => _HeaderState();
@@ -169,25 +177,22 @@ class _HeaderState extends State<_Header> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8.0),
-        child: Wrap(
-          spacing: 10,
-          crossAxisAlignment: WrapCrossAlignment.center,
-          children: [
-            ElevatedButton(
-              onPressed: handleAddRows,
-              child: const Text('Add rows'),
-            ),
-            ElevatedButton(
-              onPressed: handleRemoveCurrentRowButton,
-              child: const Text('Remove Current Row'),
-            ),
-          ],
-        ),
-      ),
-    );
+    return widget.read
+        ? const SizedBox(
+            height: 20,
+          )
+        : Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              TextButton(
+                onPressed: handleAddRows,
+                child: const Text('Add rows'),
+              ),
+              TextButton(
+                onPressed: handleRemoveCurrentRowButton,
+                child: const Text('Remove Row'),
+              ),
+            ],
+          );
   }
 }

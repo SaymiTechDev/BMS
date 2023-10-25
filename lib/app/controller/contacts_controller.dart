@@ -1,5 +1,6 @@
 import 'package:bms/app/data/contacts/contacts.dart';
 import 'package:bms/app/data/values.dart';
+import 'package:bms/app/widgets/data_grids/pluto_grid_controller.dart';
 import 'package:get/get.dart';
 import 'package:pluto_grid/pluto_grid.dart';
 import 'package:reactive_forms/reactive_forms.dart';
@@ -93,7 +94,7 @@ class ContactsController extends GetxController {
       type: PlutoColumnType.text(),
     ),
   ];
-  List<PlutoRow> contactRows = [];
+  RxList<PlutoRow> contactRows = <PlutoRow>[].obs;
 
   final List<PlutoColumn> addressColumns = <PlutoColumn>[
     PlutoColumn(
@@ -167,7 +168,7 @@ class ContactsController extends GetxController {
       type: PlutoColumnType.select(['Active', 'InActive']),
     ),
   ];
-  List<PlutoRow> addressRows = [];
+  RxList<PlutoRow> addressRows = <PlutoRow>[].obs;
 
   @override
   onInit() {
@@ -204,7 +205,7 @@ class ContactsController extends GetxController {
         true);
     contactList.add(contact);
 
-    contactRows = contactList
+    Get.find<PlutoGridController>().rowData(contactList
         .map((row) => PlutoRow(
               cells: {
                 'contactId': PlutoCell(value: row.contactId),
@@ -219,9 +220,10 @@ class ContactsController extends GetxController {
                 'panNo': PlutoCell(value: row.panNo),
               },
             ))
-        .toList();
-    // handleAddRowsContacts(contactRows);
+        .toList());
+    //rows.add(contactRows.last);
     clearForm();
+    update();
   }
 
   clearForm() {

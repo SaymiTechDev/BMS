@@ -1,5 +1,5 @@
 class Config {
-  static const String baseUrl = 'http://139.59.73.144:8080/';
+  static const String baseUrl = 'http://139.59.73.144:3000/';
 }
 
 class EndPoints {
