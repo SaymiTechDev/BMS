@@ -81,22 +81,22 @@ class _PlutoContainerState extends State<PlutoContainer> {
             ],
           ),
         ),
-        // bottom: PlutoLayoutContainer(
-        //   child: PlutoLayoutTabs(
-        //     items: [
-        //       PlutoLayoutTabItem(
-        //         id: 'bottom1',
-        //         title: 'bottom1',
-        //         tabViewWidget: const Text('bottom1'),
-        //       ),
-        //       PlutoLayoutTabItem(
-        //         id: 'bottom2',
-        //         title: 'bottom2',
-        //         tabViewWidget: const Text('bottom2'),
-        //       ),
-        //     ],
-        //   ),
-        // ),
+        bottom: PlutoLayoutContainer(
+          child: PlutoLayoutTabs(
+            items: [
+              PlutoLayoutTabItem(
+                id: 'bottom1',
+                title: 'bottom1',
+                tabViewWidget: const Text('bottom1'),
+              ),
+              PlutoLayoutTabItem(
+                id: 'bottom2',
+                title: 'bottom2',
+                tabViewWidget: const Text('bottom2'),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

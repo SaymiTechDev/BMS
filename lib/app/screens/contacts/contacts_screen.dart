@@ -6,8 +6,8 @@ import 'package:bms/app/widgets/screen_container.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ContactsPage extends GetView<ContactsController> {
-  const ContactsPage({super.key});
+class ContactsScreen extends GetView<ContactsController> {
+  const ContactsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

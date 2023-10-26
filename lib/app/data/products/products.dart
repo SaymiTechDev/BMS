@@ -9,7 +9,7 @@ class Products with _$Products {
     int productId,
     String productName,
     String sku,
-    ProductType productType,
+    String productType,
     String productGroup,
     String uom,
     int spu,
@@ -22,5 +22,3 @@ class Products with _$Products {
   factory Products.fromJson(Map<String, Object?> json) =>
       _$ProductsFromJson(json);
 }
-
-enum ProductType { item, service, process }

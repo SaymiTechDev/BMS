@@ -23,7 +23,7 @@ mixin _$Products {
   int get productId => throw _privateConstructorUsedError;
   String get productName => throw _privateConstructorUsedError;
   String get sku => throw _privateConstructorUsedError;
-  ProductType get productType => throw _privateConstructorUsedError;
+  String get productType => throw _privateConstructorUsedError;
   String get productGroup => throw _privateConstructorUsedError;
   String get uom => throw _privateConstructorUsedError;
   int get spu => throw _privateConstructorUsedError;
@@ -47,7 +47,7 @@ abstract class $ProductsCopyWith<$Res> {
       {int productId,
       String productName,
       String sku,
-      ProductType productType,
+      String productType,
       String productGroup,
       String uom,
       int spu,
@@ -98,7 +98,7 @@ class _$ProductsCopyWithImpl<$Res, $Val extends Products>
       productType: null == productType
           ? _value.productType
           : productType // ignore: cast_nullable_to_non_nullable
-              as ProductType,
+              as String,
       productGroup: null == productGroup
           ? _value.productGroup
           : productGroup // ignore: cast_nullable_to_non_nullable
@@ -143,7 +143,7 @@ abstract class _$$ProductsImplCopyWith<$Res>
       {int productId,
       String productName,
       String sku,
-      ProductType productType,
+      String productType,
       String productGroup,
       String uom,
       int spu,
@@ -192,7 +192,7 @@ class __$$ProductsImplCopyWithImpl<$Res>
       null == productType
           ? _value.productType
           : productType // ignore: cast_nullable_to_non_nullable
-              as ProductType,
+              as String,
       null == productGroup
           ? _value.productGroup
           : productGroup // ignore: cast_nullable_to_non_nullable
@@ -251,7 +251,7 @@ class _$ProductsImpl implements _Products {
   @override
   final String sku;
   @override
-  final ProductType productType;
+  final String productType;
   @override
   final String productGroup;
   @override
@@ -332,7 +332,7 @@ abstract class _Products implements Products {
       final int productId,
       final String productName,
       final String sku,
-      final ProductType productType,
+      final String productType,
       final String productGroup,
       final String uom,
       final int spu,
@@ -351,7 +351,7 @@ abstract class _Products implements Products {
   @override
   String get sku;
   @override
-  ProductType get productType;
+  String get productType;
   @override
   String get productGroup;
   @override

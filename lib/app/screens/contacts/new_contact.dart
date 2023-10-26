@@ -610,6 +610,7 @@ class NewContact extends GetView<ContactsController> {
             ElevatedButton(
                 onPressed: () {
                   controller.addContacts();
+                  Get.back();
                 },
                 style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.pGreen,

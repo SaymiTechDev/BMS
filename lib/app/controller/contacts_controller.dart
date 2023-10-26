@@ -1,16 +1,14 @@
 import 'package:bms/app/data/contacts/contacts.dart';
 import 'package:bms/app/data/values.dart';
-import 'package:bms/app/widgets/data_grids/pluto_grid_controller.dart';
 import 'package:get/get.dart';
 import 'package:pluto_grid/pluto_grid.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
 class ContactsController extends GetxController {
-  var vCardData = "".obs;
   var contactType = ContactType.company;
   final vCardForm = FormGroup(
     {
-      'type': FormControl<ContactType>(),
+      'type': FormControl<ContactType>(value: ContactType.company),
       'company': FormControl<String>(),
       'displayName': FormControl<String>(),
       'phone': FormControl<String>(),
@@ -205,7 +203,7 @@ class ContactsController extends GetxController {
         true);
     contactList.add(contact);
 
-    Get.find<PlutoGridController>().rowData(contactList
+    contactRows(contactList
         .map((row) => PlutoRow(
               cells: {
                 'contactId': PlutoCell(value: row.contactId),
@@ -247,6 +245,4 @@ class ContactsController extends GetxController {
     vCardForm.control("accountPayable").value = "";
     vCardForm.control("accountReceivable").value = "";
   }
-
-  header(PlutoGridStateManager stateManager) {}
 }

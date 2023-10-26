@@ -22,4 +22,10 @@ class DataList {
     'Bill',
     'General',
   ];
+
+  static const List<String> productType = [
+    'Service',
+    'Item',
+    'Process',
+  ];
 }

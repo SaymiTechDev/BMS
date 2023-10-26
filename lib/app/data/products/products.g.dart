@@ -11,7 +11,7 @@ _$ProductsImpl _$$ProductsImplFromJson(Map<String, dynamic> json) =>
       json['productId'] as int,
       json['productName'] as String,
       json['sku'] as String,
-      $enumDecode(_$ProductTypeEnumMap, json['productType']),
+      json['productType'] as String,
       json['productGroup'] as String,
       json['uom'] as String,
       json['spu'] as int,
@@ -26,7 +26,7 @@ Map<String, dynamic> _$$ProductsImplToJson(_$ProductsImpl instance) =>
       'productId': instance.productId,
       'productName': instance.productName,
       'sku': instance.sku,
-      'productType': _$ProductTypeEnumMap[instance.productType]!,
+      'productType': instance.productType,
       'productGroup': instance.productGroup,
       'uom': instance.uom,
       'spu': instance.spu,
@@ -35,9 +35,3 @@ Map<String, dynamic> _$$ProductsImplToJson(_$ProductsImpl instance) =>
       'createdDate': instance.createdDate.toIso8601String(),
       'isActive': instance.isActive,
     };
-
-const _$ProductTypeEnumMap = {
-  ProductType.item: 'item',
-  ProductType.service: 'service',
-  ProductType.process: 'process',
-};

@@ -1,10 +1,19 @@
 import 'package:bms/app/controller/contacts_controller.dart';
 import 'package:bms/app/controller/login_controller.dart';
+import 'package:bms/app/controller/products_controller.dart';
 import 'package:bms/app/screens/admin/admin.dart';
-import 'package:bms/app/screens/contacts/contacts_page.dart';
+import 'package:bms/app/screens/banking/banking_screen.dart';
+import 'package:bms/app/screens/contacts/contacts_screen.dart';
 import 'package:bms/app/screens/contacts/new_contact.dart';
 import 'package:bms/app/screens/dashboard.dart';
+import 'package:bms/app/screens/finance/finance_screen.dart';
+import 'package:bms/app/screens/inventory/inventory_screen.dart';
 import 'package:bms/app/screens/login.dart';
+import 'package:bms/app/screens/production/production_screen.dart';
+import 'package:bms/app/screens/products/products_screen.dart';
+import 'package:bms/app/screens/purchace/purchase_screen.dart';
+import 'package:bms/app/screens/sales/sales_screen.dart';
+import 'package:bms/app/screens/settings/settings_screen.dart';
 import 'package:get/get.dart';
 
 class Routes {
@@ -13,6 +22,14 @@ class Routes {
   static const String admin = '/admin';
   static const String contacts = '/contacts';
   static const String newContact = '/contacts/new';
+  static const String settings = '/settings';
+  static const String sales = '/sales';
+  static const String purchase = '/purchase';
+  static const String production = '/production';
+  static const String inventory = '/inventory';
+  static const String finance = '/finance';
+  static const String banking = '/banking';
+  static const String products = '/products';
 
   static List<GetPage> routesList = [
     GetPage(
@@ -28,7 +45,7 @@ class Routes {
     ),
     GetPage(
       name: contacts,
-      page: () => const ContactsPage(),
+      page: () => const ContactsScreen(),
       binding: BindingsBuilder(() {
         Get.put<ContactsController>(ContactsController());
       }),
@@ -43,6 +60,40 @@ class Routes {
     GetPage(
       name: admin,
       page: () => const Admin(),
+    ),
+    GetPage(
+      name: banking,
+      page: () => const BankingScreen(),
+    ),
+    GetPage(
+      name: finance,
+      page: () => const FinanceScreen(),
+    ),
+    GetPage(
+      name: inventory,
+      page: () => const InventoryScreen(),
+    ),
+    GetPage(
+      name: production,
+      page: () => const ProductionScreen(),
+    ),
+    GetPage(
+        name: products,
+        page: () => const ProductsScreen(),
+        binding: BindingsBuilder(() {
+          Get.put<ProductsController>(ProductsController());
+        })),
+    GetPage(
+      name: sales,
+      page: () => const SalesScreen(),
+    ),
+    GetPage(
+      name: purchase,
+      page: () => const PurchaseScreen(),
+    ),
+    GetPage(
+      name: settings,
+      page: () => const SettingsScreen(),
     ),
   ];
 }

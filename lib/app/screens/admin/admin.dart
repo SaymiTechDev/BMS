@@ -1,4 +1,5 @@
-import 'package:bms/app/widgets/grid_test.dart';
+import 'package:bms/app/widgets/layouts/pluto_layout.dart';
+import 'package:bms/app/widgets/screen_container.dart';
 import 'package:flutter/material.dart';
 
 class Admin extends StatelessWidget {
@@ -6,6 +7,6 @@ class Admin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TablePage();
+    return const ScreenContainer(body: PlutoContainer());
   }
 }

@@ -1,11 +1,10 @@
 import 'package:bms/app/data/app_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:pluto_grid/pluto_grid.dart';
 
 class PlutoGridDemo extends StatefulWidget {
   final List<PlutoColumn> columns;
-  final RxList<PlutoRow> rows;
+  final List<PlutoRow> rows;
   final bool isReadOnly;
   final String gridName;
 
@@ -177,22 +176,18 @@ class _HeaderState extends State<_Header> {
 
   @override
   Widget build(BuildContext context) {
-    return widget.read
-        ? const SizedBox(
-            height: 20,
-          )
-        : Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              TextButton(
-                onPressed: handleAddRows,
-                child: const Text('Add rows'),
-              ),
-              TextButton(
-                onPressed: handleRemoveCurrentRowButton,
-                child: const Text('Remove Row'),
-              ),
-            ],
-          );
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        TextButton(
+          onPressed: handleAddRows,
+          child: const Text('Add'),
+        ),
+        TextButton(
+          onPressed: handleRemoveCurrentRowButton,
+          child: const Text('Remove'),
+        ),
+      ],
+    );
   }
 }
