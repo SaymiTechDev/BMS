@@ -1,6 +1,8 @@
 import 'package:bms/app/controller/contacts_controller.dart';
 import 'package:bms/app/controller/login_controller.dart';
 import 'package:bms/app/controller/products_controller.dart';
+import 'package:bms/app/controller/purchase_controller.dart';
+import 'package:bms/app/controller/slaes_controller.dart';
 import 'package:bms/app/screens/admin/admin.dart';
 import 'package:bms/app/screens/banking/banking_screen.dart';
 import 'package:bms/app/screens/contacts/contacts_screen.dart';
@@ -78,18 +80,25 @@ class Routes {
       page: () => const ProductionScreen(),
     ),
     GetPage(
-        name: products,
-        page: () => const ProductsScreen(),
-        binding: BindingsBuilder(() {
-          Get.put<ProductsController>(ProductsController());
-        })),
+      name: products,
+      page: () => const ProductsScreen(),
+      binding: BindingsBuilder(() {
+        Get.put<ProductsController>(ProductsController());
+      }),
+    ),
     GetPage(
       name: sales,
       page: () => const SalesScreen(),
+      binding: BindingsBuilder(() {
+        Get.put<SalesController>(SalesController());
+      }),
     ),
     GetPage(
       name: purchase,
       page: () => const PurchaseScreen(),
+      binding: BindingsBuilder(() {
+        Get.put<PurchaseController>(PurchaseController());
+      }),
     ),
     GetPage(
       name: settings,

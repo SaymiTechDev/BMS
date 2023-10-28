@@ -7,6 +7,6 @@ class Admin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ScreenContainer(body: PlutoContainer());
+    return ScreenContainer(body: PlutoContainer(Container()));
   }
 }

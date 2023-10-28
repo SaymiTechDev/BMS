@@ -3,7 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:pluto_layout/pluto_layout.dart';
 
 class PlutoContainer extends StatefulWidget {
-  const PlutoContainer({super.key});
+  final Widget body;
+  const PlutoContainer(this.body, {super.key});
 
   @override
   State<PlutoContainer> createState() => _PlutoContainerState();
@@ -30,8 +31,8 @@ class _PlutoContainerState extends State<PlutoContainer> {
           LogicalKeySet(LogicalKeyboardKey.alt, LogicalKeyboardKey.arrowDown):
               PlutoLayoutActions.decreaseTabView(),
         },
-        body: const PlutoLayoutContainer(
-          child: Text('Body container'),
+        body: PlutoLayoutContainer(
+          child: widget.body,
         ),
         top: PlutoLayoutContainer(
           child: PlutoLayoutTabs(
