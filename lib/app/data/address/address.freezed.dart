@@ -20,19 +20,19 @@ Address _$AddressFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Address {
-  int get addressId => throw _privateConstructorUsedError;
-  String get addressType => throw _privateConstructorUsedError;
-  String get addressName => throw _privateConstructorUsedError;
-  String get doorNo => throw _privateConstructorUsedError;
-  String get building => throw _privateConstructorUsedError;
-  String get street => throw _privateConstructorUsedError;
-  String get city => throw _privateConstructorUsedError;
-  String get state => throw _privateConstructorUsedError;
-  String get pinCode => throw _privateConstructorUsedError;
-  int get contactId => throw _privateConstructorUsedError;
-  int get createdBy => throw _privateConstructorUsedError;
-  DateTime get createdDate => throw _privateConstructorUsedError;
-  bool get isActive => throw _privateConstructorUsedError;
+  int? get addressId => throw _privateConstructorUsedError;
+  String? get addressType => throw _privateConstructorUsedError;
+  String? get addressName => throw _privateConstructorUsedError;
+  String? get doorNo => throw _privateConstructorUsedError;
+  String? get building => throw _privateConstructorUsedError;
+  String? get street => throw _privateConstructorUsedError;
+  String? get city => throw _privateConstructorUsedError;
+  String? get state => throw _privateConstructorUsedError;
+  String? get pinCode => throw _privateConstructorUsedError;
+  int? get contactId => throw _privateConstructorUsedError;
+  int? get createdBy => throw _privateConstructorUsedError;
+  DateTime? get createdDate => throw _privateConstructorUsedError;
+  int? get isActive => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -45,19 +45,19 @@ abstract class $AddressCopyWith<$Res> {
       _$AddressCopyWithImpl<$Res, Address>;
   @useResult
   $Res call(
-      {int addressId,
-      String addressType,
-      String addressName,
-      String doorNo,
-      String building,
-      String street,
-      String city,
-      String state,
-      String pinCode,
-      int contactId,
-      int createdBy,
-      DateTime createdDate,
-      bool isActive});
+      {int? addressId,
+      String? addressType,
+      String? addressName,
+      String? doorNo,
+      String? building,
+      String? street,
+      String? city,
+      String? state,
+      String? pinCode,
+      int? contactId,
+      int? createdBy,
+      DateTime? createdDate,
+      int? isActive});
 }
 
 /// @nodoc
@@ -73,73 +73,73 @@ class _$AddressCopyWithImpl<$Res, $Val extends Address>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? addressId = null,
-    Object? addressType = null,
-    Object? addressName = null,
-    Object? doorNo = null,
-    Object? building = null,
-    Object? street = null,
-    Object? city = null,
-    Object? state = null,
-    Object? pinCode = null,
-    Object? contactId = null,
-    Object? createdBy = null,
-    Object? createdDate = null,
-    Object? isActive = null,
+    Object? addressId = freezed,
+    Object? addressType = freezed,
+    Object? addressName = freezed,
+    Object? doorNo = freezed,
+    Object? building = freezed,
+    Object? street = freezed,
+    Object? city = freezed,
+    Object? state = freezed,
+    Object? pinCode = freezed,
+    Object? contactId = freezed,
+    Object? createdBy = freezed,
+    Object? createdDate = freezed,
+    Object? isActive = freezed,
   }) {
     return _then(_value.copyWith(
-      addressId: null == addressId
+      addressId: freezed == addressId
           ? _value.addressId
           : addressId // ignore: cast_nullable_to_non_nullable
-              as int,
-      addressType: null == addressType
+              as int?,
+      addressType: freezed == addressType
           ? _value.addressType
           : addressType // ignore: cast_nullable_to_non_nullable
-              as String,
-      addressName: null == addressName
+              as String?,
+      addressName: freezed == addressName
           ? _value.addressName
           : addressName // ignore: cast_nullable_to_non_nullable
-              as String,
-      doorNo: null == doorNo
+              as String?,
+      doorNo: freezed == doorNo
           ? _value.doorNo
           : doorNo // ignore: cast_nullable_to_non_nullable
-              as String,
-      building: null == building
+              as String?,
+      building: freezed == building
           ? _value.building
           : building // ignore: cast_nullable_to_non_nullable
-              as String,
-      street: null == street
+              as String?,
+      street: freezed == street
           ? _value.street
           : street // ignore: cast_nullable_to_non_nullable
-              as String,
-      city: null == city
+              as String?,
+      city: freezed == city
           ? _value.city
           : city // ignore: cast_nullable_to_non_nullable
-              as String,
-      state: null == state
+              as String?,
+      state: freezed == state
           ? _value.state
           : state // ignore: cast_nullable_to_non_nullable
-              as String,
-      pinCode: null == pinCode
+              as String?,
+      pinCode: freezed == pinCode
           ? _value.pinCode
           : pinCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      contactId: null == contactId
+              as String?,
+      contactId: freezed == contactId
           ? _value.contactId
           : contactId // ignore: cast_nullable_to_non_nullable
-              as int,
-      createdBy: null == createdBy
+              as int?,
+      createdBy: freezed == createdBy
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
-              as int,
-      createdDate: null == createdDate
+              as int?,
+      createdDate: freezed == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      isActive: null == isActive
+              as DateTime?,
+      isActive: freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int?,
     ) as $Val);
   }
 }
@@ -152,19 +152,19 @@ abstract class _$$AddressImplCopyWith<$Res> implements $AddressCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {int addressId,
-      String addressType,
-      String addressName,
-      String doorNo,
-      String building,
-      String street,
-      String city,
-      String state,
-      String pinCode,
-      int contactId,
-      int createdBy,
-      DateTime createdDate,
-      bool isActive});
+      {int? addressId,
+      String? addressType,
+      String? addressName,
+      String? doorNo,
+      String? building,
+      String? street,
+      String? city,
+      String? state,
+      String? pinCode,
+      int? contactId,
+      int? createdBy,
+      DateTime? createdDate,
+      int? isActive});
 }
 
 /// @nodoc
@@ -178,73 +178,73 @@ class __$$AddressImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? addressId = null,
-    Object? addressType = null,
-    Object? addressName = null,
-    Object? doorNo = null,
-    Object? building = null,
-    Object? street = null,
-    Object? city = null,
-    Object? state = null,
-    Object? pinCode = null,
-    Object? contactId = null,
-    Object? createdBy = null,
-    Object? createdDate = null,
-    Object? isActive = null,
+    Object? addressId = freezed,
+    Object? addressType = freezed,
+    Object? addressName = freezed,
+    Object? doorNo = freezed,
+    Object? building = freezed,
+    Object? street = freezed,
+    Object? city = freezed,
+    Object? state = freezed,
+    Object? pinCode = freezed,
+    Object? contactId = freezed,
+    Object? createdBy = freezed,
+    Object? createdDate = freezed,
+    Object? isActive = freezed,
   }) {
     return _then(_$AddressImpl(
-      null == addressId
+      freezed == addressId
           ? _value.addressId
           : addressId // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == addressType
+              as int?,
+      freezed == addressType
           ? _value.addressType
           : addressType // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == addressName
+              as String?,
+      freezed == addressName
           ? _value.addressName
           : addressName // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == doorNo
+              as String?,
+      freezed == doorNo
           ? _value.doorNo
           : doorNo // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == building
+              as String?,
+      freezed == building
           ? _value.building
           : building // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == street
+              as String?,
+      freezed == street
           ? _value.street
           : street // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == city
+              as String?,
+      freezed == city
           ? _value.city
           : city // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == state
+              as String?,
+      freezed == state
           ? _value.state
           : state // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == pinCode
+              as String?,
+      freezed == pinCode
           ? _value.pinCode
           : pinCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == contactId
+              as String?,
+      freezed == contactId
           ? _value.contactId
           : contactId // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == createdBy
+              as int?,
+      freezed == createdBy
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == createdDate
+              as int?,
+      freezed == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      null == isActive
+              as DateTime?,
+      freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int?,
     ));
   }
 }
@@ -271,31 +271,31 @@ class _$AddressImpl implements _Address {
       _$$AddressImplFromJson(json);
 
   @override
-  final int addressId;
+  final int? addressId;
   @override
-  final String addressType;
+  final String? addressType;
   @override
-  final String addressName;
+  final String? addressName;
   @override
-  final String doorNo;
+  final String? doorNo;
   @override
-  final String building;
+  final String? building;
   @override
-  final String street;
+  final String? street;
   @override
-  final String city;
+  final String? city;
   @override
-  final String state;
+  final String? state;
   @override
-  final String pinCode;
+  final String? pinCode;
   @override
-  final int contactId;
+  final int? contactId;
   @override
-  final int createdBy;
+  final int? createdBy;
   @override
-  final DateTime createdDate;
+  final DateTime? createdDate;
   @override
-  final bool isActive;
+  final int? isActive;
 
   @override
   String toString() {
@@ -364,48 +364,48 @@ class _$AddressImpl implements _Address {
 
 abstract class _Address implements Address {
   const factory _Address(
-      final int addressId,
-      final String addressType,
-      final String addressName,
-      final String doorNo,
-      final String building,
-      final String street,
-      final String city,
-      final String state,
-      final String pinCode,
-      final int contactId,
-      final int createdBy,
-      final DateTime createdDate,
-      final bool isActive) = _$AddressImpl;
+      final int? addressId,
+      final String? addressType,
+      final String? addressName,
+      final String? doorNo,
+      final String? building,
+      final String? street,
+      final String? city,
+      final String? state,
+      final String? pinCode,
+      final int? contactId,
+      final int? createdBy,
+      final DateTime? createdDate,
+      final int? isActive) = _$AddressImpl;
 
   factory _Address.fromJson(Map<String, dynamic> json) = _$AddressImpl.fromJson;
 
   @override
-  int get addressId;
+  int? get addressId;
   @override
-  String get addressType;
+  String? get addressType;
   @override
-  String get addressName;
+  String? get addressName;
   @override
-  String get doorNo;
+  String? get doorNo;
   @override
-  String get building;
+  String? get building;
   @override
-  String get street;
+  String? get street;
   @override
-  String get city;
+  String? get city;
   @override
-  String get state;
+  String? get state;
   @override
-  String get pinCode;
+  String? get pinCode;
   @override
-  int get contactId;
+  int? get contactId;
   @override
-  int get createdBy;
+  int? get createdBy;
   @override
-  DateTime get createdDate;
+  DateTime? get createdDate;
   @override
-  bool get isActive;
+  int? get isActive;
   @override
   @JsonKey(ignore: true)
   _$$AddressImplCopyWith<_$AddressImpl> get copyWith =>

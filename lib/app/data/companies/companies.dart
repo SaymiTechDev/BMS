@@ -6,21 +6,21 @@ part 'companies.g.dart';
 @freezed
 class Companies with _$Companies {
   const factory Companies(
-    int companyId,
-    String companyName,
-    String displayName,
-    String phone,
-    String mobile,
-    String email,
-    String website,
-    String gstTreatment,
-    String gstNo,
-    String panNo,
-    int addressId,
-    String uniqueCode,
-    int createdBy,
-    DateTime createdDate,
-    bool isActive,
+    int? companyId,
+    String? companyName,
+    String? displayName,
+    String? phone,
+    String? mobile,
+    String? email,
+    String? website,
+    String? gstTreatment,
+    String? gstNo,
+    String? panNo,
+    int? addressId,
+    String? uniqueCode,
+    int? createdBy,
+    DateTime? createdDate,
+    int? isActive,
   ) = _Companies;
 
   factory Companies.fromJson(Map<String, Object?> json) =>

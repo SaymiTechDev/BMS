@@ -1,10 +1,10 @@
 import 'package:bms/app/controller/contacts_controller.dart';
 import 'package:bms/app/data/app_colors.dart';
 import 'package:bms/app/screens/contacts/new_contact.dart';
-import 'package:bms/app/widgets/data_grids/pluto_grid.dart';
 import 'package:bms/app/widgets/screen_container.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pluto_grid/pluto_grid.dart';
 
 class ContactsScreen extends GetView<ContactsController> {
   const ContactsScreen({super.key});
@@ -59,9 +59,21 @@ class ContactsScreen extends GetView<ContactsController> {
         ),
         const Divider(),
         Flexible(
-            flex: 1,
-            child: PlutoGridDemo(controller.contactColumns,
-                controller.contactRows, true, "Contacts"))
+          flex: 1,
+          child: Obx(() => PlutoGrid(
+                columns: controller.contactColumns,
+                rows: controller.genContactRow(controller.contactList),
+                key: UniqueKey(),
+                mode: PlutoGridMode.readOnly,
+                configuration: PlutoGridConfiguration(
+                  style: PlutoGridStyleConfig(
+                    enableGridBorderShadow: true,
+                    gridBorderColor: AppColors.lBlue,
+                    gridBorderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+              )),
+        )
       ],
     ));
   }

@@ -29,7 +29,7 @@ class MainContainer extends StatelessWidget {
             ),
             TextButton(
               onPressed: () {},
-              child: const Text("ADITHYA CLOTHING COMPANY",
+              child: const Text("BUSINESS MANAGEMENT SOFTWARE",
                   style: TextStyle(
                       fontWeight: FontWeight.w900, color: Colors.black87)),
             ),

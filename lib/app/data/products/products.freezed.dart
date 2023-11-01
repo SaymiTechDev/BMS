@@ -20,17 +20,18 @@ Products _$ProductsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Products {
-  int get productId => throw _privateConstructorUsedError;
-  String get productName => throw _privateConstructorUsedError;
-  String get sku => throw _privateConstructorUsedError;
-  String get productType => throw _privateConstructorUsedError;
-  String get productGroup => throw _privateConstructorUsedError;
-  String get uom => throw _privateConstructorUsedError;
-  int get spu => throw _privateConstructorUsedError;
-  String get hsnCode => throw _privateConstructorUsedError;
-  int get createdBy => throw _privateConstructorUsedError;
-  DateTime get createdDate => throw _privateConstructorUsedError;
-  bool get isActive => throw _privateConstructorUsedError;
+  int? get productId => throw _privateConstructorUsedError;
+  String? get productName => throw _privateConstructorUsedError;
+  String? get sku => throw _privateConstructorUsedError;
+  String? get productType => throw _privateConstructorUsedError;
+  String? get productGroup => throw _privateConstructorUsedError;
+  String? get uom => throw _privateConstructorUsedError;
+  int? get spu => throw _privateConstructorUsedError;
+  String? get hsnCode => throw _privateConstructorUsedError;
+  int? get createdBy => throw _privateConstructorUsedError;
+  DateTime? get createdDate => throw _privateConstructorUsedError;
+  int? get isActive => throw _privateConstructorUsedError;
+  int? get isStock => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -44,17 +45,18 @@ abstract class $ProductsCopyWith<$Res> {
       _$ProductsCopyWithImpl<$Res, Products>;
   @useResult
   $Res call(
-      {int productId,
-      String productName,
-      String sku,
-      String productType,
-      String productGroup,
-      String uom,
-      int spu,
-      String hsnCode,
-      int createdBy,
-      DateTime createdDate,
-      bool isActive});
+      {int? productId,
+      String? productName,
+      String? sku,
+      String? productType,
+      String? productGroup,
+      String? uom,
+      int? spu,
+      String? hsnCode,
+      int? createdBy,
+      DateTime? createdDate,
+      int? isActive,
+      int? isStock});
 }
 
 /// @nodoc
@@ -70,63 +72,68 @@ class _$ProductsCopyWithImpl<$Res, $Val extends Products>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? productId = null,
-    Object? productName = null,
-    Object? sku = null,
-    Object? productType = null,
-    Object? productGroup = null,
-    Object? uom = null,
-    Object? spu = null,
-    Object? hsnCode = null,
-    Object? createdBy = null,
-    Object? createdDate = null,
-    Object? isActive = null,
+    Object? productId = freezed,
+    Object? productName = freezed,
+    Object? sku = freezed,
+    Object? productType = freezed,
+    Object? productGroup = freezed,
+    Object? uom = freezed,
+    Object? spu = freezed,
+    Object? hsnCode = freezed,
+    Object? createdBy = freezed,
+    Object? createdDate = freezed,
+    Object? isActive = freezed,
+    Object? isStock = freezed,
   }) {
     return _then(_value.copyWith(
-      productId: null == productId
+      productId: freezed == productId
           ? _value.productId
           : productId // ignore: cast_nullable_to_non_nullable
-              as int,
-      productName: null == productName
+              as int?,
+      productName: freezed == productName
           ? _value.productName
           : productName // ignore: cast_nullable_to_non_nullable
-              as String,
-      sku: null == sku
+              as String?,
+      sku: freezed == sku
           ? _value.sku
           : sku // ignore: cast_nullable_to_non_nullable
-              as String,
-      productType: null == productType
+              as String?,
+      productType: freezed == productType
           ? _value.productType
           : productType // ignore: cast_nullable_to_non_nullable
-              as String,
-      productGroup: null == productGroup
+              as String?,
+      productGroup: freezed == productGroup
           ? _value.productGroup
           : productGroup // ignore: cast_nullable_to_non_nullable
-              as String,
-      uom: null == uom
+              as String?,
+      uom: freezed == uom
           ? _value.uom
           : uom // ignore: cast_nullable_to_non_nullable
-              as String,
-      spu: null == spu
+              as String?,
+      spu: freezed == spu
           ? _value.spu
           : spu // ignore: cast_nullable_to_non_nullable
-              as int,
-      hsnCode: null == hsnCode
+              as int?,
+      hsnCode: freezed == hsnCode
           ? _value.hsnCode
           : hsnCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdBy: null == createdBy
+              as String?,
+      createdBy: freezed == createdBy
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
-              as int,
-      createdDate: null == createdDate
+              as int?,
+      createdDate: freezed == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      isActive: null == isActive
+              as DateTime?,
+      isActive: freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int?,
+      isStock: freezed == isStock
+          ? _value.isStock
+          : isStock // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 }
@@ -140,17 +147,18 @@ abstract class _$$ProductsImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int productId,
-      String productName,
-      String sku,
-      String productType,
-      String productGroup,
-      String uom,
-      int spu,
-      String hsnCode,
-      int createdBy,
-      DateTime createdDate,
-      bool isActive});
+      {int? productId,
+      String? productName,
+      String? sku,
+      String? productType,
+      String? productGroup,
+      String? uom,
+      int? spu,
+      String? hsnCode,
+      int? createdBy,
+      DateTime? createdDate,
+      int? isActive,
+      int? isStock});
 }
 
 /// @nodoc
@@ -164,63 +172,68 @@ class __$$ProductsImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? productId = null,
-    Object? productName = null,
-    Object? sku = null,
-    Object? productType = null,
-    Object? productGroup = null,
-    Object? uom = null,
-    Object? spu = null,
-    Object? hsnCode = null,
-    Object? createdBy = null,
-    Object? createdDate = null,
-    Object? isActive = null,
+    Object? productId = freezed,
+    Object? productName = freezed,
+    Object? sku = freezed,
+    Object? productType = freezed,
+    Object? productGroup = freezed,
+    Object? uom = freezed,
+    Object? spu = freezed,
+    Object? hsnCode = freezed,
+    Object? createdBy = freezed,
+    Object? createdDate = freezed,
+    Object? isActive = freezed,
+    Object? isStock = freezed,
   }) {
     return _then(_$ProductsImpl(
-      null == productId
+      freezed == productId
           ? _value.productId
           : productId // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == productName
+              as int?,
+      freezed == productName
           ? _value.productName
           : productName // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == sku
+              as String?,
+      freezed == sku
           ? _value.sku
           : sku // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == productType
+              as String?,
+      freezed == productType
           ? _value.productType
           : productType // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == productGroup
+              as String?,
+      freezed == productGroup
           ? _value.productGroup
           : productGroup // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == uom
+              as String?,
+      freezed == uom
           ? _value.uom
           : uom // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == spu
+              as String?,
+      freezed == spu
           ? _value.spu
           : spu // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == hsnCode
+              as int?,
+      freezed == hsnCode
           ? _value.hsnCode
           : hsnCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == createdBy
+              as String?,
+      freezed == createdBy
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == createdDate
+              as int?,
+      freezed == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      null == isActive
+              as DateTime?,
+      freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int?,
+      freezed == isStock
+          ? _value.isStock
+          : isStock // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -239,37 +252,40 @@ class _$ProductsImpl implements _Products {
       this.hsnCode,
       this.createdBy,
       this.createdDate,
-      this.isActive);
+      this.isActive,
+      this.isStock);
 
   factory _$ProductsImpl.fromJson(Map<String, dynamic> json) =>
       _$$ProductsImplFromJson(json);
 
   @override
-  final int productId;
+  final int? productId;
   @override
-  final String productName;
+  final String? productName;
   @override
-  final String sku;
+  final String? sku;
   @override
-  final String productType;
+  final String? productType;
   @override
-  final String productGroup;
+  final String? productGroup;
   @override
-  final String uom;
+  final String? uom;
   @override
-  final int spu;
+  final int? spu;
   @override
-  final String hsnCode;
+  final String? hsnCode;
   @override
-  final int createdBy;
+  final int? createdBy;
   @override
-  final DateTime createdDate;
+  final DateTime? createdDate;
   @override
-  final bool isActive;
+  final int? isActive;
+  @override
+  final int? isStock;
 
   @override
   String toString() {
-    return 'Products(productId: $productId, productName: $productName, sku: $sku, productType: $productType, productGroup: $productGroup, uom: $uom, spu: $spu, hsnCode: $hsnCode, createdBy: $createdBy, createdDate: $createdDate, isActive: $isActive)';
+    return 'Products(productId: $productId, productName: $productName, sku: $sku, productType: $productType, productGroup: $productGroup, uom: $uom, spu: $spu, hsnCode: $hsnCode, createdBy: $createdBy, createdDate: $createdDate, isActive: $isActive, isStock: $isStock)';
   }
 
   @override
@@ -294,7 +310,8 @@ class _$ProductsImpl implements _Products {
             (identical(other.createdDate, createdDate) ||
                 other.createdDate == createdDate) &&
             (identical(other.isActive, isActive) ||
-                other.isActive == isActive));
+                other.isActive == isActive) &&
+            (identical(other.isStock, isStock) || other.isStock == isStock));
   }
 
   @JsonKey(ignore: true)
@@ -311,7 +328,8 @@ class _$ProductsImpl implements _Products {
       hsnCode,
       createdBy,
       createdDate,
-      isActive);
+      isActive,
+      isStock);
 
   @JsonKey(ignore: true)
   @override
@@ -329,43 +347,46 @@ class _$ProductsImpl implements _Products {
 
 abstract class _Products implements Products {
   const factory _Products(
-      final int productId,
-      final String productName,
-      final String sku,
-      final String productType,
-      final String productGroup,
-      final String uom,
-      final int spu,
-      final String hsnCode,
-      final int createdBy,
-      final DateTime createdDate,
-      final bool isActive) = _$ProductsImpl;
+      final int? productId,
+      final String? productName,
+      final String? sku,
+      final String? productType,
+      final String? productGroup,
+      final String? uom,
+      final int? spu,
+      final String? hsnCode,
+      final int? createdBy,
+      final DateTime? createdDate,
+      final int? isActive,
+      final int? isStock) = _$ProductsImpl;
 
   factory _Products.fromJson(Map<String, dynamic> json) =
       _$ProductsImpl.fromJson;
 
   @override
-  int get productId;
+  int? get productId;
   @override
-  String get productName;
+  String? get productName;
   @override
-  String get sku;
+  String? get sku;
   @override
-  String get productType;
+  String? get productType;
   @override
-  String get productGroup;
+  String? get productGroup;
   @override
-  String get uom;
+  String? get uom;
   @override
-  int get spu;
+  int? get spu;
   @override
-  String get hsnCode;
+  String? get hsnCode;
   @override
-  int get createdBy;
+  int? get createdBy;
   @override
-  DateTime get createdDate;
+  DateTime? get createdDate;
   @override
-  bool get isActive;
+  int? get isActive;
+  @override
+  int? get isStock;
   @override
   @JsonKey(ignore: true)
   _$$ProductsImplCopyWith<_$ProductsImpl> get copyWith =>

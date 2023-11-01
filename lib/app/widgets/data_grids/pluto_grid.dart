@@ -1,53 +1,42 @@
 import 'package:bms/app/data/app_colors.dart';
+import 'package:bms/app/widgets/data_grids/pluto_grid_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:pluto_grid/pluto_grid.dart';
 
-class PlutoGridDemo extends StatefulWidget {
+class PlutoGridDemo extends GetView<PlutoGridController> {
   final List<PlutoColumn> columns;
-  final List<PlutoRow> rows;
   final bool isReadOnly;
-  final String gridName;
 
-  const PlutoGridDemo(this.columns, this.rows, this.isReadOnly, this.gridName,
-      {super.key});
+  const PlutoGridDemo(this.columns, this.isReadOnly, {super.key});
 
-  @override
-  State<PlutoGridDemo> createState() => _PlutoGridDemoState();
-}
-
-class _PlutoGridDemoState extends State<PlutoGridDemo> {
-  /// [PlutoGridStateManager] has many methods and properties to dynamically manipulate the grid.
-  /// You can manipulate the grid dynamically at runtime by passing this through the [onLoaded] callback.
-  late final PlutoGridStateManager stateManager;
   @override
   Widget build(BuildContext context) {
-    return PlutoGrid(
-      columns: widget.columns,
-      rows: widget.rows,
-      mode: widget.isReadOnly ? PlutoGridMode.readOnly : PlutoGridMode.normal,
+    return Obx(() {
+      return PlutoGrid(
+        columns: columns,
+        rows: controller.genRow(controller.rows.value),
+        mode: isReadOnly ? PlutoGridMode.readOnly : PlutoGridMode.normal,
 
-      // columnGroups: columnGroups,
-      onLoaded: (PlutoGridOnLoadedEvent event) {
-        stateManager = event.stateManager;
-        stateManager.setShowColumnFilter(false);
-      },
-      onChanged: (PlutoGridOnChangedEvent event) {
-        stateManager.notifyListeners();
-      },
-      configuration: PlutoGridConfiguration(
-        columnSize: const PlutoGridColumnSizeConfig(
-            autoSizeMode: PlutoAutoSizeMode.scale),
-        style: PlutoGridStyleConfig(
-          enableGridBorderShadow: true,
-          gridBorderColor: AppColors.lBlue,
-          gridBorderRadius: BorderRadius.circular(10),
+        // columnGroups: columnGroups,
+        onLoaded: (PlutoGridOnLoadedEvent event) {
+          event.stateManager;
+        },
+        configuration: PlutoGridConfiguration(
+          columnSize: const PlutoGridColumnSizeConfig(
+              autoSizeMode: PlutoAutoSizeMode.scale),
+          style: PlutoGridStyleConfig(
+            enableGridBorderShadow: true,
+            gridBorderColor: AppColors.lBlue,
+            gridBorderRadius: BorderRadius.circular(10),
+          ),
         ),
-      ),
-      createHeader: (stateManager) => _Header(
-        stateManager: stateManager,
-        read: widget.isReadOnly,
-      ),
-    );
+        createHeader: (stateManager) => _Header(
+          stateManager: stateManager,
+          read: isReadOnly,
+        ),
+      );
+    });
   }
 }
 

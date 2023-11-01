@@ -20,12 +20,12 @@ Countries _$CountriesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Countries {
-  int get countryId => throw _privateConstructorUsedError;
-  String get countryCode => throw _privateConstructorUsedError;
-  String get country => throw _privateConstructorUsedError;
-  int get createdBy => throw _privateConstructorUsedError;
-  DateTime get createdDate => throw _privateConstructorUsedError;
-  bool get isActive => throw _privateConstructorUsedError;
+  int? get countryId => throw _privateConstructorUsedError;
+  String? get countryCode => throw _privateConstructorUsedError;
+  String? get country => throw _privateConstructorUsedError;
+  int? get createdBy => throw _privateConstructorUsedError;
+  DateTime? get createdDate => throw _privateConstructorUsedError;
+  bool? get isActive => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -39,12 +39,12 @@ abstract class $CountriesCopyWith<$Res> {
       _$CountriesCopyWithImpl<$Res, Countries>;
   @useResult
   $Res call(
-      {int countryId,
-      String countryCode,
-      String country,
-      int createdBy,
-      DateTime createdDate,
-      bool isActive});
+      {int? countryId,
+      String? countryCode,
+      String? country,
+      int? createdBy,
+      DateTime? createdDate,
+      bool? isActive});
 }
 
 /// @nodoc
@@ -60,38 +60,38 @@ class _$CountriesCopyWithImpl<$Res, $Val extends Countries>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? countryId = null,
-    Object? countryCode = null,
-    Object? country = null,
-    Object? createdBy = null,
-    Object? createdDate = null,
-    Object? isActive = null,
+    Object? countryId = freezed,
+    Object? countryCode = freezed,
+    Object? country = freezed,
+    Object? createdBy = freezed,
+    Object? createdDate = freezed,
+    Object? isActive = freezed,
   }) {
     return _then(_value.copyWith(
-      countryId: null == countryId
+      countryId: freezed == countryId
           ? _value.countryId
           : countryId // ignore: cast_nullable_to_non_nullable
-              as int,
-      countryCode: null == countryCode
+              as int?,
+      countryCode: freezed == countryCode
           ? _value.countryCode
           : countryCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      country: null == country
+              as String?,
+      country: freezed == country
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdBy: null == createdBy
+              as String?,
+      createdBy: freezed == createdBy
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
-              as int,
-      createdDate: null == createdDate
+              as int?,
+      createdDate: freezed == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      isActive: null == isActive
+              as DateTime?,
+      isActive: freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ) as $Val);
   }
 }
@@ -105,12 +105,12 @@ abstract class _$$CountriesImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int countryId,
-      String countryCode,
-      String country,
-      int createdBy,
-      DateTime createdDate,
-      bool isActive});
+      {int? countryId,
+      String? countryCode,
+      String? country,
+      int? createdBy,
+      DateTime? createdDate,
+      bool? isActive});
 }
 
 /// @nodoc
@@ -124,38 +124,38 @@ class __$$CountriesImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? countryId = null,
-    Object? countryCode = null,
-    Object? country = null,
-    Object? createdBy = null,
-    Object? createdDate = null,
-    Object? isActive = null,
+    Object? countryId = freezed,
+    Object? countryCode = freezed,
+    Object? country = freezed,
+    Object? createdBy = freezed,
+    Object? createdDate = freezed,
+    Object? isActive = freezed,
   }) {
     return _then(_$CountriesImpl(
-      null == countryId
+      freezed == countryId
           ? _value.countryId
           : countryId // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == countryCode
+              as int?,
+      freezed == countryCode
           ? _value.countryCode
           : countryCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == country
+              as String?,
+      freezed == country
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == createdBy
+              as String?,
+      freezed == createdBy
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == createdDate
+              as int?,
+      freezed == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      null == isActive
+              as DateTime?,
+      freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ));
   }
 }
@@ -170,17 +170,17 @@ class _$CountriesImpl implements _Countries {
       _$$CountriesImplFromJson(json);
 
   @override
-  final int countryId;
+  final int? countryId;
   @override
-  final String countryCode;
+  final String? countryCode;
   @override
-  final String country;
+  final String? country;
   @override
-  final int createdBy;
+  final int? createdBy;
   @override
-  final DateTime createdDate;
+  final DateTime? createdDate;
   @override
-  final bool isActive;
+  final bool? isActive;
 
   @override
   String toString() {
@@ -226,28 +226,28 @@ class _$CountriesImpl implements _Countries {
 
 abstract class _Countries implements Countries {
   const factory _Countries(
-      final int countryId,
-      final String countryCode,
-      final String country,
-      final int createdBy,
-      final DateTime createdDate,
-      final bool isActive) = _$CountriesImpl;
+      final int? countryId,
+      final String? countryCode,
+      final String? country,
+      final int? createdBy,
+      final DateTime? createdDate,
+      final bool? isActive) = _$CountriesImpl;
 
   factory _Countries.fromJson(Map<String, dynamic> json) =
       _$CountriesImpl.fromJson;
 
   @override
-  int get countryId;
+  int? get countryId;
   @override
-  String get countryCode;
+  String? get countryCode;
   @override
-  String get country;
+  String? get country;
   @override
-  int get createdBy;
+  int? get createdBy;
   @override
-  DateTime get createdDate;
+  DateTime? get createdDate;
   @override
-  bool get isActive;
+  bool? get isActive;
   @override
   @JsonKey(ignore: true)
   _$$CountriesImplCopyWith<_$CountriesImpl> get copyWith =>

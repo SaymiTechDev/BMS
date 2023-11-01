@@ -6,15 +6,15 @@ part 'coa.g.dart';
 @freezed
 class Coa with _$Coa {
   const factory Coa(
-    int coaId,
-    String accountName,
-    String accountCode,
-    AccountType accountType,
-    String parentAccount,
-    double balance,
-    int createdBy,
-    DateTime createdDate,
-    bool isActive,
+    int? coaId,
+    String? accountName,
+    String? accountCode,
+    String? accountType,
+    String? parentAccount,
+    double? balance,
+    int? createdBy,
+    DateTime? createdDate,
+    int? isActive,
   ) = _Coa;
 
   factory Coa.fromJson(Map<String, Object?> json) => _$CoaFromJson(json);

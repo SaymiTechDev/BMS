@@ -6,19 +6,19 @@ part 'address.g.dart';
 @freezed
 class Address with _$Address {
   const factory Address(
-    int addressId,
-    String addressType,
-    String addressName,
-    String doorNo,
-    String building,
-    String street,
-    String city,
-    String state,
-    String pinCode,
-    int contactId,
-    int createdBy,
-    DateTime createdDate,
-    bool isActive,
+    int? addressId,
+    String? addressType,
+    String? addressName,
+    String? doorNo,
+    String? building,
+    String? street,
+    String? city,
+    String? state,
+    String? pinCode,
+    int? contactId,
+    int? createdBy,
+    DateTime? createdDate,
+    int? isActive,
   ) = _Address;
 
   factory Address.fromJson(Map<String, Object?> json) =>

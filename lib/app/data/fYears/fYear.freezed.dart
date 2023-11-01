@@ -20,13 +20,13 @@ FYear _$FYearFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$FYear {
-  int get fYearId => throw _privateConstructorUsedError;
-  String get fYear => throw _privateConstructorUsedError;
-  DateTime get startDate => throw _privateConstructorUsedError;
-  DateTime get endDate => throw _privateConstructorUsedError;
-  int get createdBy => throw _privateConstructorUsedError;
-  DateTime get createdDate => throw _privateConstructorUsedError;
-  bool get isActive => throw _privateConstructorUsedError;
+  int? get fYearId => throw _privateConstructorUsedError;
+  String? get fYear => throw _privateConstructorUsedError;
+  DateTime? get startDate => throw _privateConstructorUsedError;
+  DateTime? get endDate => throw _privateConstructorUsedError;
+  int? get createdBy => throw _privateConstructorUsedError;
+  DateTime? get createdDate => throw _privateConstructorUsedError;
+  int? get isActive => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -39,13 +39,13 @@ abstract class $FYearCopyWith<$Res> {
       _$FYearCopyWithImpl<$Res, FYear>;
   @useResult
   $Res call(
-      {int fYearId,
-      String fYear,
-      DateTime startDate,
-      DateTime endDate,
-      int createdBy,
-      DateTime createdDate,
-      bool isActive});
+      {int? fYearId,
+      String? fYear,
+      DateTime? startDate,
+      DateTime? endDate,
+      int? createdBy,
+      DateTime? createdDate,
+      int? isActive});
 }
 
 /// @nodoc
@@ -61,43 +61,43 @@ class _$FYearCopyWithImpl<$Res, $Val extends FYear>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fYearId = null,
-    Object? fYear = null,
-    Object? startDate = null,
-    Object? endDate = null,
-    Object? createdBy = null,
-    Object? createdDate = null,
-    Object? isActive = null,
+    Object? fYearId = freezed,
+    Object? fYear = freezed,
+    Object? startDate = freezed,
+    Object? endDate = freezed,
+    Object? createdBy = freezed,
+    Object? createdDate = freezed,
+    Object? isActive = freezed,
   }) {
     return _then(_value.copyWith(
-      fYearId: null == fYearId
+      fYearId: freezed == fYearId
           ? _value.fYearId
           : fYearId // ignore: cast_nullable_to_non_nullable
-              as int,
-      fYear: null == fYear
+              as int?,
+      fYear: freezed == fYear
           ? _value.fYear
           : fYear // ignore: cast_nullable_to_non_nullable
-              as String,
-      startDate: null == startDate
+              as String?,
+      startDate: freezed == startDate
           ? _value.startDate
           : startDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      endDate: null == endDate
+              as DateTime?,
+      endDate: freezed == endDate
           ? _value.endDate
           : endDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      createdBy: null == createdBy
+              as DateTime?,
+      createdBy: freezed == createdBy
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
-              as int,
-      createdDate: null == createdDate
+              as int?,
+      createdDate: freezed == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      isActive: null == isActive
+              as DateTime?,
+      isActive: freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int?,
     ) as $Val);
   }
 }
@@ -110,13 +110,13 @@ abstract class _$$FYearImplCopyWith<$Res> implements $FYearCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {int fYearId,
-      String fYear,
-      DateTime startDate,
-      DateTime endDate,
-      int createdBy,
-      DateTime createdDate,
-      bool isActive});
+      {int? fYearId,
+      String? fYear,
+      DateTime? startDate,
+      DateTime? endDate,
+      int? createdBy,
+      DateTime? createdDate,
+      int? isActive});
 }
 
 /// @nodoc
@@ -130,43 +130,43 @@ class __$$FYearImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fYearId = null,
-    Object? fYear = null,
-    Object? startDate = null,
-    Object? endDate = null,
-    Object? createdBy = null,
-    Object? createdDate = null,
-    Object? isActive = null,
+    Object? fYearId = freezed,
+    Object? fYear = freezed,
+    Object? startDate = freezed,
+    Object? endDate = freezed,
+    Object? createdBy = freezed,
+    Object? createdDate = freezed,
+    Object? isActive = freezed,
   }) {
     return _then(_$FYearImpl(
-      null == fYearId
+      freezed == fYearId
           ? _value.fYearId
           : fYearId // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == fYear
+              as int?,
+      freezed == fYear
           ? _value.fYear
           : fYear // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == startDate
+              as String?,
+      freezed == startDate
           ? _value.startDate
           : startDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      null == endDate
+              as DateTime?,
+      freezed == endDate
           ? _value.endDate
           : endDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      null == createdBy
+              as DateTime?,
+      freezed == createdBy
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == createdDate
+              as int?,
+      freezed == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      null == isActive
+              as DateTime?,
+      freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int?,
     ));
   }
 }
@@ -181,19 +181,19 @@ class _$FYearImpl implements _FYear {
       _$$FYearImplFromJson(json);
 
   @override
-  final int fYearId;
+  final int? fYearId;
   @override
-  final String fYear;
+  final String? fYear;
   @override
-  final DateTime startDate;
+  final DateTime? startDate;
   @override
-  final DateTime endDate;
+  final DateTime? endDate;
   @override
-  final int createdBy;
+  final int? createdBy;
   @override
-  final DateTime createdDate;
+  final DateTime? createdDate;
   @override
-  final bool isActive;
+  final int? isActive;
 
   @override
   String toString() {
@@ -239,30 +239,30 @@ class _$FYearImpl implements _FYear {
 
 abstract class _FYear implements FYear {
   const factory _FYear(
-      final int fYearId,
-      final String fYear,
-      final DateTime startDate,
-      final DateTime endDate,
-      final int createdBy,
-      final DateTime createdDate,
-      final bool isActive) = _$FYearImpl;
+      final int? fYearId,
+      final String? fYear,
+      final DateTime? startDate,
+      final DateTime? endDate,
+      final int? createdBy,
+      final DateTime? createdDate,
+      final int? isActive) = _$FYearImpl;
 
   factory _FYear.fromJson(Map<String, dynamic> json) = _$FYearImpl.fromJson;
 
   @override
-  int get fYearId;
+  int? get fYearId;
   @override
-  String get fYear;
+  String? get fYear;
   @override
-  DateTime get startDate;
+  DateTime? get startDate;
   @override
-  DateTime get endDate;
+  DateTime? get endDate;
   @override
-  int get createdBy;
+  int? get createdBy;
   @override
-  DateTime get createdDate;
+  DateTime? get createdDate;
   @override
-  bool get isActive;
+  int? get isActive;
   @override
   @JsonKey(ignore: true)
   _$$FYearImplCopyWith<_$FYearImpl> get copyWith =>

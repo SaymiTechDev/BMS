@@ -30,10 +30,10 @@ class Contacts with _$Contacts {
     String? uniqueCode,
     int? createdBy,
     DateTime? createdDate,
-    bool? isActive,
+    int? isActive,
   ) = _Contacts;
   factory Contacts.fromJson(Map<String, Object?> json) =>
       _$ContactsFromJson(json);
 }
 
-enum ContactType { company, individual }
+enum ContactType { C, I }

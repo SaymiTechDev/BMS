@@ -2,7 +2,6 @@ import 'package:bms/app/controller/contacts_controller.dart';
 import 'package:bms/app/data/app_colors.dart';
 import 'package:bms/app/data/contacts/contacts.dart';
 import 'package:bms/app/data/values.dart';
-import 'package:bms/app/widgets/data_grids/pluto_grid.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:reactive_forms/reactive_forms.dart';
@@ -35,7 +34,7 @@ class NewContact extends GetView<ContactsController> {
                                     fontWeight: FontWeight.w500, fontSize: 14)),
                             formControlName: 'type',
                             activeColor: AppColors.blue,
-                            value: ContactType.individual,
+                            value: ContactType.I,
                             onChanged: (v) {},
                           ),
                         ),
@@ -48,7 +47,7 @@ class NewContact extends GetView<ContactsController> {
                                     fontWeight: FontWeight.w500, fontSize: 14)),
                             formControlName: 'type',
                             activeColor: AppColors.blue,
-                            value: ContactType.company,
+                            value: ContactType.C,
                             onChanged: (v) {},
                           ),
                         )
@@ -181,6 +180,9 @@ class NewContact extends GetView<ContactsController> {
                     ),
                   ],
                 ),
+                const SizedBox(
+                  width: 40,
+                ),
                 Column(
                   children: [
                     SizedBox(
@@ -234,9 +236,9 @@ class NewContact extends GetView<ContactsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "Pan No",
+                            labelStyle: TextStyle(color: AppColors.blue),
                             border: const UnderlineInputBorder(
-                              borderSide: BorderSide.none,
-                            ),
+                                borderSide: BorderSide.none),
                             focusedBorder: UnderlineInputBorder(
                               borderSide: BorderSide(color: AppColors.blue),
                             )
@@ -254,9 +256,9 @@ class NewContact extends GetView<ContactsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "Payment Terms",
+                            labelStyle: TextStyle(color: AppColors.blue),
                             border: const UnderlineInputBorder(
-                              borderSide: BorderSide(),
-                            ),
+                                borderSide: BorderSide.none),
                             focusedBorder: UnderlineInputBorder(
                               borderSide: BorderSide(color: AppColors.blue),
                             )
@@ -274,9 +276,9 @@ class NewContact extends GetView<ContactsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "Discount",
+                            labelStyle: TextStyle(color: AppColors.blue),
                             border: const UnderlineInputBorder(
-                              borderSide: BorderSide.none,
-                            ),
+                                borderSide: BorderSide.none),
                             focusedBorder: UnderlineInputBorder(
                               borderSide: BorderSide(color: AppColors.blue),
                             )
@@ -306,6 +308,9 @@ class NewContact extends GetView<ContactsController> {
                     ),
                   ],
                 ),
+                const SizedBox(
+                  width: 40,
+                ),
                 Column(
                   children: [
                     SizedBox(
@@ -318,9 +323,9 @@ class NewContact extends GetView<ContactsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "Bank",
+                            labelStyle: TextStyle(color: AppColors.blue),
                             border: const UnderlineInputBorder(
-                              borderSide: BorderSide(),
-                            ),
+                                borderSide: BorderSide.none),
                             focusedBorder: UnderlineInputBorder(
                               borderSide: BorderSide(color: AppColors.blue),
                             )
@@ -338,9 +343,9 @@ class NewContact extends GetView<ContactsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "Benificiary Name",
+                            labelStyle: TextStyle(color: AppColors.blue),
                             border: const UnderlineInputBorder(
-                              borderSide: BorderSide(),
-                            ),
+                                borderSide: BorderSide.none),
                             focusedBorder: UnderlineInputBorder(
                               borderSide: BorderSide(color: AppColors.blue),
                             )
@@ -358,9 +363,9 @@ class NewContact extends GetView<ContactsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "Account Number",
+                            labelStyle: TextStyle(color: AppColors.blue),
                             border: const UnderlineInputBorder(
-                              borderSide: BorderSide(),
-                            ),
+                                borderSide: BorderSide.none),
                             focusedBorder: UnderlineInputBorder(
                               borderSide: BorderSide(color: AppColors.blue),
                             )
@@ -378,9 +383,9 @@ class NewContact extends GetView<ContactsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "Ifsc Code",
+                            labelStyle: TextStyle(color: AppColors.blue),
                             border: const UnderlineInputBorder(
-                              borderSide: BorderSide(),
-                            ),
+                                borderSide: BorderSide.none),
                             focusedBorder: UnderlineInputBorder(
                               borderSide: BorderSide(color: AppColors.blue),
                             )
@@ -398,9 +403,9 @@ class NewContact extends GetView<ContactsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "UPI ID",
+                            labelStyle: TextStyle(color: AppColors.blue),
                             border: const UnderlineInputBorder(
-                              borderSide: BorderSide(),
-                            ),
+                                borderSide: BorderSide.none),
                             focusedBorder: UnderlineInputBorder(
                               borderSide: BorderSide(color: AppColors.blue),
                             )
@@ -410,6 +415,65 @@ class NewContact extends GetView<ContactsController> {
                     ),
                   ],
                 ),
+                const SizedBox(
+                  width: 40,
+                ),
+                Column(
+                  children: [
+                    SizedBox(
+                      width: 200,
+                      child: ReactiveTextField(
+                        formControlName: 'accountPayable',
+                        style: const TextStyle(fontSize: 14),
+                        cursorColor: AppColors.lBlue,
+                        // cursorHeight: 20,
+                        textAlignVertical: TextAlignVertical.center,
+                        decoration: InputDecoration(
+                            labelText: "Account Payable",
+                            labelStyle: TextStyle(color: AppColors.blue),
+                            border: const UnderlineInputBorder(
+                                borderSide: BorderSide.none),
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: AppColors.blue),
+                            )
+                            // hintText: 'Username',
+                            ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 200,
+                      child: ReactiveTextField(
+                        formControlName: 'accountReceivable',
+                        style: const TextStyle(fontSize: 14),
+                        cursorColor: AppColors.lBlue,
+                        // cursorHeight: 20,
+                        textAlignVertical: TextAlignVertical.center,
+                        decoration: InputDecoration(
+                            labelText: "Account Receivable",
+                            labelStyle: TextStyle(color: AppColors.blue),
+                            border: const UnderlineInputBorder(
+                                borderSide: BorderSide.none),
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: AppColors.blue),
+                            )
+                            // hintText: 'Username',
+                            ),
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          "Active ",
+                          style: TextStyle(color: AppColors.blue),
+                        ),
+                        ReactiveCheckbox(
+                          formControlName: "isActive",
+                          activeColor: AppColors.pGreen,
+                        ),
+                      ],
+                    )
+                  ],
+                ),
               ],
             ),
           ),
@@ -417,25 +481,61 @@ class NewContact extends GetView<ContactsController> {
         const SizedBox(
           height: 15,
         ),
-        SizedBox(
-            height: 175,
-            width: Get.width,
-            child: PlutoGridDemo(controller.addressColumns,
-                controller.addressRows, false, "Address")),
-        const SizedBox(
-          height: 15,
-        ),
         Row(
           children: [
             ElevatedButton(
                 onPressed: () {
-                  controller.addContacts();
-                  Get.back();
+                  var resp = controller.addContacts();
+                  if (resp != null) {
+                    Get.back();
+                  } else {
+                    Get.dialog(
+                      AlertDialog(
+                        title: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            IconButton(
+                              icon: const Icon(
+                                Icons.electrical_services_rounded,
+                                size: 24,
+                                color: Color(0XFFe74c3c),
+                              ),
+                              onPressed: () {},
+                            ),
+                            const SizedBox(width: 30),
+                            const Text(
+                              "Error",
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                        content: const Text(
+                          "Contact not added",
+                          style: TextStyle(fontSize: 14.0),
+                        ),
+                        actions: [
+                          Align(
+                            alignment: Alignment.bottomRight,
+                            child: TextButton(
+                              onPressed: () {
+                                if (Get.isDialogOpen!) Get.back();
+                              },
+                              child: const Text('Okay'),
+                            ),
+                          ),
+                        ],
+                      ),
+                      barrierDismissible: true,
+                    );
+                  }
                 },
                 style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.pGreen,
                     foregroundColor: AppColors.white),
-                child: const Text("Save"))
+                child: const Text("Add"))
           ],
         )
       ],

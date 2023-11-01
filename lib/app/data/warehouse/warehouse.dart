@@ -6,13 +6,13 @@ part 'warehouse.g.dart';
 @freezed
 class Warehouse with _$Warehouse {
   const factory Warehouse(
-    int warehouseId,
-    String warehouseCode,
-    String warehouse,
-    String location,
-    int createdBy,
-    DateTime createdDate,
-    bool isActive,
+    int? warehouseId,
+    String? warehouseCode,
+    String? warehouse,
+    String? location,
+    int? createdBy,
+    DateTime? createdDate,
+    int? isActive,
   ) = _Warehouse;
 
   factory Warehouse.fromJson(Map<String, Object?> json) =>

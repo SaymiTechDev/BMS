@@ -20,21 +20,21 @@ Companies _$CompaniesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Companies {
-  int get companyId => throw _privateConstructorUsedError;
-  String get companyName => throw _privateConstructorUsedError;
-  String get displayName => throw _privateConstructorUsedError;
-  String get phone => throw _privateConstructorUsedError;
-  String get mobile => throw _privateConstructorUsedError;
-  String get email => throw _privateConstructorUsedError;
-  String get website => throw _privateConstructorUsedError;
-  String get gstTreatment => throw _privateConstructorUsedError;
-  String get gstNo => throw _privateConstructorUsedError;
-  String get panNo => throw _privateConstructorUsedError;
-  int get addressId => throw _privateConstructorUsedError;
-  String get uniqueCode => throw _privateConstructorUsedError;
-  int get createdBy => throw _privateConstructorUsedError;
-  DateTime get createdDate => throw _privateConstructorUsedError;
-  bool get isActive => throw _privateConstructorUsedError;
+  int? get companyId => throw _privateConstructorUsedError;
+  String? get companyName => throw _privateConstructorUsedError;
+  String? get displayName => throw _privateConstructorUsedError;
+  String? get phone => throw _privateConstructorUsedError;
+  String? get mobile => throw _privateConstructorUsedError;
+  String? get email => throw _privateConstructorUsedError;
+  String? get website => throw _privateConstructorUsedError;
+  String? get gstTreatment => throw _privateConstructorUsedError;
+  String? get gstNo => throw _privateConstructorUsedError;
+  String? get panNo => throw _privateConstructorUsedError;
+  int? get addressId => throw _privateConstructorUsedError;
+  String? get uniqueCode => throw _privateConstructorUsedError;
+  int? get createdBy => throw _privateConstructorUsedError;
+  DateTime? get createdDate => throw _privateConstructorUsedError;
+  int? get isActive => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -48,21 +48,21 @@ abstract class $CompaniesCopyWith<$Res> {
       _$CompaniesCopyWithImpl<$Res, Companies>;
   @useResult
   $Res call(
-      {int companyId,
-      String companyName,
-      String displayName,
-      String phone,
-      String mobile,
-      String email,
-      String website,
-      String gstTreatment,
-      String gstNo,
-      String panNo,
-      int addressId,
-      String uniqueCode,
-      int createdBy,
-      DateTime createdDate,
-      bool isActive});
+      {int? companyId,
+      String? companyName,
+      String? displayName,
+      String? phone,
+      String? mobile,
+      String? email,
+      String? website,
+      String? gstTreatment,
+      String? gstNo,
+      String? panNo,
+      int? addressId,
+      String? uniqueCode,
+      int? createdBy,
+      DateTime? createdDate,
+      int? isActive});
 }
 
 /// @nodoc
@@ -78,83 +78,83 @@ class _$CompaniesCopyWithImpl<$Res, $Val extends Companies>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? companyId = null,
-    Object? companyName = null,
-    Object? displayName = null,
-    Object? phone = null,
-    Object? mobile = null,
-    Object? email = null,
-    Object? website = null,
-    Object? gstTreatment = null,
-    Object? gstNo = null,
-    Object? panNo = null,
-    Object? addressId = null,
-    Object? uniqueCode = null,
-    Object? createdBy = null,
-    Object? createdDate = null,
-    Object? isActive = null,
+    Object? companyId = freezed,
+    Object? companyName = freezed,
+    Object? displayName = freezed,
+    Object? phone = freezed,
+    Object? mobile = freezed,
+    Object? email = freezed,
+    Object? website = freezed,
+    Object? gstTreatment = freezed,
+    Object? gstNo = freezed,
+    Object? panNo = freezed,
+    Object? addressId = freezed,
+    Object? uniqueCode = freezed,
+    Object? createdBy = freezed,
+    Object? createdDate = freezed,
+    Object? isActive = freezed,
   }) {
     return _then(_value.copyWith(
-      companyId: null == companyId
+      companyId: freezed == companyId
           ? _value.companyId
           : companyId // ignore: cast_nullable_to_non_nullable
-              as int,
-      companyName: null == companyName
+              as int?,
+      companyName: freezed == companyName
           ? _value.companyName
           : companyName // ignore: cast_nullable_to_non_nullable
-              as String,
-      displayName: null == displayName
+              as String?,
+      displayName: freezed == displayName
           ? _value.displayName
           : displayName // ignore: cast_nullable_to_non_nullable
-              as String,
-      phone: null == phone
+              as String?,
+      phone: freezed == phone
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
-              as String,
-      mobile: null == mobile
+              as String?,
+      mobile: freezed == mobile
           ? _value.mobile
           : mobile // ignore: cast_nullable_to_non_nullable
-              as String,
-      email: null == email
+              as String?,
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      website: null == website
+              as String?,
+      website: freezed == website
           ? _value.website
           : website // ignore: cast_nullable_to_non_nullable
-              as String,
-      gstTreatment: null == gstTreatment
+              as String?,
+      gstTreatment: freezed == gstTreatment
           ? _value.gstTreatment
           : gstTreatment // ignore: cast_nullable_to_non_nullable
-              as String,
-      gstNo: null == gstNo
+              as String?,
+      gstNo: freezed == gstNo
           ? _value.gstNo
           : gstNo // ignore: cast_nullable_to_non_nullable
-              as String,
-      panNo: null == panNo
+              as String?,
+      panNo: freezed == panNo
           ? _value.panNo
           : panNo // ignore: cast_nullable_to_non_nullable
-              as String,
-      addressId: null == addressId
+              as String?,
+      addressId: freezed == addressId
           ? _value.addressId
           : addressId // ignore: cast_nullable_to_non_nullable
-              as int,
-      uniqueCode: null == uniqueCode
+              as int?,
+      uniqueCode: freezed == uniqueCode
           ? _value.uniqueCode
           : uniqueCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdBy: null == createdBy
+              as String?,
+      createdBy: freezed == createdBy
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
-              as int,
-      createdDate: null == createdDate
+              as int?,
+      createdDate: freezed == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      isActive: null == isActive
+              as DateTime?,
+      isActive: freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int?,
     ) as $Val);
   }
 }
@@ -168,21 +168,21 @@ abstract class _$$CompaniesImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int companyId,
-      String companyName,
-      String displayName,
-      String phone,
-      String mobile,
-      String email,
-      String website,
-      String gstTreatment,
-      String gstNo,
-      String panNo,
-      int addressId,
-      String uniqueCode,
-      int createdBy,
-      DateTime createdDate,
-      bool isActive});
+      {int? companyId,
+      String? companyName,
+      String? displayName,
+      String? phone,
+      String? mobile,
+      String? email,
+      String? website,
+      String? gstTreatment,
+      String? gstNo,
+      String? panNo,
+      int? addressId,
+      String? uniqueCode,
+      int? createdBy,
+      DateTime? createdDate,
+      int? isActive});
 }
 
 /// @nodoc
@@ -196,83 +196,83 @@ class __$$CompaniesImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? companyId = null,
-    Object? companyName = null,
-    Object? displayName = null,
-    Object? phone = null,
-    Object? mobile = null,
-    Object? email = null,
-    Object? website = null,
-    Object? gstTreatment = null,
-    Object? gstNo = null,
-    Object? panNo = null,
-    Object? addressId = null,
-    Object? uniqueCode = null,
-    Object? createdBy = null,
-    Object? createdDate = null,
-    Object? isActive = null,
+    Object? companyId = freezed,
+    Object? companyName = freezed,
+    Object? displayName = freezed,
+    Object? phone = freezed,
+    Object? mobile = freezed,
+    Object? email = freezed,
+    Object? website = freezed,
+    Object? gstTreatment = freezed,
+    Object? gstNo = freezed,
+    Object? panNo = freezed,
+    Object? addressId = freezed,
+    Object? uniqueCode = freezed,
+    Object? createdBy = freezed,
+    Object? createdDate = freezed,
+    Object? isActive = freezed,
   }) {
     return _then(_$CompaniesImpl(
-      null == companyId
+      freezed == companyId
           ? _value.companyId
           : companyId // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == companyName
+              as int?,
+      freezed == companyName
           ? _value.companyName
           : companyName // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == displayName
+              as String?,
+      freezed == displayName
           ? _value.displayName
           : displayName // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == phone
+              as String?,
+      freezed == phone
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == mobile
+              as String?,
+      freezed == mobile
           ? _value.mobile
           : mobile // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == email
+              as String?,
+      freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == website
+              as String?,
+      freezed == website
           ? _value.website
           : website // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == gstTreatment
+              as String?,
+      freezed == gstTreatment
           ? _value.gstTreatment
           : gstTreatment // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == gstNo
+              as String?,
+      freezed == gstNo
           ? _value.gstNo
           : gstNo // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == panNo
+              as String?,
+      freezed == panNo
           ? _value.panNo
           : panNo // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == addressId
+              as String?,
+      freezed == addressId
           ? _value.addressId
           : addressId // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == uniqueCode
+              as int?,
+      freezed == uniqueCode
           ? _value.uniqueCode
           : uniqueCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == createdBy
+              as String?,
+      freezed == createdBy
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == createdDate
+              as int?,
+      freezed == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      null == isActive
+              as DateTime?,
+      freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int?,
     ));
   }
 }
@@ -301,35 +301,35 @@ class _$CompaniesImpl implements _Companies {
       _$$CompaniesImplFromJson(json);
 
   @override
-  final int companyId;
+  final int? companyId;
   @override
-  final String companyName;
+  final String? companyName;
   @override
-  final String displayName;
+  final String? displayName;
   @override
-  final String phone;
+  final String? phone;
   @override
-  final String mobile;
+  final String? mobile;
   @override
-  final String email;
+  final String? email;
   @override
-  final String website;
+  final String? website;
   @override
-  final String gstTreatment;
+  final String? gstTreatment;
   @override
-  final String gstNo;
+  final String? gstNo;
   @override
-  final String panNo;
+  final String? panNo;
   @override
-  final int addressId;
+  final int? addressId;
   @override
-  final String uniqueCode;
+  final String? uniqueCode;
   @override
-  final int createdBy;
+  final int? createdBy;
   @override
-  final DateTime createdDate;
+  final DateTime? createdDate;
   @override
-  final bool isActive;
+  final int? isActive;
 
   @override
   String toString() {
@@ -403,55 +403,55 @@ class _$CompaniesImpl implements _Companies {
 
 abstract class _Companies implements Companies {
   const factory _Companies(
-      final int companyId,
-      final String companyName,
-      final String displayName,
-      final String phone,
-      final String mobile,
-      final String email,
-      final String website,
-      final String gstTreatment,
-      final String gstNo,
-      final String panNo,
-      final int addressId,
-      final String uniqueCode,
-      final int createdBy,
-      final DateTime createdDate,
-      final bool isActive) = _$CompaniesImpl;
+      final int? companyId,
+      final String? companyName,
+      final String? displayName,
+      final String? phone,
+      final String? mobile,
+      final String? email,
+      final String? website,
+      final String? gstTreatment,
+      final String? gstNo,
+      final String? panNo,
+      final int? addressId,
+      final String? uniqueCode,
+      final int? createdBy,
+      final DateTime? createdDate,
+      final int? isActive) = _$CompaniesImpl;
 
   factory _Companies.fromJson(Map<String, dynamic> json) =
       _$CompaniesImpl.fromJson;
 
   @override
-  int get companyId;
+  int? get companyId;
   @override
-  String get companyName;
+  String? get companyName;
   @override
-  String get displayName;
+  String? get displayName;
   @override
-  String get phone;
+  String? get phone;
   @override
-  String get mobile;
+  String? get mobile;
   @override
-  String get email;
+  String? get email;
   @override
-  String get website;
+  String? get website;
   @override
-  String get gstTreatment;
+  String? get gstTreatment;
   @override
-  String get gstNo;
+  String? get gstNo;
   @override
-  String get panNo;
+  String? get panNo;
   @override
-  int get addressId;
+  int? get addressId;
   @override
-  String get uniqueCode;
+  String? get uniqueCode;
   @override
-  int get createdBy;
+  int? get createdBy;
   @override
-  DateTime get createdDate;
+  DateTime? get createdDate;
   @override
-  bool get isActive;
+  int? get isActive;
   @override
   @JsonKey(ignore: true)
   _$$CompaniesImplCopyWith<_$CompaniesImpl> get copyWith =>

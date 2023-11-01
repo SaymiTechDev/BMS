@@ -8,13 +8,15 @@ part of 'productGroup.dart';
 
 _$ProductGroupImpl _$$ProductGroupImplFromJson(Map<String, dynamic> json) =>
     _$ProductGroupImpl(
-      json['productGroupId'] as int,
-      json['groupName'] as String,
-      json['purchaseAccount'] as String,
-      json['salesAccount'] as String,
-      json['createdBy'] as int,
-      DateTime.parse(json['createdDate'] as String),
-      json['isActive'] as bool,
+      json['productGroupId'] as int?,
+      json['groupName'] as String?,
+      json['purchaseAccount'] as String?,
+      json['salesAccount'] as String?,
+      json['createdBy'] as int?,
+      json['createdDate'] == null
+          ? null
+          : DateTime.parse(json['createdDate'] as String),
+      json['isActive'] as int?,
     );
 
 Map<String, dynamic> _$$ProductGroupImplToJson(_$ProductGroupImpl instance) =>
@@ -24,6 +26,6 @@ Map<String, dynamic> _$$ProductGroupImplToJson(_$ProductGroupImpl instance) =>
       'purchaseAccount': instance.purchaseAccount,
       'salesAccount': instance.salesAccount,
       'createdBy': instance.createdBy,
-      'createdDate': instance.createdDate.toIso8601String(),
+      'createdDate': instance.createdDate?.toIso8601String(),
       'isActive': instance.isActive,
     };

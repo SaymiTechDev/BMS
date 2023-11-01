@@ -34,7 +34,7 @@ _$ContactsImpl _$$ContactsImplFromJson(Map<String, dynamic> json) =>
       json['createdDate'] == null
           ? null
           : DateTime.parse(json['createdDate'] as String),
-      json['isActive'] as bool?,
+      json['isActive'] as int?,
     );
 
 Map<String, dynamic> _$$ContactsImplToJson(_$ContactsImpl instance) =>
@@ -67,6 +67,6 @@ Map<String, dynamic> _$$ContactsImplToJson(_$ContactsImpl instance) =>
     };
 
 const _$ContactTypeEnumMap = {
-  ContactType.company: 'company',
-  ContactType.individual: 'individual',
+  ContactType.C: 'C',
+  ContactType.I: 'I',
 };

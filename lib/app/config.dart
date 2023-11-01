@@ -8,6 +8,8 @@ class EndPoints {
   static const String postUsers = 'user/add';
   static const String getContacts = 'contacts/all';
   static const String postContacts = 'contacts/add';
+  static const String getProducts = 'products/all';
+  static const String postProducts = 'products/add';
   static const String getCompanies = 'companies/all';
   static const String postCompanies = 'companies/add';
   static const String getCoa = 'coa/all';

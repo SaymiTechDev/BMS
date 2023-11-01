@@ -20,12 +20,12 @@ States _$StatesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$States {
-  int get stateId => throw _privateConstructorUsedError;
-  String get stateCode => throw _privateConstructorUsedError;
-  String get state => throw _privateConstructorUsedError;
-  int get createdBy => throw _privateConstructorUsedError;
-  DateTime get createdDate => throw _privateConstructorUsedError;
-  bool get isActive => throw _privateConstructorUsedError;
+  int? get stateId => throw _privateConstructorUsedError;
+  String? get stateCode => throw _privateConstructorUsedError;
+  String? get state => throw _privateConstructorUsedError;
+  int? get createdBy => throw _privateConstructorUsedError;
+  DateTime? get createdDate => throw _privateConstructorUsedError;
+  int? get isActive => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,12 +38,12 @@ abstract class $StatesCopyWith<$Res> {
       _$StatesCopyWithImpl<$Res, States>;
   @useResult
   $Res call(
-      {int stateId,
-      String stateCode,
-      String state,
-      int createdBy,
-      DateTime createdDate,
-      bool isActive});
+      {int? stateId,
+      String? stateCode,
+      String? state,
+      int? createdBy,
+      DateTime? createdDate,
+      int? isActive});
 }
 
 /// @nodoc
@@ -59,38 +59,38 @@ class _$StatesCopyWithImpl<$Res, $Val extends States>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? stateId = null,
-    Object? stateCode = null,
-    Object? state = null,
-    Object? createdBy = null,
-    Object? createdDate = null,
-    Object? isActive = null,
+    Object? stateId = freezed,
+    Object? stateCode = freezed,
+    Object? state = freezed,
+    Object? createdBy = freezed,
+    Object? createdDate = freezed,
+    Object? isActive = freezed,
   }) {
     return _then(_value.copyWith(
-      stateId: null == stateId
+      stateId: freezed == stateId
           ? _value.stateId
           : stateId // ignore: cast_nullable_to_non_nullable
-              as int,
-      stateCode: null == stateCode
+              as int?,
+      stateCode: freezed == stateCode
           ? _value.stateCode
           : stateCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      state: null == state
+              as String?,
+      state: freezed == state
           ? _value.state
           : state // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdBy: null == createdBy
+              as String?,
+      createdBy: freezed == createdBy
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
-              as int,
-      createdDate: null == createdDate
+              as int?,
+      createdDate: freezed == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      isActive: null == isActive
+              as DateTime?,
+      isActive: freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int?,
     ) as $Val);
   }
 }
@@ -103,12 +103,12 @@ abstract class _$$StatesImplCopyWith<$Res> implements $StatesCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {int stateId,
-      String stateCode,
-      String state,
-      int createdBy,
-      DateTime createdDate,
-      bool isActive});
+      {int? stateId,
+      String? stateCode,
+      String? state,
+      int? createdBy,
+      DateTime? createdDate,
+      int? isActive});
 }
 
 /// @nodoc
@@ -122,38 +122,38 @@ class __$$StatesImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? stateId = null,
-    Object? stateCode = null,
-    Object? state = null,
-    Object? createdBy = null,
-    Object? createdDate = null,
-    Object? isActive = null,
+    Object? stateId = freezed,
+    Object? stateCode = freezed,
+    Object? state = freezed,
+    Object? createdBy = freezed,
+    Object? createdDate = freezed,
+    Object? isActive = freezed,
   }) {
     return _then(_$StatesImpl(
-      null == stateId
+      freezed == stateId
           ? _value.stateId
           : stateId // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == stateCode
+              as int?,
+      freezed == stateCode
           ? _value.stateCode
           : stateCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == state
+              as String?,
+      freezed == state
           ? _value.state
           : state // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == createdBy
+              as String?,
+      freezed == createdBy
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == createdDate
+              as int?,
+      freezed == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      null == isActive
+              as DateTime?,
+      freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int?,
     ));
   }
 }
@@ -168,17 +168,17 @@ class _$StatesImpl implements _States {
       _$$StatesImplFromJson(json);
 
   @override
-  final int stateId;
+  final int? stateId;
   @override
-  final String stateCode;
+  final String? stateCode;
   @override
-  final String state;
+  final String? state;
   @override
-  final int createdBy;
+  final int? createdBy;
   @override
-  final DateTime createdDate;
+  final DateTime? createdDate;
   @override
-  final bool isActive;
+  final int? isActive;
 
   @override
   String toString() {
@@ -223,27 +223,27 @@ class _$StatesImpl implements _States {
 
 abstract class _States implements States {
   const factory _States(
-      final int stateId,
-      final String stateCode,
-      final String state,
-      final int createdBy,
-      final DateTime createdDate,
-      final bool isActive) = _$StatesImpl;
+      final int? stateId,
+      final String? stateCode,
+      final String? state,
+      final int? createdBy,
+      final DateTime? createdDate,
+      final int? isActive) = _$StatesImpl;
 
   factory _States.fromJson(Map<String, dynamic> json) = _$StatesImpl.fromJson;
 
   @override
-  int get stateId;
+  int? get stateId;
   @override
-  String get stateCode;
+  String? get stateCode;
   @override
-  String get state;
+  String? get state;
   @override
-  int get createdBy;
+  int? get createdBy;
   @override
-  DateTime get createdDate;
+  DateTime? get createdDate;
   @override
-  bool get isActive;
+  int? get isActive;
   @override
   @JsonKey(ignore: true)
   _$$StatesImplCopyWith<_$StatesImpl> get copyWith =>

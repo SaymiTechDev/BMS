@@ -1,6 +1,5 @@
 import 'package:bms/app/controller/slaes_controller.dart';
 import 'package:bms/app/data/app_colors.dart';
-import 'package:bms/app/widgets/data_grids/pluto_grid.dart';
 import 'package:bms/app/widgets/screen_container.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -37,11 +36,78 @@ class SalesScreen extends GetView<SalesController> {
           ),
         ),
         const Divider(),
-        Flexible(
-          flex: 1,
-          child: PlutoGridDemo(
-              controller.salesColumns, controller.salesRows, true, "Sales"),
-        )
+        Expanded(
+          child: GridView.count(
+            crossAxisCount: 3,
+            children: List.generate(3, (index) {
+              return Card(
+                semanticContainer: true,
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                color: Colors.white70,
+                margin: const EdgeInsets.all(10),
+                child: ListView(
+                  children: [
+                    const ListTile(
+                        title: Text(
+                      // overflow: TextOverflow.ellipsis,
+                      "Sales Order",
+                      style:
+                          TextStyle(fontWeight: FontWeight.w800, fontSize: 25),
+                    )),
+                    ListTile(
+                      leading: Icon(
+                        Icons.phone,
+                        size: 20,
+                        color: AppColors.dBlue,
+                      ),
+                      title: const Text(
+                        "8870746955",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w800, fontSize: 12),
+                      ),
+                    ),
+                    ListTile(
+                      leading: Icon(
+                        Icons.mail,
+                        size: 20,
+                        color: AppColors.dBlue,
+                      ),
+                      title: const Text(
+                        "ramrajcotton@outlook.com",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w800, fontSize: 12),
+                      ),
+                    ),
+                    ListTile(
+                      leading: Icon(
+                        Icons.pin_drop_outlined,
+                        size: 20,
+                        color: AppColors.dBlue,
+                      ),
+                      title: const Text(
+                        "10,Ramraj V Tower,Sengunthapuram,Mangalam Road, Tiruppur - 637001",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w800, fontSize: 12),
+                      ),
+                    ),
+                    ListTile(
+                      leading: Icon(
+                        Icons.currency_rupee_outlined,
+                        size: 20,
+                        color: AppColors.dBlue,
+                      ),
+                      title: const Text(
+                        "50000",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w800, fontSize: 12),
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            }),
+          ),
+        ),
       ],
     ));
   }

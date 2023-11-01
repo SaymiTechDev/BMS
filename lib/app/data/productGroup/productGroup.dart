@@ -6,13 +6,13 @@ part 'productGroup.g.dart';
 @freezed
 class ProductGroup with _$ProductGroup {
   const factory ProductGroup(
-    int productGroupId,
-    String groupName,
-    String purchaseAccount,
-    String salesAccount,
-    int createdBy,
-    DateTime createdDate,
-    bool isActive,
+    int? productGroupId,
+    String? groupName,
+    String? purchaseAccount,
+    String? salesAccount,
+    int? createdBy,
+    DateTime? createdDate,
+    int? isActive,
   ) = _ProductGroup;
 
   factory ProductGroup.fromJson(Map<String, Object?> json) =>

@@ -1,14 +1,16 @@
 import 'package:bms/app/data/contacts/contacts.dart';
 import 'package:bms/app/data/values.dart';
+import 'package:bms/app/services/api_service.dart';
 import 'package:get/get.dart';
 import 'package:pluto_grid/pluto_grid.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
 class ContactsController extends GetxController {
-  var contactType = ContactType.company;
+  var contactType = ContactType.C;
+  final _apiService = Get.find<ApiService>();
   final vCardForm = FormGroup(
     {
-      'type': FormControl<ContactType>(value: ContactType.company),
+      'type': FormControl<ContactType>(value: ContactType.C),
       'company': FormControl<String>(),
       'displayName': FormControl<String>(),
       'phone': FormControl<String>(),
@@ -28,6 +30,7 @@ class ContactsController extends GetxController {
       'upiId': FormControl<String>(),
       'accountPayable': FormControl<String>(),
       'accountReceivable': FormControl<String>(),
+      'isActive': FormControl<bool>(value: true),
     },
   );
 
@@ -37,13 +40,13 @@ class ContactsController extends GetxController {
     PlutoColumn(
       title: 'Id',
       field: 'contactId',
-      hide: true,
+      enableRowChecked: true,
       type: PlutoColumnType.text(),
     ),
     PlutoColumn(
       title: 'Contact Code',
       field: 'uniqueCode',
-      enableRowChecked: true,
+      hide: true,
       type: PlutoColumnType.text(),
     ),
     PlutoColumn(
@@ -92,7 +95,6 @@ class ContactsController extends GetxController {
       type: PlutoColumnType.text(),
     ),
   ];
-  RxList<PlutoRow> contactRows = <PlutoRow>[].obs;
 
   final List<PlutoColumn> addressColumns = <PlutoColumn>[
     PlutoColumn(
@@ -169,14 +171,22 @@ class ContactsController extends GetxController {
   RxList<PlutoRow> addressRows = <PlutoRow>[].obs;
 
   @override
-  onInit() {
+  onInit() async {
     super.onInit();
+    var contacts = await _apiService.getContacts();
+    if (contacts != null) {
+      contacts.forEach((json) {
+        contactList.add(Contacts.fromJson(json));
+      });
+      print(contactList);
+    }
+    update();
   }
 
-  addContacts() {
+  addContacts() async {
     contactType = vCardForm.control("type").value;
     var contact = Contacts(
-        null,
+        contactList.length + 1,
         contactType,
         vCardForm.control("company").value,
         vCardForm.control("displayName").value,
@@ -200,29 +210,32 @@ class ContactsController extends GetxController {
         null,
         1,
         null,
-        true);
+        1);
     contactList.add(contact);
-
-    contactRows(contactList
-        .map((row) => PlutoRow(
-              cells: {
-                'contactId': PlutoCell(value: row.contactId),
-                'companyName': PlutoCell(value: row.companyName),
-                'contactType': PlutoCell(value: row.contactType),
-                'displayName': PlutoCell(value: row.displayName),
-                'phone': PlutoCell(value: row.phone),
-                'mobile': PlutoCell(value: row.mobile),
-                'email': PlutoCell(value: row.email),
-                'website': PlutoCell(value: row.website),
-                'gstNo': PlutoCell(value: row.gstNo),
-                'panNo': PlutoCell(value: row.panNo),
-              },
-            ))
-        .toList());
-    //rows.add(contactRows.last);
+    dynamic json = contactList.map((element) => element.toJson()).toList();
+    String resp = await _apiService.createContacts(json);
     clearForm();
-    update();
+    return resp;
   }
+
+  List<PlutoRow> genContactRow(List<Contacts> row) => List.generate(
+      row.length,
+      (index) => PlutoRow(cells: {
+            'contactId': PlutoCell(value: row[index].contactId),
+            'uniqueCode': PlutoCell(value: row[index].uniqueCode),
+            'companyName': PlutoCell(value: row[index].companyName),
+            'contactType': PlutoCell(
+                value: row[index].contactType == ContactType.I
+                    ? 'Individual'
+                    : 'Company'),
+            'displayName': PlutoCell(value: row[index].displayName),
+            'phone': PlutoCell(value: row[index].phone),
+            'mobile': PlutoCell(value: row[index].mobile),
+            'email': PlutoCell(value: row[index].email),
+            'website': PlutoCell(value: row[index].website),
+            'gstNo': PlutoCell(value: row[index].gstNo),
+            'panNo': PlutoCell(value: row[index].panNo),
+          }));
 
   clearForm() {
     vCardForm.control("company").value = "";

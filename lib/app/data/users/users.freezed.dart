@@ -20,14 +20,14 @@ Users _$UsersFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Users {
-  int get userId => throw _privateConstructorUsedError;
-  String get uomName => throw _privateConstructorUsedError;
-  String get password => throw _privateConstructorUsedError;
-  int get createdBy => throw _privateConstructorUsedError;
-  DateTime get createdDate => throw _privateConstructorUsedError;
-  DateTime get lastSignedIn => throw _privateConstructorUsedError;
-  DateTime get lastSignedOut => throw _privateConstructorUsedError;
-  bool get isActive => throw _privateConstructorUsedError;
+  int? get userId => throw _privateConstructorUsedError;
+  String? get uomName => throw _privateConstructorUsedError;
+  String? get password => throw _privateConstructorUsedError;
+  int? get createdBy => throw _privateConstructorUsedError;
+  DateTime? get createdDate => throw _privateConstructorUsedError;
+  DateTime? get lastSignedIn => throw _privateConstructorUsedError;
+  DateTime? get lastSignedOut => throw _privateConstructorUsedError;
+  int? get isActive => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -40,14 +40,14 @@ abstract class $UsersCopyWith<$Res> {
       _$UsersCopyWithImpl<$Res, Users>;
   @useResult
   $Res call(
-      {int userId,
-      String uomName,
-      String password,
-      int createdBy,
-      DateTime createdDate,
-      DateTime lastSignedIn,
-      DateTime lastSignedOut,
-      bool isActive});
+      {int? userId,
+      String? uomName,
+      String? password,
+      int? createdBy,
+      DateTime? createdDate,
+      DateTime? lastSignedIn,
+      DateTime? lastSignedOut,
+      int? isActive});
 }
 
 /// @nodoc
@@ -63,48 +63,48 @@ class _$UsersCopyWithImpl<$Res, $Val extends Users>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? userId = null,
-    Object? uomName = null,
-    Object? password = null,
-    Object? createdBy = null,
-    Object? createdDate = null,
-    Object? lastSignedIn = null,
-    Object? lastSignedOut = null,
-    Object? isActive = null,
+    Object? userId = freezed,
+    Object? uomName = freezed,
+    Object? password = freezed,
+    Object? createdBy = freezed,
+    Object? createdDate = freezed,
+    Object? lastSignedIn = freezed,
+    Object? lastSignedOut = freezed,
+    Object? isActive = freezed,
   }) {
     return _then(_value.copyWith(
-      userId: null == userId
+      userId: freezed == userId
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
-              as int,
-      uomName: null == uomName
+              as int?,
+      uomName: freezed == uomName
           ? _value.uomName
           : uomName // ignore: cast_nullable_to_non_nullable
-              as String,
-      password: null == password
+              as String?,
+      password: freezed == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdBy: null == createdBy
+              as String?,
+      createdBy: freezed == createdBy
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
-              as int,
-      createdDate: null == createdDate
+              as int?,
+      createdDate: freezed == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      lastSignedIn: null == lastSignedIn
+              as DateTime?,
+      lastSignedIn: freezed == lastSignedIn
           ? _value.lastSignedIn
           : lastSignedIn // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      lastSignedOut: null == lastSignedOut
+              as DateTime?,
+      lastSignedOut: freezed == lastSignedOut
           ? _value.lastSignedOut
           : lastSignedOut // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      isActive: null == isActive
+              as DateTime?,
+      isActive: freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int?,
     ) as $Val);
   }
 }
@@ -117,14 +117,14 @@ abstract class _$$UsersImplCopyWith<$Res> implements $UsersCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {int userId,
-      String uomName,
-      String password,
-      int createdBy,
-      DateTime createdDate,
-      DateTime lastSignedIn,
-      DateTime lastSignedOut,
-      bool isActive});
+      {int? userId,
+      String? uomName,
+      String? password,
+      int? createdBy,
+      DateTime? createdDate,
+      DateTime? lastSignedIn,
+      DateTime? lastSignedOut,
+      int? isActive});
 }
 
 /// @nodoc
@@ -138,48 +138,48 @@ class __$$UsersImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? userId = null,
-    Object? uomName = null,
-    Object? password = null,
-    Object? createdBy = null,
-    Object? createdDate = null,
-    Object? lastSignedIn = null,
-    Object? lastSignedOut = null,
-    Object? isActive = null,
+    Object? userId = freezed,
+    Object? uomName = freezed,
+    Object? password = freezed,
+    Object? createdBy = freezed,
+    Object? createdDate = freezed,
+    Object? lastSignedIn = freezed,
+    Object? lastSignedOut = freezed,
+    Object? isActive = freezed,
   }) {
     return _then(_$UsersImpl(
-      null == userId
+      freezed == userId
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == uomName
+              as int?,
+      freezed == uomName
           ? _value.uomName
           : uomName // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == password
+              as String?,
+      freezed == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == createdBy
+              as String?,
+      freezed == createdBy
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == createdDate
+              as int?,
+      freezed == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      null == lastSignedIn
+              as DateTime?,
+      freezed == lastSignedIn
           ? _value.lastSignedIn
           : lastSignedIn // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      null == lastSignedOut
+              as DateTime?,
+      freezed == lastSignedOut
           ? _value.lastSignedOut
           : lastSignedOut // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      null == isActive
+              as DateTime?,
+      freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int?,
     ));
   }
 }
@@ -194,21 +194,21 @@ class _$UsersImpl implements _Users {
       _$$UsersImplFromJson(json);
 
   @override
-  final int userId;
+  final int? userId;
   @override
-  final String uomName;
+  final String? uomName;
   @override
-  final String password;
+  final String? password;
   @override
-  final int createdBy;
+  final int? createdBy;
   @override
-  final DateTime createdDate;
+  final DateTime? createdDate;
   @override
-  final DateTime lastSignedIn;
+  final DateTime? lastSignedIn;
   @override
-  final DateTime lastSignedOut;
+  final DateTime? lastSignedOut;
   @override
-  final bool isActive;
+  final int? isActive;
 
   @override
   String toString() {
@@ -257,33 +257,33 @@ class _$UsersImpl implements _Users {
 
 abstract class _Users implements Users {
   const factory _Users(
-      final int userId,
-      final String uomName,
-      final String password,
-      final int createdBy,
-      final DateTime createdDate,
-      final DateTime lastSignedIn,
-      final DateTime lastSignedOut,
-      final bool isActive) = _$UsersImpl;
+      final int? userId,
+      final String? uomName,
+      final String? password,
+      final int? createdBy,
+      final DateTime? createdDate,
+      final DateTime? lastSignedIn,
+      final DateTime? lastSignedOut,
+      final int? isActive) = _$UsersImpl;
 
   factory _Users.fromJson(Map<String, dynamic> json) = _$UsersImpl.fromJson;
 
   @override
-  int get userId;
+  int? get userId;
   @override
-  String get uomName;
+  String? get uomName;
   @override
-  String get password;
+  String? get password;
   @override
-  int get createdBy;
+  int? get createdBy;
   @override
-  DateTime get createdDate;
+  DateTime? get createdDate;
   @override
-  DateTime get lastSignedIn;
+  DateTime? get lastSignedIn;
   @override
-  DateTime get lastSignedOut;
+  DateTime? get lastSignedOut;
   @override
-  bool get isActive;
+  int? get isActive;
   @override
   @JsonKey(ignore: true)
   _$$UsersImplCopyWith<_$UsersImpl> get copyWith =>

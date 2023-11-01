@@ -7,12 +7,14 @@ part of 'states.dart';
 // **************************************************************************
 
 _$StatesImpl _$$StatesImplFromJson(Map<String, dynamic> json) => _$StatesImpl(
-      json['stateId'] as int,
-      json['stateCode'] as String,
-      json['state'] as String,
-      json['createdBy'] as int,
-      DateTime.parse(json['createdDate'] as String),
-      json['isActive'] as bool,
+      json['stateId'] as int?,
+      json['stateCode'] as String?,
+      json['state'] as String?,
+      json['createdBy'] as int?,
+      json['createdDate'] == null
+          ? null
+          : DateTime.parse(json['createdDate'] as String),
+      json['isActive'] as int?,
     );
 
 Map<String, dynamic> _$$StatesImplToJson(_$StatesImpl instance) =>
@@ -21,6 +23,6 @@ Map<String, dynamic> _$$StatesImplToJson(_$StatesImpl instance) =>
       'stateCode': instance.stateCode,
       'state': instance.state,
       'createdBy': instance.createdBy,
-      'createdDate': instance.createdDate.toIso8601String(),
+      'createdDate': instance.createdDate?.toIso8601String(),
       'isActive': instance.isActive,
     };

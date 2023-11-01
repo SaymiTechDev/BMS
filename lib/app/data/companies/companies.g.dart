@@ -8,21 +8,23 @@ part of 'companies.dart';
 
 _$CompaniesImpl _$$CompaniesImplFromJson(Map<String, dynamic> json) =>
     _$CompaniesImpl(
-      json['companyId'] as int,
-      json['companyName'] as String,
-      json['displayName'] as String,
-      json['phone'] as String,
-      json['mobile'] as String,
-      json['email'] as String,
-      json['website'] as String,
-      json['gstTreatment'] as String,
-      json['gstNo'] as String,
-      json['panNo'] as String,
-      json['addressId'] as int,
-      json['uniqueCode'] as String,
-      json['createdBy'] as int,
-      DateTime.parse(json['createdDate'] as String),
-      json['isActive'] as bool,
+      json['companyId'] as int?,
+      json['companyName'] as String?,
+      json['displayName'] as String?,
+      json['phone'] as String?,
+      json['mobile'] as String?,
+      json['email'] as String?,
+      json['website'] as String?,
+      json['gstTreatment'] as String?,
+      json['gstNo'] as String?,
+      json['panNo'] as String?,
+      json['addressId'] as int?,
+      json['uniqueCode'] as String?,
+      json['createdBy'] as int?,
+      json['createdDate'] == null
+          ? null
+          : DateTime.parse(json['createdDate'] as String),
+      json['isActive'] as int?,
     );
 
 Map<String, dynamic> _$$CompaniesImplToJson(_$CompaniesImpl instance) =>
@@ -40,6 +42,6 @@ Map<String, dynamic> _$$CompaniesImplToJson(_$CompaniesImpl instance) =>
       'addressId': instance.addressId,
       'uniqueCode': instance.uniqueCode,
       'createdBy': instance.createdBy,
-      'createdDate': instance.createdDate.toIso8601String(),
+      'createdDate': instance.createdDate?.toIso8601String(),
       'isActive': instance.isActive,
     };

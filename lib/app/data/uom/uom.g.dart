@@ -7,10 +7,10 @@ part of 'uom.dart';
 // **************************************************************************
 
 _$UomImpl _$$UomImplFromJson(Map<String, dynamic> json) => _$UomImpl(
-      json['uomId'] as int,
-      json['uomCode'] as String,
-      json['uom'] as String,
-      json['isActive'] as bool,
+      json['uomId'] as int?,
+      json['uomCode'] as String?,
+      json['uom'] as String?,
+      json['isActive'] as int?,
     );
 
 Map<String, dynamic> _$$UomImplToJson(_$UomImpl instance) => <String, dynamic>{

@@ -8,12 +8,14 @@ part of 'countries.dart';
 
 _$CountriesImpl _$$CountriesImplFromJson(Map<String, dynamic> json) =>
     _$CountriesImpl(
-      json['countryId'] as int,
-      json['countryCode'] as String,
-      json['country'] as String,
-      json['createdBy'] as int,
-      DateTime.parse(json['createdDate'] as String),
-      json['isActive'] as bool,
+      json['countryId'] as int?,
+      json['countryCode'] as String?,
+      json['country'] as String?,
+      json['createdBy'] as int?,
+      json['createdDate'] == null
+          ? null
+          : DateTime.parse(json['createdDate'] as String),
+      json['isActive'] as bool?,
     );
 
 Map<String, dynamic> _$$CountriesImplToJson(_$CountriesImpl instance) =>
@@ -22,6 +24,6 @@ Map<String, dynamic> _$$CountriesImplToJson(_$CountriesImpl instance) =>
       'countryCode': instance.countryCode,
       'country': instance.country,
       'createdBy': instance.createdBy,
-      'createdDate': instance.createdDate.toIso8601String(),
+      'createdDate': instance.createdDate?.toIso8601String(),
       'isActive': instance.isActive,
     };

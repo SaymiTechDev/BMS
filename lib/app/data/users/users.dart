@@ -6,14 +6,14 @@ part 'users.g.dart';
 @freezed
 class Users with _$Users {
   const factory Users(
-    int userId,
-    String uomName,
-    String password,
-    int createdBy,
-    DateTime createdDate,
-    DateTime lastSignedIn,
-    DateTime lastSignedOut,
-    bool isActive,
+    int? userId,
+    String? uomName,
+    String? password,
+    int? createdBy,
+    DateTime? createdDate,
+    DateTime? lastSignedIn,
+    DateTime? lastSignedOut,
+    int? isActive,
   ) = _Users;
 
   factory Users.fromJson(Map<String, Object?> json) => _$UsersFromJson(json);

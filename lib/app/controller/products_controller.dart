@@ -1,8 +1,12 @@
-import 'package:bms/app/data/values.dart';
+import 'package:bms/app/data/products/products.dart';
+import 'package:bms/app/services/api_service.dart';
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:pluto_grid/pluto_grid.dart';
+import 'package:reactive_forms/reactive_forms.dart';
 
 class ProductsController extends GetxController {
+  final _apiService = Get.find<ApiService>();
   final List<PlutoColumn> productColumns = <PlutoColumn>[
     PlutoColumn(
       title: 'Id',
@@ -13,6 +17,7 @@ class ProductsController extends GetxController {
     PlutoColumn(
       title: 'Product Code',
       field: 'sku',
+      enableRowChecked: true,
       type: PlutoColumnType.text(),
     ),
     PlutoColumn(
@@ -23,7 +28,7 @@ class ProductsController extends GetxController {
     PlutoColumn(
       title: 'Product Type',
       field: 'productType',
-      type: PlutoColumnType.select(DataList.productType),
+      type: PlutoColumnType.text(),
     ),
     PlutoColumn(
       title: 'Product Group',
@@ -38,7 +43,7 @@ class ProductsController extends GetxController {
     PlutoColumn(
       title: 'Sale Pack Unit',
       field: 'spu',
-      type: PlutoColumnType.number(defaultValue: 1),
+      type: PlutoColumnType.number(),
     ),
     PlutoColumn(
       title: 'HsnCode',
@@ -50,6 +55,89 @@ class ProductsController extends GetxController {
       field: 'isActive',
       type: PlutoColumnType.text(),
     ),
+    PlutoColumn(
+      title: 'Stock',
+      field: 'isStock',
+      type: PlutoColumnType.text(),
+    ),
   ];
-  final List<PlutoRow> productRows = [];
+  final productList = <Products>[].obs;
+  final productForm = FormGroup(
+    {
+      'productName': FormControl<String>(),
+      'sku': FormControl<String>(),
+      'productType': FormControl<String>(),
+      'productGroup': FormControl<String>(),
+      'uom': FormControl<String>(),
+      'spu': FormControl<int>(),
+      'hsnCode': FormControl<String>(),
+      'isActive': FormControl<bool>(value: true),
+      'isStock': FormControl<bool>(value: true),
+    },
+  );
+
+  @override
+  onInit() async {
+    super.onInit();
+    var products = await _apiService.getProducts();
+    if (products != null) {
+      products.forEach((json) {
+        productList.add(Products.fromJson(json));
+      });
+      if (kDebugMode) {
+        print(productList);
+      }
+    }
+
+    update();
+  }
+
+  addProducts() async {
+    var products = Products(
+      productList.length + 1,
+      productForm.control("productName").value,
+      productForm.control("sku").value,
+      productForm.control("productType").value[0],
+      productForm.control("productGroup").value,
+      productForm.control("uom").value,
+      productForm.control("spu").value,
+      productForm.control("hsnCode").value,
+      1,
+      null,
+      productForm.control("isActive").value ? 1 : 0,
+      productForm.control("isStock").value ? 1 : 0,
+    );
+    productList.add(products);
+    dynamic json = productList.map((element) => element.toJson()).toList();
+    print(json);
+    String resp = await _apiService.createProducts(json);
+    clearForm();
+    return resp;
+  }
+
+  clearForm() {
+    productForm.control("productName").value = "";
+    productForm.control("sku").value = "";
+    productForm.control("productType").value = "";
+    productForm.control("productGroup").value = "";
+    productForm.control("uom").value = "";
+    productForm.control("spu").value = "";
+    productForm.control("hsnCode").value = "";
+  }
+
+  List<PlutoRow> genProductRow(List<Products> row) => List.generate(
+      row.length,
+      (index) => PlutoRow(cells: {
+            'productId': PlutoCell(value: row[index].productId),
+            'productName': PlutoCell(value: row[index].productName),
+            'sku': PlutoCell(value: row[index].sku),
+            'productType': PlutoCell(value: row[index].productType),
+            'productGroup': PlutoCell(value: row[index].productGroup),
+            'uom': PlutoCell(value: row[index].uom),
+            'spu': PlutoCell(value: row[index].spu),
+            'hsnCode': PlutoCell(value: row[index].hsnCode),
+            'isActive': PlutoCell(
+                value: row[index].isActive == 1 ? "Active" : "InActive"),
+            'isStock': PlutoCell(value: row[index].isStock == 1 ? "Yes" : "No"),
+          }));
 }

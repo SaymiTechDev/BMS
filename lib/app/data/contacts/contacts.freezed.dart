@@ -44,7 +44,7 @@ mixin _$Contacts {
   String? get uniqueCode => throw _privateConstructorUsedError;
   int? get createdBy => throw _privateConstructorUsedError;
   DateTime? get createdDate => throw _privateConstructorUsedError;
-  bool? get isActive => throw _privateConstructorUsedError;
+  int? get isActive => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -82,7 +82,7 @@ abstract class $ContactsCopyWith<$Res> {
       String? uniqueCode,
       int? createdBy,
       DateTime? createdDate,
-      bool? isActive});
+      int? isActive});
 }
 
 /// @nodoc
@@ -224,7 +224,7 @@ class _$ContactsCopyWithImpl<$Res, $Val extends Contacts>
       isActive: freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as int?,
     ) as $Val);
   }
 }
@@ -262,7 +262,7 @@ abstract class _$$ContactsImplCopyWith<$Res>
       String? uniqueCode,
       int? createdBy,
       DateTime? createdDate,
-      bool? isActive});
+      int? isActive});
 }
 
 /// @nodoc
@@ -402,7 +402,7 @@ class __$$ContactsImplCopyWithImpl<$Res>
       freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as int?,
     ));
   }
 }
@@ -489,7 +489,7 @@ class _$ContactsImpl implements _Contacts {
   @override
   final DateTime? createdDate;
   @override
-  final bool? isActive;
+  final int? isActive;
 
   @override
   String toString() {
@@ -617,7 +617,7 @@ abstract class _Contacts implements Contacts {
       final String? uniqueCode,
       final int? createdBy,
       final DateTime? createdDate,
-      final bool? isActive) = _$ContactsImpl;
+      final int? isActive) = _$ContactsImpl;
 
   factory _Contacts.fromJson(Map<String, dynamic> json) =
       _$ContactsImpl.fromJson;
@@ -671,7 +671,7 @@ abstract class _Contacts implements Contacts {
   @override
   DateTime? get createdDate;
   @override
-  bool? get isActive;
+  int? get isActive;
   @override
   @JsonKey(ignore: true)
   _$$ContactsImplCopyWith<_$ContactsImpl> get copyWith =>

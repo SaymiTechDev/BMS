@@ -20,10 +20,10 @@ Uom _$UomFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Uom {
-  int get uomId => throw _privateConstructorUsedError;
-  String get uomCode => throw _privateConstructorUsedError;
-  String get uom => throw _privateConstructorUsedError;
-  bool get isActive => throw _privateConstructorUsedError;
+  int? get uomId => throw _privateConstructorUsedError;
+  String? get uomCode => throw _privateConstructorUsedError;
+  String? get uom => throw _privateConstructorUsedError;
+  int? get isActive => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +35,7 @@ abstract class $UomCopyWith<$Res> {
   factory $UomCopyWith(Uom value, $Res Function(Uom) then) =
       _$UomCopyWithImpl<$Res, Uom>;
   @useResult
-  $Res call({int uomId, String uomCode, String uom, bool isActive});
+  $Res call({int? uomId, String? uomCode, String? uom, int? isActive});
 }
 
 /// @nodoc
@@ -50,28 +50,28 @@ class _$UomCopyWithImpl<$Res, $Val extends Uom> implements $UomCopyWith<$Res> {
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? uomId = null,
-    Object? uomCode = null,
-    Object? uom = null,
-    Object? isActive = null,
+    Object? uomId = freezed,
+    Object? uomCode = freezed,
+    Object? uom = freezed,
+    Object? isActive = freezed,
   }) {
     return _then(_value.copyWith(
-      uomId: null == uomId
+      uomId: freezed == uomId
           ? _value.uomId
           : uomId // ignore: cast_nullable_to_non_nullable
-              as int,
-      uomCode: null == uomCode
+              as int?,
+      uomCode: freezed == uomCode
           ? _value.uomCode
           : uomCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      uom: null == uom
+              as String?,
+      uom: freezed == uom
           ? _value.uom
           : uom // ignore: cast_nullable_to_non_nullable
-              as String,
-      isActive: null == isActive
+              as String?,
+      isActive: freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int?,
     ) as $Val);
   }
 }
@@ -82,7 +82,7 @@ abstract class _$$UomImplCopyWith<$Res> implements $UomCopyWith<$Res> {
       __$$UomImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int uomId, String uomCode, String uom, bool isActive});
+  $Res call({int? uomId, String? uomCode, String? uom, int? isActive});
 }
 
 /// @nodoc
@@ -94,28 +94,28 @@ class __$$UomImplCopyWithImpl<$Res> extends _$UomCopyWithImpl<$Res, _$UomImpl>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? uomId = null,
-    Object? uomCode = null,
-    Object? uom = null,
-    Object? isActive = null,
+    Object? uomId = freezed,
+    Object? uomCode = freezed,
+    Object? uom = freezed,
+    Object? isActive = freezed,
   }) {
     return _then(_$UomImpl(
-      null == uomId
+      freezed == uomId
           ? _value.uomId
           : uomId // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == uomCode
+              as int?,
+      freezed == uomCode
           ? _value.uomCode
           : uomCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == uom
+              as String?,
+      freezed == uom
           ? _value.uom
           : uom // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == isActive
+              as String?,
+      freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int?,
     ));
   }
 }
@@ -129,13 +129,13 @@ class _$UomImpl implements _Uom {
       _$$UomImplFromJson(json);
 
   @override
-  final int uomId;
+  final int? uomId;
   @override
-  final String uomCode;
+  final String? uomCode;
   @override
-  final String uom;
+  final String? uom;
   @override
-  final bool isActive;
+  final int? isActive;
 
   @override
   String toString() {
@@ -173,19 +173,19 @@ class _$UomImpl implements _Uom {
 }
 
 abstract class _Uom implements Uom {
-  const factory _Uom(final int uomId, final String uomCode, final String uom,
-      final bool isActive) = _$UomImpl;
+  const factory _Uom(final int? uomId, final String? uomCode, final String? uom,
+      final int? isActive) = _$UomImpl;
 
   factory _Uom.fromJson(Map<String, dynamic> json) = _$UomImpl.fromJson;
 
   @override
-  int get uomId;
+  int? get uomId;
   @override
-  String get uomCode;
+  String? get uomCode;
   @override
-  String get uom;
+  String? get uom;
   @override
-  bool get isActive;
+  int? get isActive;
   @override
   @JsonKey(ignore: true)
   _$$UomImplCopyWith<_$UomImpl> get copyWith =>

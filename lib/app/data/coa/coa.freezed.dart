@@ -20,15 +20,15 @@ Coa _$CoaFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Coa {
-  int get coaId => throw _privateConstructorUsedError;
-  String get accountName => throw _privateConstructorUsedError;
-  String get accountCode => throw _privateConstructorUsedError;
-  AccountType get accountType => throw _privateConstructorUsedError;
-  String get parentAccount => throw _privateConstructorUsedError;
-  double get balance => throw _privateConstructorUsedError;
-  int get createdBy => throw _privateConstructorUsedError;
-  DateTime get createdDate => throw _privateConstructorUsedError;
-  bool get isActive => throw _privateConstructorUsedError;
+  int? get coaId => throw _privateConstructorUsedError;
+  String? get accountName => throw _privateConstructorUsedError;
+  String? get accountCode => throw _privateConstructorUsedError;
+  String? get accountType => throw _privateConstructorUsedError;
+  String? get parentAccount => throw _privateConstructorUsedError;
+  double? get balance => throw _privateConstructorUsedError;
+  int? get createdBy => throw _privateConstructorUsedError;
+  DateTime? get createdDate => throw _privateConstructorUsedError;
+  int? get isActive => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -41,15 +41,15 @@ abstract class $CoaCopyWith<$Res> {
       _$CoaCopyWithImpl<$Res, Coa>;
   @useResult
   $Res call(
-      {int coaId,
-      String accountName,
-      String accountCode,
-      AccountType accountType,
-      String parentAccount,
-      double balance,
-      int createdBy,
-      DateTime createdDate,
-      bool isActive});
+      {int? coaId,
+      String? accountName,
+      String? accountCode,
+      String? accountType,
+      String? parentAccount,
+      double? balance,
+      int? createdBy,
+      DateTime? createdDate,
+      int? isActive});
 }
 
 /// @nodoc
@@ -64,53 +64,53 @@ class _$CoaCopyWithImpl<$Res, $Val extends Coa> implements $CoaCopyWith<$Res> {
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? coaId = null,
-    Object? accountName = null,
-    Object? accountCode = null,
-    Object? accountType = null,
-    Object? parentAccount = null,
-    Object? balance = null,
-    Object? createdBy = null,
-    Object? createdDate = null,
-    Object? isActive = null,
+    Object? coaId = freezed,
+    Object? accountName = freezed,
+    Object? accountCode = freezed,
+    Object? accountType = freezed,
+    Object? parentAccount = freezed,
+    Object? balance = freezed,
+    Object? createdBy = freezed,
+    Object? createdDate = freezed,
+    Object? isActive = freezed,
   }) {
     return _then(_value.copyWith(
-      coaId: null == coaId
+      coaId: freezed == coaId
           ? _value.coaId
           : coaId // ignore: cast_nullable_to_non_nullable
-              as int,
-      accountName: null == accountName
+              as int?,
+      accountName: freezed == accountName
           ? _value.accountName
           : accountName // ignore: cast_nullable_to_non_nullable
-              as String,
-      accountCode: null == accountCode
+              as String?,
+      accountCode: freezed == accountCode
           ? _value.accountCode
           : accountCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      accountType: null == accountType
+              as String?,
+      accountType: freezed == accountType
           ? _value.accountType
           : accountType // ignore: cast_nullable_to_non_nullable
-              as AccountType,
-      parentAccount: null == parentAccount
+              as String?,
+      parentAccount: freezed == parentAccount
           ? _value.parentAccount
           : parentAccount // ignore: cast_nullable_to_non_nullable
-              as String,
-      balance: null == balance
+              as String?,
+      balance: freezed == balance
           ? _value.balance
           : balance // ignore: cast_nullable_to_non_nullable
-              as double,
-      createdBy: null == createdBy
+              as double?,
+      createdBy: freezed == createdBy
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
-              as int,
-      createdDate: null == createdDate
+              as int?,
+      createdDate: freezed == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      isActive: null == isActive
+              as DateTime?,
+      isActive: freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int?,
     ) as $Val);
   }
 }
@@ -122,15 +122,15 @@ abstract class _$$CoaImplCopyWith<$Res> implements $CoaCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {int coaId,
-      String accountName,
-      String accountCode,
-      AccountType accountType,
-      String parentAccount,
-      double balance,
-      int createdBy,
-      DateTime createdDate,
-      bool isActive});
+      {int? coaId,
+      String? accountName,
+      String? accountCode,
+      String? accountType,
+      String? parentAccount,
+      double? balance,
+      int? createdBy,
+      DateTime? createdDate,
+      int? isActive});
 }
 
 /// @nodoc
@@ -142,53 +142,53 @@ class __$$CoaImplCopyWithImpl<$Res> extends _$CoaCopyWithImpl<$Res, _$CoaImpl>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? coaId = null,
-    Object? accountName = null,
-    Object? accountCode = null,
-    Object? accountType = null,
-    Object? parentAccount = null,
-    Object? balance = null,
-    Object? createdBy = null,
-    Object? createdDate = null,
-    Object? isActive = null,
+    Object? coaId = freezed,
+    Object? accountName = freezed,
+    Object? accountCode = freezed,
+    Object? accountType = freezed,
+    Object? parentAccount = freezed,
+    Object? balance = freezed,
+    Object? createdBy = freezed,
+    Object? createdDate = freezed,
+    Object? isActive = freezed,
   }) {
     return _then(_$CoaImpl(
-      null == coaId
+      freezed == coaId
           ? _value.coaId
           : coaId // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == accountName
+              as int?,
+      freezed == accountName
           ? _value.accountName
           : accountName // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == accountCode
+              as String?,
+      freezed == accountCode
           ? _value.accountCode
           : accountCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == accountType
+              as String?,
+      freezed == accountType
           ? _value.accountType
           : accountType // ignore: cast_nullable_to_non_nullable
-              as AccountType,
-      null == parentAccount
+              as String?,
+      freezed == parentAccount
           ? _value.parentAccount
           : parentAccount // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == balance
+              as String?,
+      freezed == balance
           ? _value.balance
           : balance // ignore: cast_nullable_to_non_nullable
-              as double,
-      null == createdBy
+              as double?,
+      freezed == createdBy
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == createdDate
+              as int?,
+      freezed == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      null == isActive
+              as DateTime?,
+      freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int?,
     ));
   }
 }
@@ -211,23 +211,23 @@ class _$CoaImpl implements _Coa {
       _$$CoaImplFromJson(json);
 
   @override
-  final int coaId;
+  final int? coaId;
   @override
-  final String accountName;
+  final String? accountName;
   @override
-  final String accountCode;
+  final String? accountCode;
   @override
-  final AccountType accountType;
+  final String? accountType;
   @override
-  final String parentAccount;
+  final String? parentAccount;
   @override
-  final double balance;
+  final double? balance;
   @override
-  final int createdBy;
+  final int? createdBy;
   @override
-  final DateTime createdDate;
+  final DateTime? createdDate;
   @override
-  final bool isActive;
+  final int? isActive;
 
   @override
   String toString() {
@@ -278,36 +278,36 @@ class _$CoaImpl implements _Coa {
 
 abstract class _Coa implements Coa {
   const factory _Coa(
-      final int coaId,
-      final String accountName,
-      final String accountCode,
-      final AccountType accountType,
-      final String parentAccount,
-      final double balance,
-      final int createdBy,
-      final DateTime createdDate,
-      final bool isActive) = _$CoaImpl;
+      final int? coaId,
+      final String? accountName,
+      final String? accountCode,
+      final String? accountType,
+      final String? parentAccount,
+      final double? balance,
+      final int? createdBy,
+      final DateTime? createdDate,
+      final int? isActive) = _$CoaImpl;
 
   factory _Coa.fromJson(Map<String, dynamic> json) = _$CoaImpl.fromJson;
 
   @override
-  int get coaId;
+  int? get coaId;
   @override
-  String get accountName;
+  String? get accountName;
   @override
-  String get accountCode;
+  String? get accountCode;
   @override
-  AccountType get accountType;
+  String? get accountType;
   @override
-  String get parentAccount;
+  String? get parentAccount;
   @override
-  double get balance;
+  double? get balance;
   @override
-  int get createdBy;
+  int? get createdBy;
   @override
-  DateTime get createdDate;
+  DateTime? get createdDate;
   @override
-  bool get isActive;
+  int? get isActive;
   @override
   @JsonKey(ignore: true)
   _$$CoaImplCopyWith<_$CoaImpl> get copyWith =>

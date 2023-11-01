@@ -20,13 +20,13 @@ Warehouse _$WarehouseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Warehouse {
-  int get warehouseId => throw _privateConstructorUsedError;
-  String get warehouseCode => throw _privateConstructorUsedError;
-  String get warehouse => throw _privateConstructorUsedError;
-  String get location => throw _privateConstructorUsedError;
-  int get createdBy => throw _privateConstructorUsedError;
-  DateTime get createdDate => throw _privateConstructorUsedError;
-  bool get isActive => throw _privateConstructorUsedError;
+  int? get warehouseId => throw _privateConstructorUsedError;
+  String? get warehouseCode => throw _privateConstructorUsedError;
+  String? get warehouse => throw _privateConstructorUsedError;
+  String? get location => throw _privateConstructorUsedError;
+  int? get createdBy => throw _privateConstructorUsedError;
+  DateTime? get createdDate => throw _privateConstructorUsedError;
+  int? get isActive => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -40,13 +40,13 @@ abstract class $WarehouseCopyWith<$Res> {
       _$WarehouseCopyWithImpl<$Res, Warehouse>;
   @useResult
   $Res call(
-      {int warehouseId,
-      String warehouseCode,
-      String warehouse,
-      String location,
-      int createdBy,
-      DateTime createdDate,
-      bool isActive});
+      {int? warehouseId,
+      String? warehouseCode,
+      String? warehouse,
+      String? location,
+      int? createdBy,
+      DateTime? createdDate,
+      int? isActive});
 }
 
 /// @nodoc
@@ -62,43 +62,43 @@ class _$WarehouseCopyWithImpl<$Res, $Val extends Warehouse>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? warehouseId = null,
-    Object? warehouseCode = null,
-    Object? warehouse = null,
-    Object? location = null,
-    Object? createdBy = null,
-    Object? createdDate = null,
-    Object? isActive = null,
+    Object? warehouseId = freezed,
+    Object? warehouseCode = freezed,
+    Object? warehouse = freezed,
+    Object? location = freezed,
+    Object? createdBy = freezed,
+    Object? createdDate = freezed,
+    Object? isActive = freezed,
   }) {
     return _then(_value.copyWith(
-      warehouseId: null == warehouseId
+      warehouseId: freezed == warehouseId
           ? _value.warehouseId
           : warehouseId // ignore: cast_nullable_to_non_nullable
-              as int,
-      warehouseCode: null == warehouseCode
+              as int?,
+      warehouseCode: freezed == warehouseCode
           ? _value.warehouseCode
           : warehouseCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      warehouse: null == warehouse
+              as String?,
+      warehouse: freezed == warehouse
           ? _value.warehouse
           : warehouse // ignore: cast_nullable_to_non_nullable
-              as String,
-      location: null == location
+              as String?,
+      location: freezed == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdBy: null == createdBy
+              as String?,
+      createdBy: freezed == createdBy
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
-              as int,
-      createdDate: null == createdDate
+              as int?,
+      createdDate: freezed == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      isActive: null == isActive
+              as DateTime?,
+      isActive: freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int?,
     ) as $Val);
   }
 }
@@ -112,13 +112,13 @@ abstract class _$$WarehouseImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int warehouseId,
-      String warehouseCode,
-      String warehouse,
-      String location,
-      int createdBy,
-      DateTime createdDate,
-      bool isActive});
+      {int? warehouseId,
+      String? warehouseCode,
+      String? warehouse,
+      String? location,
+      int? createdBy,
+      DateTime? createdDate,
+      int? isActive});
 }
 
 /// @nodoc
@@ -132,43 +132,43 @@ class __$$WarehouseImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? warehouseId = null,
-    Object? warehouseCode = null,
-    Object? warehouse = null,
-    Object? location = null,
-    Object? createdBy = null,
-    Object? createdDate = null,
-    Object? isActive = null,
+    Object? warehouseId = freezed,
+    Object? warehouseCode = freezed,
+    Object? warehouse = freezed,
+    Object? location = freezed,
+    Object? createdBy = freezed,
+    Object? createdDate = freezed,
+    Object? isActive = freezed,
   }) {
     return _then(_$WarehouseImpl(
-      null == warehouseId
+      freezed == warehouseId
           ? _value.warehouseId
           : warehouseId // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == warehouseCode
+              as int?,
+      freezed == warehouseCode
           ? _value.warehouseCode
           : warehouseCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == warehouse
+              as String?,
+      freezed == warehouse
           ? _value.warehouse
           : warehouse // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == location
+              as String?,
+      freezed == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == createdBy
+              as String?,
+      freezed == createdBy
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == createdDate
+              as int?,
+      freezed == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      null == isActive
+              as DateTime?,
+      freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int?,
     ));
   }
 }
@@ -183,19 +183,19 @@ class _$WarehouseImpl implements _Warehouse {
       _$$WarehouseImplFromJson(json);
 
   @override
-  final int warehouseId;
+  final int? warehouseId;
   @override
-  final String warehouseCode;
+  final String? warehouseCode;
   @override
-  final String warehouse;
+  final String? warehouse;
   @override
-  final String location;
+  final String? location;
   @override
-  final int createdBy;
+  final int? createdBy;
   @override
-  final DateTime createdDate;
+  final DateTime? createdDate;
   @override
-  final bool isActive;
+  final int? isActive;
 
   @override
   String toString() {
@@ -244,31 +244,31 @@ class _$WarehouseImpl implements _Warehouse {
 
 abstract class _Warehouse implements Warehouse {
   const factory _Warehouse(
-      final int warehouseId,
-      final String warehouseCode,
-      final String warehouse,
-      final String location,
-      final int createdBy,
-      final DateTime createdDate,
-      final bool isActive) = _$WarehouseImpl;
+      final int? warehouseId,
+      final String? warehouseCode,
+      final String? warehouse,
+      final String? location,
+      final int? createdBy,
+      final DateTime? createdDate,
+      final int? isActive) = _$WarehouseImpl;
 
   factory _Warehouse.fromJson(Map<String, dynamic> json) =
       _$WarehouseImpl.fromJson;
 
   @override
-  int get warehouseId;
+  int? get warehouseId;
   @override
-  String get warehouseCode;
+  String? get warehouseCode;
   @override
-  String get warehouse;
+  String? get warehouse;
   @override
-  String get location;
+  String? get location;
   @override
-  int get createdBy;
+  int? get createdBy;
   @override
-  DateTime get createdDate;
+  DateTime? get createdDate;
   @override
-  bool get isActive;
+  int? get isActive;
   @override
   @JsonKey(ignore: true)
   _$$WarehouseImplCopyWith<_$WarehouseImpl> get copyWith =>

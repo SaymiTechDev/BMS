@@ -20,13 +20,13 @@ ProductGroup _$ProductGroupFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ProductGroup {
-  int get productGroupId => throw _privateConstructorUsedError;
-  String get groupName => throw _privateConstructorUsedError;
-  String get purchaseAccount => throw _privateConstructorUsedError;
-  String get salesAccount => throw _privateConstructorUsedError;
-  int get createdBy => throw _privateConstructorUsedError;
-  DateTime get createdDate => throw _privateConstructorUsedError;
-  bool get isActive => throw _privateConstructorUsedError;
+  int? get productGroupId => throw _privateConstructorUsedError;
+  String? get groupName => throw _privateConstructorUsedError;
+  String? get purchaseAccount => throw _privateConstructorUsedError;
+  String? get salesAccount => throw _privateConstructorUsedError;
+  int? get createdBy => throw _privateConstructorUsedError;
+  DateTime? get createdDate => throw _privateConstructorUsedError;
+  int? get isActive => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -41,13 +41,13 @@ abstract class $ProductGroupCopyWith<$Res> {
       _$ProductGroupCopyWithImpl<$Res, ProductGroup>;
   @useResult
   $Res call(
-      {int productGroupId,
-      String groupName,
-      String purchaseAccount,
-      String salesAccount,
-      int createdBy,
-      DateTime createdDate,
-      bool isActive});
+      {int? productGroupId,
+      String? groupName,
+      String? purchaseAccount,
+      String? salesAccount,
+      int? createdBy,
+      DateTime? createdDate,
+      int? isActive});
 }
 
 /// @nodoc
@@ -63,43 +63,43 @@ class _$ProductGroupCopyWithImpl<$Res, $Val extends ProductGroup>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? productGroupId = null,
-    Object? groupName = null,
-    Object? purchaseAccount = null,
-    Object? salesAccount = null,
-    Object? createdBy = null,
-    Object? createdDate = null,
-    Object? isActive = null,
+    Object? productGroupId = freezed,
+    Object? groupName = freezed,
+    Object? purchaseAccount = freezed,
+    Object? salesAccount = freezed,
+    Object? createdBy = freezed,
+    Object? createdDate = freezed,
+    Object? isActive = freezed,
   }) {
     return _then(_value.copyWith(
-      productGroupId: null == productGroupId
+      productGroupId: freezed == productGroupId
           ? _value.productGroupId
           : productGroupId // ignore: cast_nullable_to_non_nullable
-              as int,
-      groupName: null == groupName
+              as int?,
+      groupName: freezed == groupName
           ? _value.groupName
           : groupName // ignore: cast_nullable_to_non_nullable
-              as String,
-      purchaseAccount: null == purchaseAccount
+              as String?,
+      purchaseAccount: freezed == purchaseAccount
           ? _value.purchaseAccount
           : purchaseAccount // ignore: cast_nullable_to_non_nullable
-              as String,
-      salesAccount: null == salesAccount
+              as String?,
+      salesAccount: freezed == salesAccount
           ? _value.salesAccount
           : salesAccount // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdBy: null == createdBy
+              as String?,
+      createdBy: freezed == createdBy
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
-              as int,
-      createdDate: null == createdDate
+              as int?,
+      createdDate: freezed == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      isActive: null == isActive
+              as DateTime?,
+      isActive: freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int?,
     ) as $Val);
   }
 }
@@ -113,13 +113,13 @@ abstract class _$$ProductGroupImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int productGroupId,
-      String groupName,
-      String purchaseAccount,
-      String salesAccount,
-      int createdBy,
-      DateTime createdDate,
-      bool isActive});
+      {int? productGroupId,
+      String? groupName,
+      String? purchaseAccount,
+      String? salesAccount,
+      int? createdBy,
+      DateTime? createdDate,
+      int? isActive});
 }
 
 /// @nodoc
@@ -133,43 +133,43 @@ class __$$ProductGroupImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? productGroupId = null,
-    Object? groupName = null,
-    Object? purchaseAccount = null,
-    Object? salesAccount = null,
-    Object? createdBy = null,
-    Object? createdDate = null,
-    Object? isActive = null,
+    Object? productGroupId = freezed,
+    Object? groupName = freezed,
+    Object? purchaseAccount = freezed,
+    Object? salesAccount = freezed,
+    Object? createdBy = freezed,
+    Object? createdDate = freezed,
+    Object? isActive = freezed,
   }) {
     return _then(_$ProductGroupImpl(
-      null == productGroupId
+      freezed == productGroupId
           ? _value.productGroupId
           : productGroupId // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == groupName
+              as int?,
+      freezed == groupName
           ? _value.groupName
           : groupName // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == purchaseAccount
+              as String?,
+      freezed == purchaseAccount
           ? _value.purchaseAccount
           : purchaseAccount // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == salesAccount
+              as String?,
+      freezed == salesAccount
           ? _value.salesAccount
           : salesAccount // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == createdBy
+              as String?,
+      freezed == createdBy
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == createdDate
+              as int?,
+      freezed == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      null == isActive
+              as DateTime?,
+      freezed == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int?,
     ));
   }
 }
@@ -190,19 +190,19 @@ class _$ProductGroupImpl implements _ProductGroup {
       _$$ProductGroupImplFromJson(json);
 
   @override
-  final int productGroupId;
+  final int? productGroupId;
   @override
-  final String groupName;
+  final String? groupName;
   @override
-  final String purchaseAccount;
+  final String? purchaseAccount;
   @override
-  final String salesAccount;
+  final String? salesAccount;
   @override
-  final int createdBy;
+  final int? createdBy;
   @override
-  final DateTime createdDate;
+  final DateTime? createdDate;
   @override
-  final bool isActive;
+  final int? isActive;
 
   @override
   String toString() {
@@ -251,31 +251,31 @@ class _$ProductGroupImpl implements _ProductGroup {
 
 abstract class _ProductGroup implements ProductGroup {
   const factory _ProductGroup(
-      final int productGroupId,
-      final String groupName,
-      final String purchaseAccount,
-      final String salesAccount,
-      final int createdBy,
-      final DateTime createdDate,
-      final bool isActive) = _$ProductGroupImpl;
+      final int? productGroupId,
+      final String? groupName,
+      final String? purchaseAccount,
+      final String? salesAccount,
+      final int? createdBy,
+      final DateTime? createdDate,
+      final int? isActive) = _$ProductGroupImpl;
 
   factory _ProductGroup.fromJson(Map<String, dynamic> json) =
       _$ProductGroupImpl.fromJson;
 
   @override
-  int get productGroupId;
+  int? get productGroupId;
   @override
-  String get groupName;
+  String? get groupName;
   @override
-  String get purchaseAccount;
+  String? get purchaseAccount;
   @override
-  String get salesAccount;
+  String? get salesAccount;
   @override
-  int get createdBy;
+  int? get createdBy;
   @override
-  DateTime get createdDate;
+  DateTime? get createdDate;
   @override
-  bool get isActive;
+  int? get isActive;
   @override
   @JsonKey(ignore: true)
   _$$ProductGroupImplCopyWith<_$ProductGroupImpl> get copyWith =>
