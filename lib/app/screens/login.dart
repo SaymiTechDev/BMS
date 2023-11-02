@@ -44,7 +44,7 @@ class Login extends GetView<LoginController> {
                         //       blurRadius: 15)
                         // ],
                       ),
-                      child: Image.asset("logo.jpg"),
+                      child: Image.asset("assets/logo.jpg"),
                       // child: CircleAvatar(
                       //   radius: 45.0,
                       //   backgroundColor: AppColors.white,
