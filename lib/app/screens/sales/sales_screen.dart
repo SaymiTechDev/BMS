@@ -27,7 +27,7 @@ class SalesScreen extends GetView<SalesController> {
                     width: 15,
                   ),
                   const Text(
-                    "Sales",
+                    "Sales/Purchase",
                     style: TextStyle(fontWeight: FontWeight.w800, fontSize: 18),
                   ),
                 ],
@@ -50,29 +50,24 @@ class SalesScreen extends GetView<SalesController> {
                     const ListTile(
                         title: Text(
                       // overflow: TextOverflow.ellipsis,
-                      "Sales Order",
+                      "SO0001",
                       style:
                           TextStyle(fontWeight: FontWeight.w800, fontSize: 25),
                     )),
-                    ListTile(
-                      leading: Icon(
-                        Icons.phone,
-                        size: 20,
-                        color: AppColors.dBlue,
-                      ),
-                      title: const Text(
-                        "8870746955",
+                    const ListTile(
+                      title: Text(
+                        "Sri Ragavendhara textile mills ",
                         style: TextStyle(
                             fontWeight: FontWeight.w800, fontSize: 12),
                       ),
                     ),
-                    ListTile(
-                      leading: Icon(
-                        Icons.mail,
-                        size: 20,
-                        color: AppColors.dBlue,
+                    const ListTile(
+                      leading: Text(
+                        "ramrajcotton@outlook.com",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w800, fontSize: 12),
                       ),
-                      title: const Text(
+                      title: Text(
                         "ramrajcotton@outlook.com",
                         style: TextStyle(
                             fontWeight: FontWeight.w800, fontSize: 12),

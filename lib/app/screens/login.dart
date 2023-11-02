@@ -37,22 +37,23 @@ class Login extends GetView<LoginController> {
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(90),
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.grey.shade600,
-                              spreadRadius: 1,
-                              blurRadius: 15)
-                        ],
+                        // boxShadow: [
+                        //   BoxShadow(
+                        //       color: Colors.grey.shade600,
+                        //       spreadRadius: 1,
+                        //       blurRadius: 15)
+                        // ],
                       ),
-                      child: CircleAvatar(
-                        radius: 45.0,
-                        backgroundColor: AppColors.white,
-                        child: Icon(
-                          Icons.person,
-                          size: 45,
-                          color: AppColors.blue,
-                        ),
-                      ),
+                      child: Image.asset("logo.jpg"),
+                      // child: CircleAvatar(
+                      //   radius: 45.0,
+                      //   backgroundColor: AppColors.white,
+                      //   child: Icon(
+                      //     Icons.person,
+                      //     size: 45,
+                      //     color: AppColors.blue,
+                      //   ),
+                      // ),
                     ),
                   ),
                   const SizedBox(height: 35),

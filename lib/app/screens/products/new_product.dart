@@ -33,7 +33,7 @@ class NewProduct extends GetView<ProductsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "Product Code",
-                            labelStyle: TextStyle(color: AppColors.blue),
+                            labelStyle: TextStyle(color: AppColors.dBlue),
                             border: const UnderlineInputBorder(
                                 borderSide: BorderSide.none),
                             focusedBorder: UnderlineInputBorder(
@@ -53,7 +53,7 @@ class NewProduct extends GetView<ProductsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "Product Name",
-                            labelStyle: TextStyle(color: AppColors.blue),
+                            labelStyle: TextStyle(color: AppColors.dBlue),
                             border: const UnderlineInputBorder(
                               borderSide: BorderSide.none,
                             ),
@@ -71,7 +71,7 @@ class NewProduct extends GetView<ProductsController> {
                           style: const TextStyle(fontSize: 14),
                           decoration: InputDecoration(
                             labelText: "Product Type",
-                            labelStyle: TextStyle(color: AppColors.blue),
+                            labelStyle: TextStyle(color: AppColors.dBlue),
                             border: const UnderlineInputBorder(
                               borderSide: BorderSide.none,
                             ),
@@ -94,7 +94,7 @@ class NewProduct extends GetView<ProductsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "Product Group",
-                            labelStyle: TextStyle(color: AppColors.blue),
+                            labelStyle: TextStyle(color: AppColors.dBlue),
                             border: const UnderlineInputBorder(
                               borderSide: BorderSide.none,
                             ),
@@ -115,7 +115,7 @@ class NewProduct extends GetView<ProductsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "Uom",
-                            labelStyle: TextStyle(color: AppColors.blue),
+                            labelStyle: TextStyle(color: AppColors.dBlue),
                             border: const UnderlineInputBorder(
                               borderSide: BorderSide.none,
                             ),
@@ -136,7 +136,7 @@ class NewProduct extends GetView<ProductsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "Sale Pack Unit",
-                            labelStyle: TextStyle(color: AppColors.blue),
+                            labelStyle: TextStyle(color: AppColors.dBlue),
                             border: const UnderlineInputBorder(
                               borderSide: BorderSide.none,
                             ),
@@ -162,7 +162,7 @@ class NewProduct extends GetView<ProductsController> {
                     textAlignVertical: TextAlignVertical.center,
                     decoration: InputDecoration(
                         labelText: "HSN Code",
-                        labelStyle: TextStyle(color: AppColors.blue),
+                        labelStyle: TextStyle(color: AppColors.dBlue),
                         border: const UnderlineInputBorder(
                           borderSide: BorderSide.none,
                         ),
@@ -180,7 +180,7 @@ class NewProduct extends GetView<ProductsController> {
                       children: [
                         Text(
                           "Active ",
-                          style: TextStyle(color: AppColors.blue),
+                          style: TextStyle(color: AppColors.dBlue),
                         ),
                         ReactiveCheckbox(
                           formControlName: "isActive",
@@ -192,7 +192,7 @@ class NewProduct extends GetView<ProductsController> {
                       children: [
                         Text(
                           "Stock ",
-                          style: TextStyle(color: AppColors.blue),
+                          style: TextStyle(color: AppColors.dBlue),
                         ),
                         ReactiveCheckbox(
                           formControlName: "isStock",

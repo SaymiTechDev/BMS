@@ -84,7 +84,7 @@ class NewContact extends GetView<ContactsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "Display Name",
-                            labelStyle: TextStyle(color: AppColors.blue),
+                            labelStyle: TextStyle(color: AppColors.dBlue),
                             border: const UnderlineInputBorder(
                                 borderSide: BorderSide.none),
                             focusedBorder: UnderlineInputBorder(
@@ -104,7 +104,7 @@ class NewContact extends GetView<ContactsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "Phone",
-                            labelStyle: TextStyle(color: AppColors.blue),
+                            labelStyle: TextStyle(color: AppColors.dBlue),
                             border: const UnderlineInputBorder(
                               borderSide: BorderSide.none,
                             ),
@@ -125,7 +125,7 @@ class NewContact extends GetView<ContactsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "Mobile",
-                            labelStyle: TextStyle(color: AppColors.blue),
+                            labelStyle: TextStyle(color: AppColors.dBlue),
                             border: const UnderlineInputBorder(
                               borderSide: BorderSide.none,
                             ),
@@ -146,7 +146,7 @@ class NewContact extends GetView<ContactsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "E-Mail",
-                            labelStyle: TextStyle(color: AppColors.blue),
+                            labelStyle: TextStyle(color: AppColors.dBlue),
                             border: const UnderlineInputBorder(
                               borderSide: BorderSide.none,
                             ),
@@ -167,7 +167,7 @@ class NewContact extends GetView<ContactsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "WebSite",
-                            labelStyle: TextStyle(color: AppColors.blue),
+                            labelStyle: TextStyle(color: AppColors.dBlue),
                             border: const UnderlineInputBorder(
                               borderSide: BorderSide.none,
                             ),
@@ -192,7 +192,7 @@ class NewContact extends GetView<ContactsController> {
                           style: const TextStyle(fontSize: 14),
                           decoration: InputDecoration(
                             labelText: "Gst Treatment",
-                            labelStyle: TextStyle(color: AppColors.blue),
+                            labelStyle: TextStyle(color: AppColors.dBlue),
                             border: const UnderlineInputBorder(
                               borderSide: BorderSide.none,
                             ),
@@ -215,7 +215,7 @@ class NewContact extends GetView<ContactsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "GstNo",
-                            labelStyle: TextStyle(color: AppColors.blue),
+                            labelStyle: TextStyle(color: AppColors.dBlue),
                             border: const UnderlineInputBorder(
                               borderSide: BorderSide.none,
                             ),
@@ -236,7 +236,7 @@ class NewContact extends GetView<ContactsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "Pan No",
-                            labelStyle: TextStyle(color: AppColors.blue),
+                            labelStyle: TextStyle(color: AppColors.dBlue),
                             border: const UnderlineInputBorder(
                                 borderSide: BorderSide.none),
                             focusedBorder: UnderlineInputBorder(
@@ -256,7 +256,7 @@ class NewContact extends GetView<ContactsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "Payment Terms",
-                            labelStyle: TextStyle(color: AppColors.blue),
+                            labelStyle: TextStyle(color: AppColors.dBlue),
                             border: const UnderlineInputBorder(
                                 borderSide: BorderSide.none),
                             focusedBorder: UnderlineInputBorder(
@@ -276,7 +276,7 @@ class NewContact extends GetView<ContactsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "Discount",
-                            labelStyle: TextStyle(color: AppColors.blue),
+                            labelStyle: TextStyle(color: AppColors.dBlue),
                             border: const UnderlineInputBorder(
                                 borderSide: BorderSide.none),
                             focusedBorder: UnderlineInputBorder(
@@ -293,7 +293,7 @@ class NewContact extends GetView<ContactsController> {
                           style: const TextStyle(fontSize: 14),
                           decoration: InputDecoration(
                             labelText: "RelationShip",
-                            labelStyle: TextStyle(color: AppColors.blue),
+                            labelStyle: TextStyle(color: AppColors.dBlue),
                             border: const UnderlineInputBorder(
                               borderSide: BorderSide.none,
                             ),
@@ -323,7 +323,7 @@ class NewContact extends GetView<ContactsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "Bank",
-                            labelStyle: TextStyle(color: AppColors.blue),
+                            labelStyle: TextStyle(color: AppColors.dBlue),
                             border: const UnderlineInputBorder(
                                 borderSide: BorderSide.none),
                             focusedBorder: UnderlineInputBorder(
@@ -343,7 +343,7 @@ class NewContact extends GetView<ContactsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "Benificiary Name",
-                            labelStyle: TextStyle(color: AppColors.blue),
+                            labelStyle: TextStyle(color: AppColors.dBlue),
                             border: const UnderlineInputBorder(
                                 borderSide: BorderSide.none),
                             focusedBorder: UnderlineInputBorder(
@@ -363,7 +363,7 @@ class NewContact extends GetView<ContactsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "Account Number",
-                            labelStyle: TextStyle(color: AppColors.blue),
+                            labelStyle: TextStyle(color: AppColors.dBlue),
                             border: const UnderlineInputBorder(
                                 borderSide: BorderSide.none),
                             focusedBorder: UnderlineInputBorder(
@@ -383,7 +383,7 @@ class NewContact extends GetView<ContactsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "Ifsc Code",
-                            labelStyle: TextStyle(color: AppColors.blue),
+                            labelStyle: TextStyle(color: AppColors.dBlue),
                             border: const UnderlineInputBorder(
                                 borderSide: BorderSide.none),
                             focusedBorder: UnderlineInputBorder(
@@ -403,7 +403,7 @@ class NewContact extends GetView<ContactsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "UPI ID",
-                            labelStyle: TextStyle(color: AppColors.blue),
+                            labelStyle: TextStyle(color: AppColors.dBlue),
                             border: const UnderlineInputBorder(
                                 borderSide: BorderSide.none),
                             focusedBorder: UnderlineInputBorder(
@@ -430,7 +430,7 @@ class NewContact extends GetView<ContactsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "Account Payable",
-                            labelStyle: TextStyle(color: AppColors.blue),
+                            labelStyle: TextStyle(color: AppColors.dBlue),
                             border: const UnderlineInputBorder(
                                 borderSide: BorderSide.none),
                             focusedBorder: UnderlineInputBorder(
@@ -450,7 +450,7 @@ class NewContact extends GetView<ContactsController> {
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                             labelText: "Account Receivable",
-                            labelStyle: TextStyle(color: AppColors.blue),
+                            labelStyle: TextStyle(color: AppColors.dBlue),
                             border: const UnderlineInputBorder(
                                 borderSide: BorderSide.none),
                             focusedBorder: UnderlineInputBorder(
@@ -464,7 +464,7 @@ class NewContact extends GetView<ContactsController> {
                       children: [
                         Text(
                           "Active ",
-                          style: TextStyle(color: AppColors.blue),
+                          style: TextStyle(color: AppColors.dBlue),
                         ),
                         ReactiveCheckbox(
                           formControlName: "isActive",

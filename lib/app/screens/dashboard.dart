@@ -39,17 +39,17 @@ class Dashboard extends StatelessWidget {
       "page": Routes.banking,
     },
     {
-      "name": "Sales",
+      "name": "Transactions",
       "color": AppColors.pGreen,
       "icon": Icons.sell,
-      "page": Routes.sales,
+      "page": Routes.trans,
     },
-    {
-      "name": "Purchase",
-      "color": AppColors.lPink,
-      "icon": Icons.shopping_cart,
-      "page": Routes.purchase,
-    },
+    // {
+    //   "name": "Purchase",
+    //   "color": AppColors.lPink,
+    //   "icon": Icons.shopping_cart,
+    //   "page": Routes.purchase,
+    // },
     {
       "name": "Inventory",
       "color": AppColors.sandal,

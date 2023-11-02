@@ -2,7 +2,7 @@ import 'package:bms/app/controller/contacts_controller.dart';
 import 'package:bms/app/controller/login_controller.dart';
 import 'package:bms/app/controller/products_controller.dart';
 import 'package:bms/app/controller/purchase_controller.dart';
-import 'package:bms/app/controller/slaes_controller.dart';
+import 'package:bms/app/controller/transaction_controller.dart';
 import 'package:bms/app/screens/admin/admin.dart';
 import 'package:bms/app/screens/banking/banking_screen.dart';
 import 'package:bms/app/screens/contacts/contacts_screen.dart';
@@ -14,8 +14,8 @@ import 'package:bms/app/screens/login.dart';
 import 'package:bms/app/screens/production/production_screen.dart';
 import 'package:bms/app/screens/products/products_screen.dart';
 import 'package:bms/app/screens/purchace/purchase_screen.dart';
-import 'package:bms/app/screens/sales/sales_screen.dart';
 import 'package:bms/app/screens/settings/settings_screen.dart';
+import 'package:bms/app/screens/transaction/transaction_screen.dart';
 import 'package:get/get.dart';
 
 class Routes {
@@ -25,7 +25,7 @@ class Routes {
   static const String contacts = '/contacts';
   static const String newContact = '/contacts/new';
   static const String settings = '/settings';
-  static const String sales = '/sales';
+  static const String trans = '/trans';
   static const String purchase = '/purchase';
   static const String production = '/production';
   static const String inventory = '/inventory';
@@ -87,10 +87,12 @@ class Routes {
       }),
     ),
     GetPage(
-      name: sales,
-      page: () => const SalesScreen(),
+      name: trans,
+      page: () => const TransactionScreen(),
       binding: BindingsBuilder(() {
-        Get.put<SalesController>(SalesController());
+        Get.put<ContactsController>(ContactsController());
+        Get.put<ProductsController>(ProductsController());
+        Get.put<TransactionController>(TransactionController());
       }),
     ),
     GetPage(

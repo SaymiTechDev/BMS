@@ -51,6 +51,36 @@ class ApiService {
     }
   }
 
+  getTransHeader() async {
+    try {
+      var response = await dio.get(
+        '${Config.baseUrl}${EndPoints.getTransHeader}',
+      );
+      if (response.statusCode == 200 && response.data != null) {
+        return response.data["msg"];
+      }
+    } catch (e) {
+      return null;
+    }
+  }
+
+  Future<dynamic> createTransaction(dynamic json) async {
+    try {
+      Response response = await dio.post(
+        '${Config.baseUrl}${EndPoints.postTransaction}',
+        data: {"transaction": json},
+      );
+      if (response.statusCode == 200 && response.data != null) {
+        return response.statusMessage;
+      }
+    } catch (e) {
+      if (kDebugMode) {
+        print(e);
+      }
+      return null;
+    }
+  }
+
   Future<dynamic> createContacts(dynamic json) async {
     try {
       Response response = await dio.post(

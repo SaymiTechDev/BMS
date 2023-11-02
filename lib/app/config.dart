@@ -14,4 +14,6 @@ class EndPoints {
   static const String postCompanies = 'companies/add';
   static const String getCoa = 'coa/all';
   static const String postCoa = 'coa/add';
+  static const String getTransHeader = 'transHeader/all';
+  static const String postTransaction = 'transaction/add';
 }
