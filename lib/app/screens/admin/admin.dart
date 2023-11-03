@@ -115,7 +115,19 @@ class Admin extends GetView<AdminController> {
                 },
                 body: SizedBox(
                   height: 300,
-                  child: Container(),
+                  child: Obx(() => PlutoGrid(
+                        columns: controller.userColumns,
+                        rows: controller.genUserRow(controller.userList),
+                        key: UniqueKey(),
+                        mode: PlutoGridMode.readOnly,
+                        configuration: PlutoGridConfiguration(
+                          style: PlutoGridStyleConfig(
+                            enableGridBorderShadow: true,
+                            gridBorderColor: AppColors.lBlue,
+                            gridBorderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                      )),
                 ),
                 isExpanded: controller.isUserExpand.value,
               ),

@@ -48,6 +48,7 @@ dependencies:
   pluto_layout: ^1.0.0
   dio: ^5.3.3
   reactive_date_time_picker: ^3.0.0
+  shared_preferences: ^2.2.2
 
 dev_dependencies:
   flutter_test:

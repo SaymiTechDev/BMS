@@ -1,6 +1,7 @@
 import 'package:bms/app/controller/finance_controller.dart';
 import 'package:bms/app/data/app_colors.dart';
 import 'package:bms/app/screens/finance/new_coa.dart';
+import 'package:bms/app/screens/finance/new_fYear.dart';
 import 'package:bms/app/widgets/screen_container.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -60,8 +61,8 @@ class FinanceScreen extends GetView<FinanceController> {
                               builder: (BuildContext context) {
                                 return const AlertDialog(
                                   scrollable: true,
-                                  title: Text("Chart Of Account"),
-                                  content: NewCoa(),
+                                  title: Text("Financial Year"),
+                                  content: NewFYear(),
                                 );
                               });
                         },

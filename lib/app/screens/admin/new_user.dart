@@ -25,7 +25,7 @@ class NewUser extends GetView<AdminController> {
                     SizedBox(
                       width: 300,
                       child: ReactiveTextField(
-                        formControlName: 'userName',
+                        formControlName: 'user',
                         style: const TextStyle(fontSize: 14),
                         cursorColor: AppColors.lBlue,
                         textAlignVertical: TextAlignVertical.center,

@@ -17,7 +17,7 @@ class NewFYear extends GetView<FinanceController> {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15), color: AppColors.white),
           child: ReactiveForm(
-            formGroup: controller.coaForm,
+            formGroup: controller.fYearForm,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
