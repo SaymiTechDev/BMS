@@ -1,6 +1,7 @@
 import 'package:bms/app/controller/admin_controller.dart';
 import 'package:bms/app/data/app_colors.dart';
 import 'package:bms/app/screens/admin/new_company.dart';
+import 'package:bms/app/screens/admin/new_user.dart';
 import 'package:bms/app/widgets/screen_container.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -95,12 +96,21 @@ class Admin extends GetView<AdminController> {
                     leading: const Icon(Icons.person),
                     title: const Text('Users'),
                     trailing: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: AppColors.blue,
-                          foregroundColor: AppColors.white),
-                      child: const Text('New'),
-                    ),
+                        onPressed: () {
+                          showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return const AlertDialog(
+                                  scrollable: true,
+                                  title: Text("New User"),
+                                  content: NewUser(),
+                                );
+                              });
+                        },
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: AppColors.blue,
+                            foregroundColor: AppColors.white),
+                        child: const Text('New')),
                   );
                 },
                 body: SizedBox(

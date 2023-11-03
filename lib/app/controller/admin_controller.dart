@@ -1,4 +1,5 @@
 import 'package:bms/app/data/companies/companies.dart';
+import 'package:bms/app/data/users/users.dart';
 import 'package:bms/app/services/api_service.dart';
 import 'package:get/get.dart';
 import 'package:pluto_grid/pluto_grid.dart';
@@ -8,6 +9,7 @@ class AdminController extends GetxController {
   var isCompanyExpand = false.obs;
   var isUserExpand = false.obs;
   var companyList = <Companies>[].obs;
+  var userList = <Users>[].obs;
   final _apiService = Get.find<ApiService>();
   final List<PlutoColumn> companyColumns = <PlutoColumn>[
     PlutoColumn(
@@ -63,6 +65,39 @@ class AdminController extends GetxController {
       type: PlutoColumnType.text(),
     ),
   ];
+  final List<PlutoColumn> userColumns = <PlutoColumn>[
+    PlutoColumn(
+      title: 'Id',
+      field: 'userId',
+      enableRowChecked: true,
+      type: PlutoColumnType.text(),
+    ),
+    PlutoColumn(
+      title: 'User Name',
+      field: 'userName',
+      type: PlutoColumnType.text(),
+    ),
+    PlutoColumn(
+      title: 'Company',
+      field: 'company',
+      type: PlutoColumnType.text(),
+    ),
+    PlutoColumn(
+      title: 'SignedIn',
+      field: 'lastSignedIn',
+      type: PlutoColumnType.date(),
+    ),
+    PlutoColumn(
+      title: 'SignedOut',
+      field: 'lastSignedOut',
+      type: PlutoColumnType.date(),
+    ),
+    PlutoColumn(
+      title: 'Active',
+      field: 'isActive',
+      type: PlutoColumnType.text(),
+    ),
+  ];
 
   final companyForm = FormGroup(
     {
@@ -78,16 +113,30 @@ class AdminController extends GetxController {
       'isActive': FormControl<bool>(value: true),
     },
   );
-
+  final userForm = FormGroup(
+    {
+      'user': FormControl<String>(),
+      'password': FormControl<String>(),
+      'company': FormControl<String>(),
+      'isActive': FormControl<bool>(value: true),
+    },
+  );
   @override
   onInit() async {
     super.onInit();
     var company = await _apiService.getCompanies();
+    var user = await _apiService.getUsers();
     if (company != null) {
       company.forEach((json) {
         companyList.add(Companies.fromJson(json));
       });
       print(companyList);
+    }
+    if (user != null) {
+      user.forEach((json) {
+        userList.add(Users.fromJson(json));
+      });
+      print(userList);
     }
     update();
   }
@@ -116,6 +165,25 @@ class AdminController extends GetxController {
     return resp;
   }
 
+  addUser() async {
+    var user = Users(
+      userList.length + 1,
+      userForm.control("user").value,
+      userForm.control("password").value,
+      userForm.control("company").value,
+      1,
+      null,
+      null,
+      null,
+      1,
+    );
+    userList.add(user);
+    dynamic json = userList.map((element) => element.toJson()).toList();
+    String resp = await _apiService.createUser(json);
+    userForm.reset();
+    return resp;
+  }
+
   List<PlutoRow> genCompanyRow(List<Companies> row) => List.generate(
       row.length,
       (index) => PlutoRow(cells: {
@@ -129,6 +197,18 @@ class AdminController extends GetxController {
             'website': PlutoCell(value: row[index].website),
             'gstNo': PlutoCell(value: row[index].gstNo),
             'panNo': PlutoCell(value: row[index].panNo),
+          }));
+
+  List<PlutoRow> genUserRow(List<Users> row) => List.generate(
+      row.length,
+      (index) => PlutoRow(cells: {
+            'userId': PlutoCell(value: row[index].userId),
+            'userName': PlutoCell(value: row[index].userName),
+            'company': PlutoCell(value: row[index].company),
+            'lastSignedIn': PlutoCell(value: row[index].lastSignedIn),
+            'lastSignedOut': PlutoCell(value: row[index].lastSignedOut),
+            'isActive':
+                PlutoCell(value: row[index].isActive == 1 ? 'Yes' : 'No'),
           }));
 
   clearForm() {

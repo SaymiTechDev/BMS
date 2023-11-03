@@ -21,8 +21,9 @@ Users _$UsersFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Users {
   int? get userId => throw _privateConstructorUsedError;
-  String? get uomName => throw _privateConstructorUsedError;
+  String? get userName => throw _privateConstructorUsedError;
   String? get password => throw _privateConstructorUsedError;
+  String? get company => throw _privateConstructorUsedError;
   int? get createdBy => throw _privateConstructorUsedError;
   DateTime? get createdDate => throw _privateConstructorUsedError;
   DateTime? get lastSignedIn => throw _privateConstructorUsedError;
@@ -41,8 +42,9 @@ abstract class $UsersCopyWith<$Res> {
   @useResult
   $Res call(
       {int? userId,
-      String? uomName,
+      String? userName,
       String? password,
+      String? company,
       int? createdBy,
       DateTime? createdDate,
       DateTime? lastSignedIn,
@@ -64,8 +66,9 @@ class _$UsersCopyWithImpl<$Res, $Val extends Users>
   @override
   $Res call({
     Object? userId = freezed,
-    Object? uomName = freezed,
+    Object? userName = freezed,
     Object? password = freezed,
+    Object? company = freezed,
     Object? createdBy = freezed,
     Object? createdDate = freezed,
     Object? lastSignedIn = freezed,
@@ -77,13 +80,17 @@ class _$UsersCopyWithImpl<$Res, $Val extends Users>
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
               as int?,
-      uomName: freezed == uomName
-          ? _value.uomName
-          : uomName // ignore: cast_nullable_to_non_nullable
+      userName: freezed == userName
+          ? _value.userName
+          : userName // ignore: cast_nullable_to_non_nullable
               as String?,
       password: freezed == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
+              as String?,
+      company: freezed == company
+          ? _value.company
+          : company // ignore: cast_nullable_to_non_nullable
               as String?,
       createdBy: freezed == createdBy
           ? _value.createdBy
@@ -118,8 +125,9 @@ abstract class _$$UsersImplCopyWith<$Res> implements $UsersCopyWith<$Res> {
   @useResult
   $Res call(
       {int? userId,
-      String? uomName,
+      String? userName,
       String? password,
+      String? company,
       int? createdBy,
       DateTime? createdDate,
       DateTime? lastSignedIn,
@@ -139,8 +147,9 @@ class __$$UsersImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? userId = freezed,
-    Object? uomName = freezed,
+    Object? userName = freezed,
     Object? password = freezed,
+    Object? company = freezed,
     Object? createdBy = freezed,
     Object? createdDate = freezed,
     Object? lastSignedIn = freezed,
@@ -152,13 +161,17 @@ class __$$UsersImplCopyWithImpl<$Res>
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
               as int?,
-      freezed == uomName
-          ? _value.uomName
-          : uomName // ignore: cast_nullable_to_non_nullable
+      freezed == userName
+          ? _value.userName
+          : userName // ignore: cast_nullable_to_non_nullable
               as String?,
       freezed == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
+              as String?,
+      freezed == company
+          ? _value.company
+          : company // ignore: cast_nullable_to_non_nullable
               as String?,
       freezed == createdBy
           ? _value.createdBy
@@ -187,8 +200,16 @@ class __$$UsersImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$UsersImpl implements _Users {
-  const _$UsersImpl(this.userId, this.uomName, this.password, this.createdBy,
-      this.createdDate, this.lastSignedIn, this.lastSignedOut, this.isActive);
+  const _$UsersImpl(
+      this.userId,
+      this.userName,
+      this.password,
+      this.company,
+      this.createdBy,
+      this.createdDate,
+      this.lastSignedIn,
+      this.lastSignedOut,
+      this.isActive);
 
   factory _$UsersImpl.fromJson(Map<String, dynamic> json) =>
       _$$UsersImplFromJson(json);
@@ -196,9 +217,11 @@ class _$UsersImpl implements _Users {
   @override
   final int? userId;
   @override
-  final String? uomName;
+  final String? userName;
   @override
   final String? password;
+  @override
+  final String? company;
   @override
   final int? createdBy;
   @override
@@ -212,7 +235,7 @@ class _$UsersImpl implements _Users {
 
   @override
   String toString() {
-    return 'Users(userId: $userId, uomName: $uomName, password: $password, createdBy: $createdBy, createdDate: $createdDate, lastSignedIn: $lastSignedIn, lastSignedOut: $lastSignedOut, isActive: $isActive)';
+    return 'Users(userId: $userId, userName: $userName, password: $password, company: $company, createdBy: $createdBy, createdDate: $createdDate, lastSignedIn: $lastSignedIn, lastSignedOut: $lastSignedOut, isActive: $isActive)';
   }
 
   @override
@@ -221,9 +244,11 @@ class _$UsersImpl implements _Users {
         (other.runtimeType == runtimeType &&
             other is _$UsersImpl &&
             (identical(other.userId, userId) || other.userId == userId) &&
-            (identical(other.uomName, uomName) || other.uomName == uomName) &&
+            (identical(other.userName, userName) ||
+                other.userName == userName) &&
             (identical(other.password, password) ||
                 other.password == password) &&
+            (identical(other.company, company) || other.company == company) &&
             (identical(other.createdBy, createdBy) ||
                 other.createdBy == createdBy) &&
             (identical(other.createdDate, createdDate) ||
@@ -238,8 +263,8 @@ class _$UsersImpl implements _Users {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, userId, uomName, password,
-      createdBy, createdDate, lastSignedIn, lastSignedOut, isActive);
+  int get hashCode => Object.hash(runtimeType, userId, userName, password,
+      company, createdBy, createdDate, lastSignedIn, lastSignedOut, isActive);
 
   @JsonKey(ignore: true)
   @override
@@ -258,8 +283,9 @@ class _$UsersImpl implements _Users {
 abstract class _Users implements Users {
   const factory _Users(
       final int? userId,
-      final String? uomName,
+      final String? userName,
       final String? password,
+      final String? company,
       final int? createdBy,
       final DateTime? createdDate,
       final DateTime? lastSignedIn,
@@ -271,9 +297,11 @@ abstract class _Users implements Users {
   @override
   int? get userId;
   @override
-  String? get uomName;
+  String? get userName;
   @override
   String? get password;
+  @override
+  String? get company;
   @override
   int? get createdBy;
   @override

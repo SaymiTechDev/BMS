@@ -45,6 +45,30 @@ class FinanceController extends GetxController {
       type: PlutoColumnType.text(),
     ),
   ];
+  final List<PlutoColumn> fYearColumns = <PlutoColumn>[
+    PlutoColumn(
+      title: 'Id',
+      field: 'fYearId',
+      enableRowChecked: true,
+      type: PlutoColumnType.text(),
+    ),
+    PlutoColumn(
+      title: 'Fin Year',
+      field: 'fYear',
+      hide: true,
+      type: PlutoColumnType.text(),
+    ),
+    PlutoColumn(
+      title: 'Start Date',
+      field: 'startDate',
+      type: PlutoColumnType.date(),
+    ),
+    PlutoColumn(
+      title: 'End Date',
+      field: 'endDate',
+      type: PlutoColumnType.date(),
+    ),
+  ];
 
   final coaForm = FormGroup(
     {
@@ -56,15 +80,31 @@ class FinanceController extends GetxController {
     },
   );
 
+  final fYearForm = FormGroup(
+    {
+      'fYear': FormControl<String>(),
+      'startDate': FormControl<DateTime>(),
+      'endDate': FormControl<DateTime>(),
+      'isActive': FormControl<bool>(value: true),
+    },
+  );
+
   @override
   onInit() async {
     super.onInit();
     var coa = await _apiService.getCoa();
+    var fyr = await _apiService.getFYear();
     if (coa != null) {
       coa.forEach((json) {
         coaList.add(Coa.fromJson(json));
       });
       print(coaList);
+    }
+    if (fyr != null) {
+      fyr.forEach((json) {
+        finYearList.add(FYear.fromJson(json));
+      });
+      print(finYearList);
     }
     update();
   }
@@ -87,6 +127,22 @@ class FinanceController extends GetxController {
     return resp;
   }
 
+  addFYear() async {
+    var fyr = FYear(
+        finYearList.length + 1,
+        fYearForm.control("fYear").value,
+        fYearForm.control("startDate").value,
+        fYearForm.control("endDate").value,
+        1,
+        null,
+        1);
+    finYearList.add(fyr);
+    dynamic json = coaList.map((element) => element.toJson()).toList();
+    String resp = await _apiService.createFYear(json);
+    clearForm();
+    return resp;
+  }
+
   List<PlutoRow> genCoaRow(List<Coa> row) => List.generate(
       row.length,
       (index) => PlutoRow(cells: {
@@ -98,10 +154,23 @@ class FinanceController extends GetxController {
             'balance': PlutoCell(value: row[index].balance),
           }));
 
+  List<PlutoRow> genFYearRow(List<FYear> row) => List.generate(
+      row.length,
+      (index) => PlutoRow(cells: {
+            'fYearId': PlutoCell(value: row[index].fYearId),
+            'fYear': PlutoCell(value: row[index].fYear),
+            'startDate': PlutoCell(value: row[index].startDate),
+            'endDate': PlutoCell(value: row[index].endDate),
+          }));
+
   clearForm() {
     coaForm.control("accountCode").value = "";
     coaForm.control("accountName").value = "";
     coaForm.control("accountType").value = "";
     coaForm.control("parentAccount").value = "";
+
+    fYearForm.control("fYear").value = "";
+    fYearForm.control("startDate").value = "";
+    fYearForm.control("endDate").value = "";
   }
 }

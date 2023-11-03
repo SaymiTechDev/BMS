@@ -77,6 +77,19 @@ class ApiService {
     }
   }
 
+  getUsers() async {
+    try {
+      var response = await dio.get(
+        '${Config.baseUrl}${EndPoints.getUsers}',
+      );
+      if (response.statusCode == 200 && response.data != null) {
+        return response.data["msg"];
+      }
+    } catch (e) {
+      return null;
+    }
+  }
+
   getProducts() async {
     try {
       var response = await dio.get(
@@ -179,6 +192,42 @@ class ApiService {
       Response response = await dio.post(
         '${Config.baseUrl}${EndPoints.postCoa}',
         data: {"coa": json},
+      );
+      if (response.statusCode == 200 && response.data != null) {
+        return response.statusMessage;
+      }
+    } catch (e) {
+      if (kDebugMode) {
+        print(e);
+      }
+      return null;
+    }
+  }
+
+  Future<dynamic> createUser(dynamic json) async {
+    try {
+      print(jsonEncode(json));
+      Response response = await dio.post(
+        '${Config.baseUrl}${EndPoints.postUsers}',
+        data: {"users": json},
+      );
+      if (response.statusCode == 200 && response.data != null) {
+        return response.statusMessage;
+      }
+    } catch (e) {
+      if (kDebugMode) {
+        print(e);
+      }
+      return null;
+    }
+  }
+
+  Future<dynamic> createFYear(dynamic json) async {
+    try {
+      print(jsonEncode(json));
+      Response response = await dio.post(
+        '${Config.baseUrl}${EndPoints.postFYear}',
+        data: {"fYear": json},
       );
       if (response.statusCode == 200 && response.data != null) {
         return response.statusMessage;

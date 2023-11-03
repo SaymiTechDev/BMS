@@ -8,8 +8,9 @@ part of 'users.dart';
 
 _$UsersImpl _$$UsersImplFromJson(Map<String, dynamic> json) => _$UsersImpl(
       json['userId'] as int?,
-      json['uomName'] as String?,
+      json['userName'] as String?,
       json['password'] as String?,
+      json['company'] as String?,
       json['createdBy'] as int?,
       json['createdDate'] == null
           ? null
@@ -26,8 +27,9 @@ _$UsersImpl _$$UsersImplFromJson(Map<String, dynamic> json) => _$UsersImpl(
 Map<String, dynamic> _$$UsersImplToJson(_$UsersImpl instance) =>
     <String, dynamic>{
       'userId': instance.userId,
-      'uomName': instance.uomName,
+      'userName': instance.userName,
       'password': instance.password,
+      'company': instance.company,
       'createdBy': instance.createdBy,
       'createdDate': instance.createdDate?.toIso8601String(),
       'lastSignedIn': instance.lastSignedIn?.toIso8601String(),

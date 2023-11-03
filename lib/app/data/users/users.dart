@@ -7,8 +7,9 @@ part 'users.g.dart';
 class Users with _$Users {
   const factory Users(
     int? userId,
-    String? uomName,
+    String? userName,
     String? password,
+    String? company,
     int? createdBy,
     DateTime? createdDate,
     DateTime? lastSignedIn,

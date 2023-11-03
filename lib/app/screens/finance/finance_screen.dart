@@ -54,7 +54,17 @@ class FinanceScreen extends GetView<FinanceController> {
                     leading: const Icon(Icons.access_time),
                     title: const Text('Financial Year'),
                     trailing: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return const AlertDialog(
+                                  scrollable: true,
+                                  title: Text("Chart Of Account"),
+                                  content: NewCoa(),
+                                );
+                              });
+                        },
                         style: ElevatedButton.styleFrom(
                             backgroundColor: AppColors.blue,
                             foregroundColor: AppColors.white),
@@ -63,7 +73,19 @@ class FinanceScreen extends GetView<FinanceController> {
                 },
                 body: SizedBox(
                   height: 300,
-                  child: Container(),
+                  child: Obx(() => PlutoGrid(
+                        columns: controller.fYearColumns,
+                        rows: controller.genFYearRow(controller.finYearList),
+                        key: UniqueKey(),
+                        mode: PlutoGridMode.readOnly,
+                        configuration: PlutoGridConfiguration(
+                          style: PlutoGridStyleConfig(
+                            enableGridBorderShadow: true,
+                            gridBorderColor: AppColors.lBlue,
+                            gridBorderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                      )),
                 ),
                 isExpanded: controller.isFinYearExpand.value,
               ),
