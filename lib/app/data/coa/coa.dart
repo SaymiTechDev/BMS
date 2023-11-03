@@ -11,19 +11,11 @@ class Coa with _$Coa {
     String? accountCode,
     String? accountType,
     String? parentAccount,
-    double? balance,
+    String? balance,
     int? createdBy,
     DateTime? createdDate,
     int? isActive,
   ) = _Coa;
 
   factory Coa.fromJson(Map<String, Object?> json) => _$CoaFromJson(json);
-}
-
-enum AccountType {
-  assets,
-  liability,
-  equity,
-  income,
-  expense,
 }

@@ -25,7 +25,7 @@ mixin _$Coa {
   String? get accountCode => throw _privateConstructorUsedError;
   String? get accountType => throw _privateConstructorUsedError;
   String? get parentAccount => throw _privateConstructorUsedError;
-  double? get balance => throw _privateConstructorUsedError;
+  String? get balance => throw _privateConstructorUsedError;
   int? get createdBy => throw _privateConstructorUsedError;
   DateTime? get createdDate => throw _privateConstructorUsedError;
   int? get isActive => throw _privateConstructorUsedError;
@@ -46,7 +46,7 @@ abstract class $CoaCopyWith<$Res> {
       String? accountCode,
       String? accountType,
       String? parentAccount,
-      double? balance,
+      String? balance,
       int? createdBy,
       DateTime? createdDate,
       int? isActive});
@@ -98,7 +98,7 @@ class _$CoaCopyWithImpl<$Res, $Val extends Coa> implements $CoaCopyWith<$Res> {
       balance: freezed == balance
           ? _value.balance
           : balance // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as String?,
       createdBy: freezed == createdBy
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
@@ -127,7 +127,7 @@ abstract class _$$CoaImplCopyWith<$Res> implements $CoaCopyWith<$Res> {
       String? accountCode,
       String? accountType,
       String? parentAccount,
-      double? balance,
+      String? balance,
       int? createdBy,
       DateTime? createdDate,
       int? isActive});
@@ -176,7 +176,7 @@ class __$$CoaImplCopyWithImpl<$Res> extends _$CoaCopyWithImpl<$Res, _$CoaImpl>
       freezed == balance
           ? _value.balance
           : balance // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as String?,
       freezed == createdBy
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
@@ -221,7 +221,7 @@ class _$CoaImpl implements _Coa {
   @override
   final String? parentAccount;
   @override
-  final double? balance;
+  final String? balance;
   @override
   final int? createdBy;
   @override
@@ -283,7 +283,7 @@ abstract class _Coa implements Coa {
       final String? accountCode,
       final String? accountType,
       final String? parentAccount,
-      final double? balance,
+      final String? balance,
       final int? createdBy,
       final DateTime? createdDate,
       final int? isActive) = _$CoaImpl;
@@ -301,7 +301,7 @@ abstract class _Coa implements Coa {
   @override
   String? get parentAccount;
   @override
-  double? get balance;
+  String? get balance;
   @override
   int? get createdBy;
   @override

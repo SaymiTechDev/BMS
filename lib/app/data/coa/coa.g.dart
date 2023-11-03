@@ -12,7 +12,7 @@ _$CoaImpl _$$CoaImplFromJson(Map<String, dynamic> json) => _$CoaImpl(
       json['accountCode'] as String?,
       json['accountType'] as String?,
       json['parentAccount'] as String?,
-      (json['balance'] as num?)?.toDouble(),
+      json['balance'] as String?,
       json['createdBy'] as int?,
       json['createdDate'] == null
           ? null

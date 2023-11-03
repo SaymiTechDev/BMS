@@ -38,6 +38,45 @@ class ApiService {
     }
   }
 
+  getCompanies() async {
+    try {
+      var response = await dio.get(
+        '${Config.baseUrl}${EndPoints.getCompanies}',
+      );
+      if (response.statusCode == 200 && response.data != null) {
+        return response.data["msg"];
+      }
+    } catch (e) {
+      return null;
+    }
+  }
+
+  getFYear() async {
+    try {
+      var response = await dio.get(
+        '${Config.baseUrl}${EndPoints.getFYear}',
+      );
+      if (response.statusCode == 200 && response.data != null) {
+        return response.data["msg"];
+      }
+    } catch (e) {
+      return null;
+    }
+  }
+
+  getCoa() async {
+    try {
+      var response = await dio.get(
+        '${Config.baseUrl}${EndPoints.getCoa}',
+      );
+      if (response.statusCode == 200 && response.data != null) {
+        return response.data["msg"];
+      }
+    } catch (e) {
+      return null;
+    }
+  }
+
   getProducts() async {
     try {
       var response = await dio.get(
@@ -104,6 +143,42 @@ class ApiService {
       Response response = await dio.post(
         '${Config.baseUrl}${EndPoints.postProducts}',
         data: {"products": json},
+      );
+      if (response.statusCode == 200 && response.data != null) {
+        return response.statusMessage;
+      }
+    } catch (e) {
+      if (kDebugMode) {
+        print(e);
+      }
+      return null;
+    }
+  }
+
+  Future<dynamic> createCompany(dynamic json) async {
+    try {
+      print(jsonEncode(json));
+      Response response = await dio.post(
+        '${Config.baseUrl}${EndPoints.postCompanies}',
+        data: {"companies": json},
+      );
+      if (response.statusCode == 200 && response.data != null) {
+        return response.statusMessage;
+      }
+    } catch (e) {
+      if (kDebugMode) {
+        print(e);
+      }
+      return null;
+    }
+  }
+
+  Future<dynamic> createCoa(dynamic json) async {
+    try {
+      print(jsonEncode(json));
+      Response response = await dio.post(
+        '${Config.baseUrl}${EndPoints.postCoa}',
+        data: {"coa": json},
       );
       if (response.statusCode == 200 && response.data != null) {
         return response.statusMessage;

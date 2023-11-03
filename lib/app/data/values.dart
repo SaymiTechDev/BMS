@@ -28,4 +28,12 @@ class DataList {
     'Item',
     'Process',
   ];
+
+  static const List<String> accountType = [
+    'assets',
+    'liability',
+    'equity',
+    'income',
+    'expense',
+  ];
 }

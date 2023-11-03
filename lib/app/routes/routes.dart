@@ -1,4 +1,6 @@
+import 'package:bms/app/controller/admin_controller.dart';
 import 'package:bms/app/controller/contacts_controller.dart';
+import 'package:bms/app/controller/finance_controller.dart';
 import 'package:bms/app/controller/login_controller.dart';
 import 'package:bms/app/controller/products_controller.dart';
 import 'package:bms/app/controller/purchase_controller.dart';
@@ -62,6 +64,9 @@ class Routes {
     GetPage(
       name: admin,
       page: () => const Admin(),
+      binding: BindingsBuilder(() {
+        Get.put<AdminController>(AdminController());
+      }),
     ),
     GetPage(
       name: banking,
@@ -70,6 +75,9 @@ class Routes {
     GetPage(
       name: finance,
       page: () => const FinanceScreen(),
+      binding: BindingsBuilder(() {
+        Get.put<FinanceController>(FinanceController());
+      }),
     ),
     GetPage(
       name: inventory,
