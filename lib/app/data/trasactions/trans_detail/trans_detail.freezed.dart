@@ -37,6 +37,8 @@ mixin _$TransDetail {
   int? get baseLine => throw _privateConstructorUsedError;
   int? get createdBy => throw _privateConstructorUsedError;
   DateTime? get createdDate => throw _privateConstructorUsedError;
+  String? get company => throw _privateConstructorUsedError;
+  String? get companyName => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -67,7 +69,9 @@ abstract class $TransDetailCopyWith<$Res> {
       int? baseEntry,
       int? baseLine,
       int? createdBy,
-      DateTime? createdDate});
+      DateTime? createdDate,
+      String? company,
+      String? companyName});
 }
 
 /// @nodoc
@@ -100,6 +104,8 @@ class _$TransDetailCopyWithImpl<$Res, $Val extends TransDetail>
     Object? baseLine = freezed,
     Object? createdBy = freezed,
     Object? createdDate = freezed,
+    Object? company = freezed,
+    Object? companyName = freezed,
   }) {
     return _then(_value.copyWith(
       transDetailEntry: freezed == transDetailEntry
@@ -170,6 +176,14 @@ class _$TransDetailCopyWithImpl<$Res, $Val extends TransDetail>
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      company: freezed == company
+          ? _value.company
+          : company // ignore: cast_nullable_to_non_nullable
+              as String?,
+      companyName: freezed == companyName
+          ? _value.companyName
+          : companyName // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -199,7 +213,9 @@ abstract class _$$TransDetailImplCopyWith<$Res>
       int? baseEntry,
       int? baseLine,
       int? createdBy,
-      DateTime? createdDate});
+      DateTime? createdDate,
+      String? company,
+      String? companyName});
 }
 
 /// @nodoc
@@ -230,6 +246,8 @@ class __$$TransDetailImplCopyWithImpl<$Res>
     Object? baseLine = freezed,
     Object? createdBy = freezed,
     Object? createdDate = freezed,
+    Object? company = freezed,
+    Object? companyName = freezed,
   }) {
     return _then(_$TransDetailImpl(
       freezed == transDetailEntry
@@ -300,6 +318,14 @@ class __$$TransDetailImplCopyWithImpl<$Res>
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      freezed == company
+          ? _value.company
+          : company // ignore: cast_nullable_to_non_nullable
+              as String?,
+      freezed == companyName
+          ? _value.companyName
+          : companyName // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -324,7 +350,9 @@ class _$TransDetailImpl implements _TransDetail {
       this.baseEntry,
       this.baseLine,
       this.createdBy,
-      this.createdDate);
+      this.createdDate,
+      this.company,
+      this.companyName);
 
   factory _$TransDetailImpl.fromJson(Map<String, dynamic> json) =>
       _$$TransDetailImplFromJson(json);
@@ -363,10 +391,14 @@ class _$TransDetailImpl implements _TransDetail {
   final int? createdBy;
   @override
   final DateTime? createdDate;
+  @override
+  final String? company;
+  @override
+  final String? companyName;
 
   @override
   String toString() {
-    return 'TransDetail(transDetailEntry: $transDetailEntry, transEntry: $transEntry, lineId: $lineId, productId: $productId, sku: $sku, productName: $productName, quantity: $quantity, rate: $rate, taxCode: $taxCode, amount: $amount, warehouseCode: $warehouseCode, lineStatus: $lineStatus, baseType: $baseType, baseEntry: $baseEntry, baseLine: $baseLine, createdBy: $createdBy, createdDate: $createdDate)';
+    return 'TransDetail(transDetailEntry: $transDetailEntry, transEntry: $transEntry, lineId: $lineId, productId: $productId, sku: $sku, productName: $productName, quantity: $quantity, rate: $rate, taxCode: $taxCode, amount: $amount, warehouseCode: $warehouseCode, lineStatus: $lineStatus, baseType: $baseType, baseEntry: $baseEntry, baseLine: $baseLine, createdBy: $createdBy, createdDate: $createdDate, company: $company, companyName: $companyName)';
   }
 
   @override
@@ -402,30 +434,36 @@ class _$TransDetailImpl implements _TransDetail {
             (identical(other.createdBy, createdBy) ||
                 other.createdBy == createdBy) &&
             (identical(other.createdDate, createdDate) ||
-                other.createdDate == createdDate));
+                other.createdDate == createdDate) &&
+            (identical(other.company, company) || other.company == company) &&
+            (identical(other.companyName, companyName) ||
+                other.companyName == companyName));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      transDetailEntry,
-      transEntry,
-      lineId,
-      productId,
-      sku,
-      productName,
-      quantity,
-      rate,
-      taxCode,
-      amount,
-      warehouseCode,
-      lineStatus,
-      baseType,
-      baseEntry,
-      baseLine,
-      createdBy,
-      createdDate);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        transDetailEntry,
+        transEntry,
+        lineId,
+        productId,
+        sku,
+        productName,
+        quantity,
+        rate,
+        taxCode,
+        amount,
+        warehouseCode,
+        lineStatus,
+        baseType,
+        baseEntry,
+        baseLine,
+        createdBy,
+        createdDate,
+        company,
+        companyName
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -459,7 +497,9 @@ abstract class _TransDetail implements TransDetail {
       final int? baseEntry,
       final int? baseLine,
       final int? createdBy,
-      final DateTime? createdDate) = _$TransDetailImpl;
+      final DateTime? createdDate,
+      final String? company,
+      final String? companyName) = _$TransDetailImpl;
 
   factory _TransDetail.fromJson(Map<String, dynamic> json) =
       _$TransDetailImpl.fromJson;
@@ -498,6 +538,10 @@ abstract class _TransDetail implements TransDetail {
   int? get createdBy;
   @override
   DateTime? get createdDate;
+  @override
+  String? get company;
+  @override
+  String? get companyName;
   @override
   @JsonKey(ignore: true)
   _$$TransDetailImplCopyWith<_$TransDetailImpl> get copyWith =>

@@ -29,6 +29,8 @@ mixin _$Coa {
   int? get createdBy => throw _privateConstructorUsedError;
   DateTime? get createdDate => throw _privateConstructorUsedError;
   int? get isActive => throw _privateConstructorUsedError;
+  String? get company => throw _privateConstructorUsedError;
+  String? get companyName => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -49,7 +51,9 @@ abstract class $CoaCopyWith<$Res> {
       String? balance,
       int? createdBy,
       DateTime? createdDate,
-      int? isActive});
+      int? isActive,
+      String? company,
+      String? companyName});
 }
 
 /// @nodoc
@@ -73,6 +77,8 @@ class _$CoaCopyWithImpl<$Res, $Val extends Coa> implements $CoaCopyWith<$Res> {
     Object? createdBy = freezed,
     Object? createdDate = freezed,
     Object? isActive = freezed,
+    Object? company = freezed,
+    Object? companyName = freezed,
   }) {
     return _then(_value.copyWith(
       coaId: freezed == coaId
@@ -111,6 +117,14 @@ class _$CoaCopyWithImpl<$Res, $Val extends Coa> implements $CoaCopyWith<$Res> {
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
               as int?,
+      company: freezed == company
+          ? _value.company
+          : company // ignore: cast_nullable_to_non_nullable
+              as String?,
+      companyName: freezed == companyName
+          ? _value.companyName
+          : companyName // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -130,7 +144,9 @@ abstract class _$$CoaImplCopyWith<$Res> implements $CoaCopyWith<$Res> {
       String? balance,
       int? createdBy,
       DateTime? createdDate,
-      int? isActive});
+      int? isActive,
+      String? company,
+      String? companyName});
 }
 
 /// @nodoc
@@ -151,6 +167,8 @@ class __$$CoaImplCopyWithImpl<$Res> extends _$CoaCopyWithImpl<$Res, _$CoaImpl>
     Object? createdBy = freezed,
     Object? createdDate = freezed,
     Object? isActive = freezed,
+    Object? company = freezed,
+    Object? companyName = freezed,
   }) {
     return _then(_$CoaImpl(
       freezed == coaId
@@ -189,6 +207,14 @@ class __$$CoaImplCopyWithImpl<$Res> extends _$CoaCopyWithImpl<$Res, _$CoaImpl>
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
               as int?,
+      freezed == company
+          ? _value.company
+          : company // ignore: cast_nullable_to_non_nullable
+              as String?,
+      freezed == companyName
+          ? _value.companyName
+          : companyName // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -205,7 +231,9 @@ class _$CoaImpl implements _Coa {
       this.balance,
       this.createdBy,
       this.createdDate,
-      this.isActive);
+      this.isActive,
+      this.company,
+      this.companyName);
 
   factory _$CoaImpl.fromJson(Map<String, dynamic> json) =>
       _$$CoaImplFromJson(json);
@@ -228,10 +256,14 @@ class _$CoaImpl implements _Coa {
   final DateTime? createdDate;
   @override
   final int? isActive;
+  @override
+  final String? company;
+  @override
+  final String? companyName;
 
   @override
   String toString() {
-    return 'Coa(coaId: $coaId, accountName: $accountName, accountCode: $accountCode, accountType: $accountType, parentAccount: $parentAccount, balance: $balance, createdBy: $createdBy, createdDate: $createdDate, isActive: $isActive)';
+    return 'Coa(coaId: $coaId, accountName: $accountName, accountCode: $accountCode, accountType: $accountType, parentAccount: $parentAccount, balance: $balance, createdBy: $createdBy, createdDate: $createdDate, isActive: $isActive, company: $company, companyName: $companyName)';
   }
 
   @override
@@ -254,13 +286,27 @@ class _$CoaImpl implements _Coa {
             (identical(other.createdDate, createdDate) ||
                 other.createdDate == createdDate) &&
             (identical(other.isActive, isActive) ||
-                other.isActive == isActive));
+                other.isActive == isActive) &&
+            (identical(other.company, company) || other.company == company) &&
+            (identical(other.companyName, companyName) ||
+                other.companyName == companyName));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, coaId, accountName, accountCode,
-      accountType, parentAccount, balance, createdBy, createdDate, isActive);
+  int get hashCode => Object.hash(
+      runtimeType,
+      coaId,
+      accountName,
+      accountCode,
+      accountType,
+      parentAccount,
+      balance,
+      createdBy,
+      createdDate,
+      isActive,
+      company,
+      companyName);
 
   @JsonKey(ignore: true)
   @override
@@ -286,7 +332,9 @@ abstract class _Coa implements Coa {
       final String? balance,
       final int? createdBy,
       final DateTime? createdDate,
-      final int? isActive) = _$CoaImpl;
+      final int? isActive,
+      final String? company,
+      final String? companyName) = _$CoaImpl;
 
   factory _Coa.fromJson(Map<String, dynamic> json) = _$CoaImpl.fromJson;
 
@@ -308,6 +356,10 @@ abstract class _Coa implements Coa {
   DateTime? get createdDate;
   @override
   int? get isActive;
+  @override
+  String? get company;
+  @override
+  String? get companyName;
   @override
   @JsonKey(ignore: true)
   _$$CoaImplCopyWith<_$CoaImpl> get copyWith =>

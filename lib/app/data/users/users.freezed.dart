@@ -24,6 +24,7 @@ mixin _$Users {
   String? get userName => throw _privateConstructorUsedError;
   String? get password => throw _privateConstructorUsedError;
   String? get company => throw _privateConstructorUsedError;
+  String? get companyName => throw _privateConstructorUsedError;
   int? get createdBy => throw _privateConstructorUsedError;
   DateTime? get createdDate => throw _privateConstructorUsedError;
   DateTime? get lastSignedIn => throw _privateConstructorUsedError;
@@ -45,6 +46,7 @@ abstract class $UsersCopyWith<$Res> {
       String? userName,
       String? password,
       String? company,
+      String? companyName,
       int? createdBy,
       DateTime? createdDate,
       DateTime? lastSignedIn,
@@ -69,6 +71,7 @@ class _$UsersCopyWithImpl<$Res, $Val extends Users>
     Object? userName = freezed,
     Object? password = freezed,
     Object? company = freezed,
+    Object? companyName = freezed,
     Object? createdBy = freezed,
     Object? createdDate = freezed,
     Object? lastSignedIn = freezed,
@@ -91,6 +94,10 @@ class _$UsersCopyWithImpl<$Res, $Val extends Users>
       company: freezed == company
           ? _value.company
           : company // ignore: cast_nullable_to_non_nullable
+              as String?,
+      companyName: freezed == companyName
+          ? _value.companyName
+          : companyName // ignore: cast_nullable_to_non_nullable
               as String?,
       createdBy: freezed == createdBy
           ? _value.createdBy
@@ -128,6 +135,7 @@ abstract class _$$UsersImplCopyWith<$Res> implements $UsersCopyWith<$Res> {
       String? userName,
       String? password,
       String? company,
+      String? companyName,
       int? createdBy,
       DateTime? createdDate,
       DateTime? lastSignedIn,
@@ -150,6 +158,7 @@ class __$$UsersImplCopyWithImpl<$Res>
     Object? userName = freezed,
     Object? password = freezed,
     Object? company = freezed,
+    Object? companyName = freezed,
     Object? createdBy = freezed,
     Object? createdDate = freezed,
     Object? lastSignedIn = freezed,
@@ -172,6 +181,10 @@ class __$$UsersImplCopyWithImpl<$Res>
       freezed == company
           ? _value.company
           : company // ignore: cast_nullable_to_non_nullable
+              as String?,
+      freezed == companyName
+          ? _value.companyName
+          : companyName // ignore: cast_nullable_to_non_nullable
               as String?,
       freezed == createdBy
           ? _value.createdBy
@@ -205,6 +218,7 @@ class _$UsersImpl implements _Users {
       this.userName,
       this.password,
       this.company,
+      this.companyName,
       this.createdBy,
       this.createdDate,
       this.lastSignedIn,
@@ -223,6 +237,8 @@ class _$UsersImpl implements _Users {
   @override
   final String? company;
   @override
+  final String? companyName;
+  @override
   final int? createdBy;
   @override
   final DateTime? createdDate;
@@ -235,7 +251,7 @@ class _$UsersImpl implements _Users {
 
   @override
   String toString() {
-    return 'Users(userId: $userId, userName: $userName, password: $password, company: $company, createdBy: $createdBy, createdDate: $createdDate, lastSignedIn: $lastSignedIn, lastSignedOut: $lastSignedOut, isActive: $isActive)';
+    return 'Users(userId: $userId, userName: $userName, password: $password, company: $company, companyName: $companyName, createdBy: $createdBy, createdDate: $createdDate, lastSignedIn: $lastSignedIn, lastSignedOut: $lastSignedOut, isActive: $isActive)';
   }
 
   @override
@@ -249,6 +265,8 @@ class _$UsersImpl implements _Users {
             (identical(other.password, password) ||
                 other.password == password) &&
             (identical(other.company, company) || other.company == company) &&
+            (identical(other.companyName, companyName) ||
+                other.companyName == companyName) &&
             (identical(other.createdBy, createdBy) ||
                 other.createdBy == createdBy) &&
             (identical(other.createdDate, createdDate) ||
@@ -263,8 +281,18 @@ class _$UsersImpl implements _Users {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, userId, userName, password,
-      company, createdBy, createdDate, lastSignedIn, lastSignedOut, isActive);
+  int get hashCode => Object.hash(
+      runtimeType,
+      userId,
+      userName,
+      password,
+      company,
+      companyName,
+      createdBy,
+      createdDate,
+      lastSignedIn,
+      lastSignedOut,
+      isActive);
 
   @JsonKey(ignore: true)
   @override
@@ -286,6 +314,7 @@ abstract class _Users implements Users {
       final String? userName,
       final String? password,
       final String? company,
+      final String? companyName,
       final int? createdBy,
       final DateTime? createdDate,
       final DateTime? lastSignedIn,
@@ -302,6 +331,8 @@ abstract class _Users implements Users {
   String? get password;
   @override
   String? get company;
+  @override
+  String? get companyName;
   @override
   int? get createdBy;
   @override

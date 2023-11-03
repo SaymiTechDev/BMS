@@ -227,7 +227,7 @@ class ApiService {
       print(jsonEncode(json));
       Response response = await dio.post(
         '${Config.baseUrl}${EndPoints.postFYear}',
-        data: {"fYear": json},
+        data: {"finYear": json},
       );
       if (response.statusCode == 200 && response.data != null) {
         return response.statusMessage;

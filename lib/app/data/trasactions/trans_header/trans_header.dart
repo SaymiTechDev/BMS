@@ -29,6 +29,8 @@ class TransHeader with _$TransHeader {
     double? total,
     int? createdBy,
     DateTime? createdDate,
+    String? company,
+    String? companyName,
   ) = _TransHeader;
   factory TransHeader.fromJson(Map<String, Object?> json) =>
       _$TransHeaderFromJson(json);

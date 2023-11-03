@@ -10,6 +10,7 @@ class Users with _$Users {
     String? userName,
     String? password,
     String? company,
+    String? companyName,
     int? createdBy,
     DateTime? createdDate,
     DateTime? lastSignedIn,

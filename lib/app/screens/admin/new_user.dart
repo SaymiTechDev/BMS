@@ -79,6 +79,13 @@ class NewUser extends GetView<AdminController> {
                               borderSide: BorderSide(color: AppColors.blue),
                             ),
                           ),
+                          onChanged: (e) {
+                            controller.userForm.control("companyName").value =
+                                controller.companyList
+                                    .where((p0) => p0.uniqueCode == e.value)
+                                    .map((e) => e.companyName)
+                                    .first;
+                          },
                           items: controller.companyList
                               .map((e) => DropdownMenuItem(
                                   value: e.uniqueCode,

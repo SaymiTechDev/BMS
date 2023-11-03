@@ -39,6 +39,8 @@ _$TransHeaderImpl _$$TransHeaderImplFromJson(Map<String, dynamic> json) =>
       json['createdDate'] == null
           ? null
           : DateTime.parse(json['createdDate'] as String),
+      json['company'] as String?,
+      json['companyName'] as String?,
     );
 
 Map<String, dynamic> _$$TransHeaderImplToJson(_$TransHeaderImpl instance) =>
@@ -66,4 +68,6 @@ Map<String, dynamic> _$$TransHeaderImplToJson(_$TransHeaderImpl instance) =>
       'total': instance.total,
       'createdBy': instance.createdBy,
       'createdDate': instance.createdDate?.toIso8601String(),
+      'company': instance.company,
+      'companyName': instance.companyName,
     };

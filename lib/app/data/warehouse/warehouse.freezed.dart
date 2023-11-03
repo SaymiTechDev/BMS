@@ -27,6 +27,8 @@ mixin _$Warehouse {
   int? get createdBy => throw _privateConstructorUsedError;
   DateTime? get createdDate => throw _privateConstructorUsedError;
   int? get isActive => throw _privateConstructorUsedError;
+  String? get company => throw _privateConstructorUsedError;
+  String? get companyName => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -46,7 +48,9 @@ abstract class $WarehouseCopyWith<$Res> {
       String? location,
       int? createdBy,
       DateTime? createdDate,
-      int? isActive});
+      int? isActive,
+      String? company,
+      String? companyName});
 }
 
 /// @nodoc
@@ -69,6 +73,8 @@ class _$WarehouseCopyWithImpl<$Res, $Val extends Warehouse>
     Object? createdBy = freezed,
     Object? createdDate = freezed,
     Object? isActive = freezed,
+    Object? company = freezed,
+    Object? companyName = freezed,
   }) {
     return _then(_value.copyWith(
       warehouseId: freezed == warehouseId
@@ -99,6 +105,14 @@ class _$WarehouseCopyWithImpl<$Res, $Val extends Warehouse>
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
               as int?,
+      company: freezed == company
+          ? _value.company
+          : company // ignore: cast_nullable_to_non_nullable
+              as String?,
+      companyName: freezed == companyName
+          ? _value.companyName
+          : companyName // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -118,7 +132,9 @@ abstract class _$$WarehouseImplCopyWith<$Res>
       String? location,
       int? createdBy,
       DateTime? createdDate,
-      int? isActive});
+      int? isActive,
+      String? company,
+      String? companyName});
 }
 
 /// @nodoc
@@ -139,6 +155,8 @@ class __$$WarehouseImplCopyWithImpl<$Res>
     Object? createdBy = freezed,
     Object? createdDate = freezed,
     Object? isActive = freezed,
+    Object? company = freezed,
+    Object? companyName = freezed,
   }) {
     return _then(_$WarehouseImpl(
       freezed == warehouseId
@@ -169,6 +187,14 @@ class __$$WarehouseImplCopyWithImpl<$Res>
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
               as int?,
+      freezed == company
+          ? _value.company
+          : company // ignore: cast_nullable_to_non_nullable
+              as String?,
+      freezed == companyName
+          ? _value.companyName
+          : companyName // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -176,8 +202,16 @@ class __$$WarehouseImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$WarehouseImpl implements _Warehouse {
-  const _$WarehouseImpl(this.warehouseId, this.warehouseCode, this.warehouse,
-      this.location, this.createdBy, this.createdDate, this.isActive);
+  const _$WarehouseImpl(
+      this.warehouseId,
+      this.warehouseCode,
+      this.warehouse,
+      this.location,
+      this.createdBy,
+      this.createdDate,
+      this.isActive,
+      this.company,
+      this.companyName);
 
   factory _$WarehouseImpl.fromJson(Map<String, dynamic> json) =>
       _$$WarehouseImplFromJson(json);
@@ -196,10 +230,14 @@ class _$WarehouseImpl implements _Warehouse {
   final DateTime? createdDate;
   @override
   final int? isActive;
+  @override
+  final String? company;
+  @override
+  final String? companyName;
 
   @override
   String toString() {
-    return 'Warehouse(warehouseId: $warehouseId, warehouseCode: $warehouseCode, warehouse: $warehouse, location: $location, createdBy: $createdBy, createdDate: $createdDate, isActive: $isActive)';
+    return 'Warehouse(warehouseId: $warehouseId, warehouseCode: $warehouseCode, warehouse: $warehouse, location: $location, createdBy: $createdBy, createdDate: $createdDate, isActive: $isActive, company: $company, companyName: $companyName)';
   }
 
   @override
@@ -220,13 +258,25 @@ class _$WarehouseImpl implements _Warehouse {
             (identical(other.createdDate, createdDate) ||
                 other.createdDate == createdDate) &&
             (identical(other.isActive, isActive) ||
-                other.isActive == isActive));
+                other.isActive == isActive) &&
+            (identical(other.company, company) || other.company == company) &&
+            (identical(other.companyName, companyName) ||
+                other.companyName == companyName));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, warehouseId, warehouseCode,
-      warehouse, location, createdBy, createdDate, isActive);
+  int get hashCode => Object.hash(
+      runtimeType,
+      warehouseId,
+      warehouseCode,
+      warehouse,
+      location,
+      createdBy,
+      createdDate,
+      isActive,
+      company,
+      companyName);
 
   @JsonKey(ignore: true)
   @override
@@ -250,7 +300,9 @@ abstract class _Warehouse implements Warehouse {
       final String? location,
       final int? createdBy,
       final DateTime? createdDate,
-      final int? isActive) = _$WarehouseImpl;
+      final int? isActive,
+      final String? company,
+      final String? companyName) = _$WarehouseImpl;
 
   factory _Warehouse.fromJson(Map<String, dynamic> json) =
       _$WarehouseImpl.fromJson;
@@ -269,6 +321,10 @@ abstract class _Warehouse implements Warehouse {
   DateTime? get createdDate;
   @override
   int? get isActive;
+  @override
+  String? get company;
+  @override
+  String? get companyName;
   @override
   @JsonKey(ignore: true)
   _$$WarehouseImplCopyWith<_$WarehouseImpl> get copyWith =>

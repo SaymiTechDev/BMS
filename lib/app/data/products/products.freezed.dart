@@ -32,6 +32,8 @@ mixin _$Products {
   DateTime? get createdDate => throw _privateConstructorUsedError;
   int? get isActive => throw _privateConstructorUsedError;
   int? get isStock => throw _privateConstructorUsedError;
+  String? get company => throw _privateConstructorUsedError;
+  String? get companyName => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -56,7 +58,9 @@ abstract class $ProductsCopyWith<$Res> {
       int? createdBy,
       DateTime? createdDate,
       int? isActive,
-      int? isStock});
+      int? isStock,
+      String? company,
+      String? companyName});
 }
 
 /// @nodoc
@@ -84,6 +88,8 @@ class _$ProductsCopyWithImpl<$Res, $Val extends Products>
     Object? createdDate = freezed,
     Object? isActive = freezed,
     Object? isStock = freezed,
+    Object? company = freezed,
+    Object? companyName = freezed,
   }) {
     return _then(_value.copyWith(
       productId: freezed == productId
@@ -134,6 +140,14 @@ class _$ProductsCopyWithImpl<$Res, $Val extends Products>
           ? _value.isStock
           : isStock // ignore: cast_nullable_to_non_nullable
               as int?,
+      company: freezed == company
+          ? _value.company
+          : company // ignore: cast_nullable_to_non_nullable
+              as String?,
+      companyName: freezed == companyName
+          ? _value.companyName
+          : companyName // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -158,7 +172,9 @@ abstract class _$$ProductsImplCopyWith<$Res>
       int? createdBy,
       DateTime? createdDate,
       int? isActive,
-      int? isStock});
+      int? isStock,
+      String? company,
+      String? companyName});
 }
 
 /// @nodoc
@@ -184,6 +200,8 @@ class __$$ProductsImplCopyWithImpl<$Res>
     Object? createdDate = freezed,
     Object? isActive = freezed,
     Object? isStock = freezed,
+    Object? company = freezed,
+    Object? companyName = freezed,
   }) {
     return _then(_$ProductsImpl(
       freezed == productId
@@ -234,6 +252,14 @@ class __$$ProductsImplCopyWithImpl<$Res>
           ? _value.isStock
           : isStock // ignore: cast_nullable_to_non_nullable
               as int?,
+      freezed == company
+          ? _value.company
+          : company // ignore: cast_nullable_to_non_nullable
+              as String?,
+      freezed == companyName
+          ? _value.companyName
+          : companyName // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -253,7 +279,9 @@ class _$ProductsImpl implements _Products {
       this.createdBy,
       this.createdDate,
       this.isActive,
-      this.isStock);
+      this.isStock,
+      this.company,
+      this.companyName);
 
   factory _$ProductsImpl.fromJson(Map<String, dynamic> json) =>
       _$$ProductsImplFromJson(json);
@@ -282,10 +310,14 @@ class _$ProductsImpl implements _Products {
   final int? isActive;
   @override
   final int? isStock;
+  @override
+  final String? company;
+  @override
+  final String? companyName;
 
   @override
   String toString() {
-    return 'Products(productId: $productId, productName: $productName, sku: $sku, productType: $productType, productGroup: $productGroup, uom: $uom, spu: $spu, hsnCode: $hsnCode, createdBy: $createdBy, createdDate: $createdDate, isActive: $isActive, isStock: $isStock)';
+    return 'Products(productId: $productId, productName: $productName, sku: $sku, productType: $productType, productGroup: $productGroup, uom: $uom, spu: $spu, hsnCode: $hsnCode, createdBy: $createdBy, createdDate: $createdDate, isActive: $isActive, isStock: $isStock, company: $company, companyName: $companyName)';
   }
 
   @override
@@ -311,7 +343,10 @@ class _$ProductsImpl implements _Products {
                 other.createdDate == createdDate) &&
             (identical(other.isActive, isActive) ||
                 other.isActive == isActive) &&
-            (identical(other.isStock, isStock) || other.isStock == isStock));
+            (identical(other.isStock, isStock) || other.isStock == isStock) &&
+            (identical(other.company, company) || other.company == company) &&
+            (identical(other.companyName, companyName) ||
+                other.companyName == companyName));
   }
 
   @JsonKey(ignore: true)
@@ -329,7 +364,9 @@ class _$ProductsImpl implements _Products {
       createdBy,
       createdDate,
       isActive,
-      isStock);
+      isStock,
+      company,
+      companyName);
 
   @JsonKey(ignore: true)
   @override
@@ -358,7 +395,9 @@ abstract class _Products implements Products {
       final int? createdBy,
       final DateTime? createdDate,
       final int? isActive,
-      final int? isStock) = _$ProductsImpl;
+      final int? isStock,
+      final String? company,
+      final String? companyName) = _$ProductsImpl;
 
   factory _Products.fromJson(Map<String, dynamic> json) =
       _$ProductsImpl.fromJson;
@@ -387,6 +426,10 @@ abstract class _Products implements Products {
   int? get isActive;
   @override
   int? get isStock;
+  @override
+  String? get company;
+  @override
+  String? get companyName;
   @override
   @JsonKey(ignore: true)
   _$$ProductsImplCopyWith<_$ProductsImpl> get copyWith =>

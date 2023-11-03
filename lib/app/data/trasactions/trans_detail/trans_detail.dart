@@ -23,6 +23,8 @@ class TransDetail with _$TransDetail {
     int? baseLine,
     int? createdBy,
     DateTime? createdDate,
+    String? company,
+    String? companyName,
   ) = _TransDetail;
   factory TransDetail.fromJson(Map<String, Object?> json) =>
       _$TransDetailFromJson(json);

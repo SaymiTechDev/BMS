@@ -19,6 +19,8 @@ class Address with _$Address {
     int? createdBy,
     DateTime? createdDate,
     int? isActive,
+    String? company,
+    String? companyName,
   ) = _Address;
 
   factory Address.fromJson(Map<String, Object?> json) =>

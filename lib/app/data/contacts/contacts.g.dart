@@ -10,7 +10,7 @@ _$ContactsImpl _$$ContactsImplFromJson(Map<String, dynamic> json) =>
     _$ContactsImpl(
       json['contactId'] as int?,
       $enumDecodeNullable(_$ContactTypeEnumMap, json['contactType']),
-      json['companyName'] as String?,
+      json['name'] as String?,
       json['displayName'] as String?,
       json['phone'] as String?,
       json['mobile'] as String?,
@@ -35,13 +35,15 @@ _$ContactsImpl _$$ContactsImplFromJson(Map<String, dynamic> json) =>
           ? null
           : DateTime.parse(json['createdDate'] as String),
       json['isActive'] as int?,
+      json['company'] as String?,
+      json['companyName'] as String?,
     );
 
 Map<String, dynamic> _$$ContactsImplToJson(_$ContactsImpl instance) =>
     <String, dynamic>{
       'contactId': instance.contactId,
       'contactType': _$ContactTypeEnumMap[instance.contactType],
-      'companyName': instance.companyName,
+      'name': instance.name,
       'displayName': instance.displayName,
       'phone': instance.phone,
       'mobile': instance.mobile,
@@ -64,6 +66,8 @@ Map<String, dynamic> _$$ContactsImplToJson(_$ContactsImpl instance) =>
       'createdBy': instance.createdBy,
       'createdDate': instance.createdDate?.toIso8601String(),
       'isActive': instance.isActive,
+      'company': instance.company,
+      'companyName': instance.companyName,
     };
 
 const _$ContactTypeEnumMap = {

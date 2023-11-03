@@ -43,6 +43,8 @@ mixin _$TransHeader {
   double? get total => throw _privateConstructorUsedError;
   int? get createdBy => throw _privateConstructorUsedError;
   DateTime? get createdDate => throw _privateConstructorUsedError;
+  String? get company => throw _privateConstructorUsedError;
+  String? get companyName => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -79,7 +81,9 @@ abstract class $TransHeaderCopyWith<$Res> {
       double? subTotal,
       double? total,
       int? createdBy,
-      DateTime? createdDate});
+      DateTime? createdDate,
+      String? company,
+      String? companyName});
 }
 
 /// @nodoc
@@ -118,6 +122,8 @@ class _$TransHeaderCopyWithImpl<$Res, $Val extends TransHeader>
     Object? total = freezed,
     Object? createdBy = freezed,
     Object? createdDate = freezed,
+    Object? company = freezed,
+    Object? companyName = freezed,
   }) {
     return _then(_value.copyWith(
       transEntry: freezed == transEntry
@@ -212,6 +218,14 @@ class _$TransHeaderCopyWithImpl<$Res, $Val extends TransHeader>
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      company: freezed == company
+          ? _value.company
+          : company // ignore: cast_nullable_to_non_nullable
+              as String?,
+      companyName: freezed == companyName
+          ? _value.companyName
+          : companyName // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -247,7 +261,9 @@ abstract class _$$TransHeaderImplCopyWith<$Res>
       double? subTotal,
       double? total,
       int? createdBy,
-      DateTime? createdDate});
+      DateTime? createdDate,
+      String? company,
+      String? companyName});
 }
 
 /// @nodoc
@@ -284,6 +300,8 @@ class __$$TransHeaderImplCopyWithImpl<$Res>
     Object? total = freezed,
     Object? createdBy = freezed,
     Object? createdDate = freezed,
+    Object? company = freezed,
+    Object? companyName = freezed,
   }) {
     return _then(_$TransHeaderImpl(
       freezed == transEntry
@@ -378,6 +396,14 @@ class __$$TransHeaderImplCopyWithImpl<$Res>
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      freezed == company
+          ? _value.company
+          : company // ignore: cast_nullable_to_non_nullable
+              as String?,
+      freezed == companyName
+          ? _value.companyName
+          : companyName // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -408,7 +434,9 @@ class _$TransHeaderImpl implements _TransHeader {
       this.subTotal,
       this.total,
       this.createdBy,
-      this.createdDate);
+      this.createdDate,
+      this.company,
+      this.companyName);
 
   factory _$TransHeaderImpl.fromJson(Map<String, dynamic> json) =>
       _$$TransHeaderImplFromJson(json);
@@ -459,10 +487,14 @@ class _$TransHeaderImpl implements _TransHeader {
   final int? createdBy;
   @override
   final DateTime? createdDate;
+  @override
+  final String? company;
+  @override
+  final String? companyName;
 
   @override
   String toString() {
-    return 'TransHeader(transEntry: $transEntry, docType: $docType, docNo: $docNo, contactId: $contactId, contactName: $contactName, shipId: $shipId, billId: $billId, status: $status, reference: $reference, orderDate: $orderDate, shipDate: $shipDate, refDate: $refDate, payTerms: $payTerms, comments: $comments, adjustment: $adjustment, discount: $discount, adjustValue: $adjustValue, tdsType: $tdsType, tdsValue: $tdsValue, subTotal: $subTotal, total: $total, createdBy: $createdBy, createdDate: $createdDate)';
+    return 'TransHeader(transEntry: $transEntry, docType: $docType, docNo: $docNo, contactId: $contactId, contactName: $contactName, shipId: $shipId, billId: $billId, status: $status, reference: $reference, orderDate: $orderDate, shipDate: $shipDate, refDate: $refDate, payTerms: $payTerms, comments: $comments, adjustment: $adjustment, discount: $discount, adjustValue: $adjustValue, tdsType: $tdsType, tdsValue: $tdsValue, subTotal: $subTotal, total: $total, createdBy: $createdBy, createdDate: $createdDate, company: $company, companyName: $companyName)';
   }
 
   @override
@@ -507,7 +539,10 @@ class _$TransHeaderImpl implements _TransHeader {
             (identical(other.createdBy, createdBy) ||
                 other.createdBy == createdBy) &&
             (identical(other.createdDate, createdDate) ||
-                other.createdDate == createdDate));
+                other.createdDate == createdDate) &&
+            (identical(other.company, company) || other.company == company) &&
+            (identical(other.companyName, companyName) ||
+                other.companyName == companyName));
   }
 
   @JsonKey(ignore: true)
@@ -536,7 +571,9 @@ class _$TransHeaderImpl implements _TransHeader {
         subTotal,
         total,
         createdBy,
-        createdDate
+        createdDate,
+        company,
+        companyName
       ]);
 
   @JsonKey(ignore: true)
@@ -577,7 +614,9 @@ abstract class _TransHeader implements TransHeader {
       final double? subTotal,
       final double? total,
       final int? createdBy,
-      final DateTime? createdDate) = _$TransHeaderImpl;
+      final DateTime? createdDate,
+      final String? company,
+      final String? companyName) = _$TransHeaderImpl;
 
   factory _TransHeader.fromJson(Map<String, dynamic> json) =
       _$TransHeaderImpl.fromJson;
@@ -628,6 +667,10 @@ abstract class _TransHeader implements TransHeader {
   int? get createdBy;
   @override
   DateTime? get createdDate;
+  @override
+  String? get company;
+  @override
+  String? get companyName;
   @override
   @JsonKey(ignore: true)
   _$$TransHeaderImplCopyWith<_$TransHeaderImpl> get copyWith =>

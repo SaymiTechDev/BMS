@@ -13,6 +13,8 @@ class Warehouse with _$Warehouse {
     int? createdBy,
     DateTime? createdDate,
     int? isActive,
+    String? company,
+    String? companyName,
   ) = _Warehouse;
 
   factory Warehouse.fromJson(Map<String, Object?> json) =>

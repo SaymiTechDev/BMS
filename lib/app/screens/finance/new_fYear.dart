@@ -62,11 +62,15 @@ class NewFYear extends GetView<FinanceController> {
                       // ),
                       child: ReactiveDateTimePicker(
                         formControlName: 'startDate',
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
                           labelText: 'Start Date',
-                          border: OutlineInputBorder(),
+                          border: const UnderlineInputBorder(
+                              borderSide: BorderSide.none),
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: AppColors.blue),
+                          ),
                           helperText: '',
-                          suffixIcon: Icon(Icons.calendar_today),
+                          suffixIcon: const Icon(Icons.calendar_today),
                         ),
                       ),
                     ),
@@ -92,11 +96,15 @@ class NewFYear extends GetView<FinanceController> {
                       // ),
                       child: ReactiveDateTimePicker(
                         formControlName: 'endDate',
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
                           labelText: 'End Date',
-                          border: OutlineInputBorder(),
+                          border: const UnderlineInputBorder(
+                              borderSide: BorderSide.none),
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: AppColors.blue),
+                          ),
                           helperText: '',
-                          suffixIcon: Icon(Icons.calendar_today),
+                          suffixIcon: const Icon(Icons.calendar_today),
                         ),
                       ),
                     ),

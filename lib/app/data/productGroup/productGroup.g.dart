@@ -17,6 +17,8 @@ _$ProductGroupImpl _$$ProductGroupImplFromJson(Map<String, dynamic> json) =>
           ? null
           : DateTime.parse(json['createdDate'] as String),
       json['isActive'] as int?,
+      json['company'] as String?,
+      json['companyName'] as String?,
     );
 
 Map<String, dynamic> _$$ProductGroupImplToJson(_$ProductGroupImpl instance) =>
@@ -28,4 +30,6 @@ Map<String, dynamic> _$$ProductGroupImplToJson(_$ProductGroupImpl instance) =>
       'createdBy': instance.createdBy,
       'createdDate': instance.createdDate?.toIso8601String(),
       'isActive': instance.isActive,
+      'company': instance.company,
+      'companyName': instance.companyName,
     };

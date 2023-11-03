@@ -22,7 +22,7 @@ Contacts _$ContactsFromJson(Map<String, dynamic> json) {
 mixin _$Contacts {
   int? get contactId => throw _privateConstructorUsedError;
   ContactType? get contactType => throw _privateConstructorUsedError;
-  String? get companyName => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   String? get displayName => throw _privateConstructorUsedError;
   String? get phone => throw _privateConstructorUsedError;
   String? get mobile => throw _privateConstructorUsedError;
@@ -45,6 +45,8 @@ mixin _$Contacts {
   int? get createdBy => throw _privateConstructorUsedError;
   DateTime? get createdDate => throw _privateConstructorUsedError;
   int? get isActive => throw _privateConstructorUsedError;
+  String? get company => throw _privateConstructorUsedError;
+  String? get companyName => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -60,7 +62,7 @@ abstract class $ContactsCopyWith<$Res> {
   $Res call(
       {int? contactId,
       ContactType? contactType,
-      String? companyName,
+      String? name,
       String? displayName,
       String? phone,
       String? mobile,
@@ -82,7 +84,9 @@ abstract class $ContactsCopyWith<$Res> {
       String? uniqueCode,
       int? createdBy,
       DateTime? createdDate,
-      int? isActive});
+      int? isActive,
+      String? company,
+      String? companyName});
 }
 
 /// @nodoc
@@ -100,7 +104,7 @@ class _$ContactsCopyWithImpl<$Res, $Val extends Contacts>
   $Res call({
     Object? contactId = freezed,
     Object? contactType = freezed,
-    Object? companyName = freezed,
+    Object? name = freezed,
     Object? displayName = freezed,
     Object? phone = freezed,
     Object? mobile = freezed,
@@ -123,6 +127,8 @@ class _$ContactsCopyWithImpl<$Res, $Val extends Contacts>
     Object? createdBy = freezed,
     Object? createdDate = freezed,
     Object? isActive = freezed,
+    Object? company = freezed,
+    Object? companyName = freezed,
   }) {
     return _then(_value.copyWith(
       contactId: freezed == contactId
@@ -133,9 +139,9 @@ class _$ContactsCopyWithImpl<$Res, $Val extends Contacts>
           ? _value.contactType
           : contactType // ignore: cast_nullable_to_non_nullable
               as ContactType?,
-      companyName: freezed == companyName
-          ? _value.companyName
-          : companyName // ignore: cast_nullable_to_non_nullable
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
               as String?,
       displayName: freezed == displayName
           ? _value.displayName
@@ -225,6 +231,14 @@ class _$ContactsCopyWithImpl<$Res, $Val extends Contacts>
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
               as int?,
+      company: freezed == company
+          ? _value.company
+          : company // ignore: cast_nullable_to_non_nullable
+              as String?,
+      companyName: freezed == companyName
+          ? _value.companyName
+          : companyName // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -240,7 +254,7 @@ abstract class _$$ContactsImplCopyWith<$Res>
   $Res call(
       {int? contactId,
       ContactType? contactType,
-      String? companyName,
+      String? name,
       String? displayName,
       String? phone,
       String? mobile,
@@ -262,7 +276,9 @@ abstract class _$$ContactsImplCopyWith<$Res>
       String? uniqueCode,
       int? createdBy,
       DateTime? createdDate,
-      int? isActive});
+      int? isActive,
+      String? company,
+      String? companyName});
 }
 
 /// @nodoc
@@ -278,7 +294,7 @@ class __$$ContactsImplCopyWithImpl<$Res>
   $Res call({
     Object? contactId = freezed,
     Object? contactType = freezed,
-    Object? companyName = freezed,
+    Object? name = freezed,
     Object? displayName = freezed,
     Object? phone = freezed,
     Object? mobile = freezed,
@@ -301,6 +317,8 @@ class __$$ContactsImplCopyWithImpl<$Res>
     Object? createdBy = freezed,
     Object? createdDate = freezed,
     Object? isActive = freezed,
+    Object? company = freezed,
+    Object? companyName = freezed,
   }) {
     return _then(_$ContactsImpl(
       freezed == contactId
@@ -311,9 +329,9 @@ class __$$ContactsImplCopyWithImpl<$Res>
           ? _value.contactType
           : contactType // ignore: cast_nullable_to_non_nullable
               as ContactType?,
-      freezed == companyName
-          ? _value.companyName
-          : companyName // ignore: cast_nullable_to_non_nullable
+      freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
               as String?,
       freezed == displayName
           ? _value.displayName
@@ -403,6 +421,14 @@ class __$$ContactsImplCopyWithImpl<$Res>
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
               as int?,
+      freezed == company
+          ? _value.company
+          : company // ignore: cast_nullable_to_non_nullable
+              as String?,
+      freezed == companyName
+          ? _value.companyName
+          : companyName // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -413,7 +439,7 @@ class _$ContactsImpl implements _Contacts {
   const _$ContactsImpl(
       this.contactId,
       this.contactType,
-      this.companyName,
+      this.name,
       this.displayName,
       this.phone,
       this.mobile,
@@ -435,7 +461,9 @@ class _$ContactsImpl implements _Contacts {
       this.uniqueCode,
       this.createdBy,
       this.createdDate,
-      this.isActive);
+      this.isActive,
+      this.company,
+      this.companyName);
 
   factory _$ContactsImpl.fromJson(Map<String, dynamic> json) =>
       _$$ContactsImplFromJson(json);
@@ -445,7 +473,7 @@ class _$ContactsImpl implements _Contacts {
   @override
   final ContactType? contactType;
   @override
-  final String? companyName;
+  final String? name;
   @override
   final String? displayName;
   @override
@@ -490,10 +518,14 @@ class _$ContactsImpl implements _Contacts {
   final DateTime? createdDate;
   @override
   final int? isActive;
+  @override
+  final String? company;
+  @override
+  final String? companyName;
 
   @override
   String toString() {
-    return 'Contacts(contactId: $contactId, contactType: $contactType, companyName: $companyName, displayName: $displayName, phone: $phone, mobile: $mobile, email: $email, website: $website, gstTreatment: $gstTreatment, gstNo: $gstNo, panNo: $panNo, paymentTerms: $paymentTerms, discount: $discount, relationShipType: $relationShipType, bankName: $bankName, benificiaryName: $benificiaryName, accountNo: $accountNo, ifscCode: $ifscCode, upiId: $upiId, accountPayable: $accountPayable, accountReceivable: $accountReceivable, uniqueCode: $uniqueCode, createdBy: $createdBy, createdDate: $createdDate, isActive: $isActive)';
+    return 'Contacts(contactId: $contactId, contactType: $contactType, name: $name, displayName: $displayName, phone: $phone, mobile: $mobile, email: $email, website: $website, gstTreatment: $gstTreatment, gstNo: $gstNo, panNo: $panNo, paymentTerms: $paymentTerms, discount: $discount, relationShipType: $relationShipType, bankName: $bankName, benificiaryName: $benificiaryName, accountNo: $accountNo, ifscCode: $ifscCode, upiId: $upiId, accountPayable: $accountPayable, accountReceivable: $accountReceivable, uniqueCode: $uniqueCode, createdBy: $createdBy, createdDate: $createdDate, isActive: $isActive, company: $company, companyName: $companyName)';
   }
 
   @override
@@ -505,8 +537,7 @@ class _$ContactsImpl implements _Contacts {
                 other.contactId == contactId) &&
             (identical(other.contactType, contactType) ||
                 other.contactType == contactType) &&
-            (identical(other.companyName, companyName) ||
-                other.companyName == companyName) &&
+            (identical(other.name, name) || other.name == name) &&
             (identical(other.displayName, displayName) ||
                 other.displayName == displayName) &&
             (identical(other.phone, phone) || other.phone == phone) &&
@@ -543,7 +574,10 @@ class _$ContactsImpl implements _Contacts {
             (identical(other.createdDate, createdDate) ||
                 other.createdDate == createdDate) &&
             (identical(other.isActive, isActive) ||
-                other.isActive == isActive));
+                other.isActive == isActive) &&
+            (identical(other.company, company) || other.company == company) &&
+            (identical(other.companyName, companyName) ||
+                other.companyName == companyName));
   }
 
   @JsonKey(ignore: true)
@@ -552,7 +586,7 @@ class _$ContactsImpl implements _Contacts {
         runtimeType,
         contactId,
         contactType,
-        companyName,
+        name,
         displayName,
         phone,
         mobile,
@@ -574,7 +608,9 @@ class _$ContactsImpl implements _Contacts {
         uniqueCode,
         createdBy,
         createdDate,
-        isActive
+        isActive,
+        company,
+        companyName
       ]);
 
   @JsonKey(ignore: true)
@@ -595,7 +631,7 @@ abstract class _Contacts implements Contacts {
   const factory _Contacts(
       final int? contactId,
       final ContactType? contactType,
-      final String? companyName,
+      final String? name,
       final String? displayName,
       final String? phone,
       final String? mobile,
@@ -617,7 +653,9 @@ abstract class _Contacts implements Contacts {
       final String? uniqueCode,
       final int? createdBy,
       final DateTime? createdDate,
-      final int? isActive) = _$ContactsImpl;
+      final int? isActive,
+      final String? company,
+      final String? companyName) = _$ContactsImpl;
 
   factory _Contacts.fromJson(Map<String, dynamic> json) =
       _$ContactsImpl.fromJson;
@@ -627,7 +665,7 @@ abstract class _Contacts implements Contacts {
   @override
   ContactType? get contactType;
   @override
-  String? get companyName;
+  String? get name;
   @override
   String? get displayName;
   @override
@@ -672,6 +710,10 @@ abstract class _Contacts implements Contacts {
   DateTime? get createdDate;
   @override
   int? get isActive;
+  @override
+  String? get company;
+  @override
+  String? get companyName;
   @override
   @JsonKey(ignore: true)
   _$$ContactsImplCopyWith<_$ContactsImpl> get copyWith =>

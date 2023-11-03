@@ -55,7 +55,6 @@ class FinanceController extends GetxController {
     PlutoColumn(
       title: 'Fin Year',
       field: 'fYear',
-      hide: true,
       type: PlutoColumnType.text(),
     ),
     PlutoColumn(
@@ -111,15 +110,18 @@ class FinanceController extends GetxController {
 
   addCoa() async {
     var coa = Coa(
-        coaList.length + 1,
-        coaForm.control("accountName").value,
-        coaForm.control("accountCode").value,
-        coaForm.control("accountType").value,
-        coaForm.control("parentAccount").value,
-        "0",
-        1,
-        null,
-        1);
+      coaList.length + 1,
+      coaForm.control("accountName").value,
+      coaForm.control("accountCode").value,
+      coaForm.control("accountType").value,
+      coaForm.control("parentAccount").value,
+      "0",
+      1,
+      null,
+      1,
+      coaForm.control("company").value,
+      coaForm.control("companyName").value,
+    );
     coaList.add(coa);
     dynamic json = coaList.map((element) => element.toJson()).toList();
     String resp = await _apiService.createCoa(json);
@@ -137,7 +139,7 @@ class FinanceController extends GetxController {
         null,
         1);
     finYearList.add(fyr);
-    dynamic json = coaList.map((element) => element.toJson()).toList();
+    dynamic json = finYearList.map((element) => element.toJson()).toList();
     String resp = await _apiService.createFYear(json);
     clearForm();
     return resp;

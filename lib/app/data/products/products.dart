@@ -18,6 +18,8 @@ class Products with _$Products {
     DateTime? createdDate,
     int? isActive,
     int? isStock,
+    String? company,
+    String? companyName,
   ) = _Products;
 
   factory Products.fromJson(Map<String, Object?> json) =>

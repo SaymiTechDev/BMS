@@ -8,7 +8,7 @@ class Contacts with _$Contacts {
   const factory Contacts(
     int? contactId,
     ContactType? contactType,
-    String? companyName,
+    String? name,
     String? displayName,
     String? phone,
     String? mobile,
@@ -31,6 +31,8 @@ class Contacts with _$Contacts {
     int? createdBy,
     DateTime? createdDate,
     int? isActive,
+    String? company,
+    String? companyName,
   ) = _Contacts;
   factory Contacts.fromJson(Map<String, Object?> json) =>
       _$ContactsFromJson(json);

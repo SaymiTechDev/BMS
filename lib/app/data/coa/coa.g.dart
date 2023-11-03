@@ -18,6 +18,8 @@ _$CoaImpl _$$CoaImplFromJson(Map<String, dynamic> json) => _$CoaImpl(
           ? null
           : DateTime.parse(json['createdDate'] as String),
       json['isActive'] as int?,
+      json['company'] as String?,
+      json['companyName'] as String?,
     );
 
 Map<String, dynamic> _$$CoaImplToJson(_$CoaImpl instance) => <String, dynamic>{
@@ -30,4 +32,6 @@ Map<String, dynamic> _$$CoaImplToJson(_$CoaImpl instance) => <String, dynamic>{
       'createdBy': instance.createdBy,
       'createdDate': instance.createdDate?.toIso8601String(),
       'isActive': instance.isActive,
+      'company': instance.company,
+      'companyName': instance.companyName,
     };

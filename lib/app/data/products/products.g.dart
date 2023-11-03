@@ -22,6 +22,8 @@ _$ProductsImpl _$$ProductsImplFromJson(Map<String, dynamic> json) =>
           : DateTime.parse(json['createdDate'] as String),
       json['isActive'] as int?,
       json['isStock'] as int?,
+      json['company'] as String?,
+      json['companyName'] as String?,
     );
 
 Map<String, dynamic> _$$ProductsImplToJson(_$ProductsImpl instance) =>
@@ -38,4 +40,6 @@ Map<String, dynamic> _$$ProductsImplToJson(_$ProductsImpl instance) =>
       'createdDate': instance.createdDate?.toIso8601String(),
       'isActive': instance.isActive,
       'isStock': instance.isStock,
+      'company': instance.company,
+      'companyName': instance.companyName,
     };

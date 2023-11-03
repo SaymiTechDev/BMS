@@ -33,6 +33,8 @@ mixin _$Address {
   int? get createdBy => throw _privateConstructorUsedError;
   DateTime? get createdDate => throw _privateConstructorUsedError;
   int? get isActive => throw _privateConstructorUsedError;
+  String? get company => throw _privateConstructorUsedError;
+  String? get companyName => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -57,7 +59,9 @@ abstract class $AddressCopyWith<$Res> {
       int? contactId,
       int? createdBy,
       DateTime? createdDate,
-      int? isActive});
+      int? isActive,
+      String? company,
+      String? companyName});
 }
 
 /// @nodoc
@@ -86,6 +90,8 @@ class _$AddressCopyWithImpl<$Res, $Val extends Address>
     Object? createdBy = freezed,
     Object? createdDate = freezed,
     Object? isActive = freezed,
+    Object? company = freezed,
+    Object? companyName = freezed,
   }) {
     return _then(_value.copyWith(
       addressId: freezed == addressId
@@ -140,6 +146,14 @@ class _$AddressCopyWithImpl<$Res, $Val extends Address>
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
               as int?,
+      company: freezed == company
+          ? _value.company
+          : company // ignore: cast_nullable_to_non_nullable
+              as String?,
+      companyName: freezed == companyName
+          ? _value.companyName
+          : companyName // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -164,7 +178,9 @@ abstract class _$$AddressImplCopyWith<$Res> implements $AddressCopyWith<$Res> {
       int? contactId,
       int? createdBy,
       DateTime? createdDate,
-      int? isActive});
+      int? isActive,
+      String? company,
+      String? companyName});
 }
 
 /// @nodoc
@@ -191,6 +207,8 @@ class __$$AddressImplCopyWithImpl<$Res>
     Object? createdBy = freezed,
     Object? createdDate = freezed,
     Object? isActive = freezed,
+    Object? company = freezed,
+    Object? companyName = freezed,
   }) {
     return _then(_$AddressImpl(
       freezed == addressId
@@ -245,6 +263,14 @@ class __$$AddressImplCopyWithImpl<$Res>
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
               as int?,
+      freezed == company
+          ? _value.company
+          : company // ignore: cast_nullable_to_non_nullable
+              as String?,
+      freezed == companyName
+          ? _value.companyName
+          : companyName // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -265,7 +291,9 @@ class _$AddressImpl implements _Address {
       this.contactId,
       this.createdBy,
       this.createdDate,
-      this.isActive);
+      this.isActive,
+      this.company,
+      this.companyName);
 
   factory _$AddressImpl.fromJson(Map<String, dynamic> json) =>
       _$$AddressImplFromJson(json);
@@ -296,10 +324,14 @@ class _$AddressImpl implements _Address {
   final DateTime? createdDate;
   @override
   final int? isActive;
+  @override
+  final String? company;
+  @override
+  final String? companyName;
 
   @override
   String toString() {
-    return 'Address(addressId: $addressId, addressType: $addressType, addressName: $addressName, doorNo: $doorNo, building: $building, street: $street, city: $city, state: $state, pinCode: $pinCode, contactId: $contactId, createdBy: $createdBy, createdDate: $createdDate, isActive: $isActive)';
+    return 'Address(addressId: $addressId, addressType: $addressType, addressName: $addressName, doorNo: $doorNo, building: $building, street: $street, city: $city, state: $state, pinCode: $pinCode, contactId: $contactId, createdBy: $createdBy, createdDate: $createdDate, isActive: $isActive, company: $company, companyName: $companyName)';
   }
 
   @override
@@ -327,7 +359,10 @@ class _$AddressImpl implements _Address {
             (identical(other.createdDate, createdDate) ||
                 other.createdDate == createdDate) &&
             (identical(other.isActive, isActive) ||
-                other.isActive == isActive));
+                other.isActive == isActive) &&
+            (identical(other.company, company) || other.company == company) &&
+            (identical(other.companyName, companyName) ||
+                other.companyName == companyName));
   }
 
   @JsonKey(ignore: true)
@@ -346,7 +381,9 @@ class _$AddressImpl implements _Address {
       contactId,
       createdBy,
       createdDate,
-      isActive);
+      isActive,
+      company,
+      companyName);
 
   @JsonKey(ignore: true)
   @override
@@ -376,7 +413,9 @@ abstract class _Address implements Address {
       final int? contactId,
       final int? createdBy,
       final DateTime? createdDate,
-      final int? isActive) = _$AddressImpl;
+      final int? isActive,
+      final String? company,
+      final String? companyName) = _$AddressImpl;
 
   factory _Address.fromJson(Map<String, dynamic> json) = _$AddressImpl.fromJson;
 
@@ -406,6 +445,10 @@ abstract class _Address implements Address {
   DateTime? get createdDate;
   @override
   int? get isActive;
+  @override
+  String? get company;
+  @override
+  String? get companyName;
   @override
   @JsonKey(ignore: true)
   _$$AddressImplCopyWith<_$AddressImpl> get copyWith =>

@@ -13,6 +13,8 @@ class ProductGroup with _$ProductGroup {
     int? createdBy,
     DateTime? createdDate,
     int? isActive,
+    String? company,
+    String? companyName,
   ) = _ProductGroup;
 
   factory ProductGroup.fromJson(Map<String, Object?> json) =>

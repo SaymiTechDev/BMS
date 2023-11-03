@@ -12,6 +12,7 @@ class ContactsController extends GetxController {
     {
       'type': FormControl<ContactType>(value: ContactType.C),
       'company': FormControl<String>(),
+      'name': FormControl<String>(),
       'displayName': FormControl<String>(),
       'phone': FormControl<String>(),
       'mobile': FormControl<String>(),
@@ -186,35 +187,38 @@ class ContactsController extends GetxController {
   addContacts() async {
     contactType = vCardForm.control("type").value;
     var contact = Contacts(
-        contactList.length + 1,
-        contactType,
-        vCardForm.control("company").value,
-        vCardForm.control("displayName").value,
-        vCardForm.control("phone").value,
-        vCardForm.control("mobile").value,
-        vCardForm.control("email").value,
-        vCardForm.control("website").value,
-        vCardForm.control("gstTreatment").value,
-        vCardForm.control("gstNo").value,
-        vCardForm.control("panNo").value,
-        vCardForm.control("paymentTerms").value,
-        vCardForm.control("discount").value,
-        vCardForm.control("relationShipType").value,
-        vCardForm.control("bankName").value,
-        vCardForm.control("benificiaryName").value,
-        vCardForm.control("accountNo").value,
-        vCardForm.control("ifscCode").value,
-        vCardForm.control("upiId").value,
-        vCardForm.control("accountPayable").value,
-        vCardForm.control("accountReceivable").value,
-        null,
-        1,
-        null,
-        1);
+      contactList.length + 1,
+      contactType,
+      vCardForm.control("name").value,
+      vCardForm.control("displayName").value,
+      vCardForm.control("phone").value,
+      vCardForm.control("mobile").value,
+      vCardForm.control("email").value,
+      vCardForm.control("website").value,
+      vCardForm.control("gstTreatment").value,
+      vCardForm.control("gstNo").value,
+      vCardForm.control("panNo").value,
+      vCardForm.control("paymentTerms").value,
+      vCardForm.control("discount").value,
+      vCardForm.control("relationShipType").value,
+      vCardForm.control("bankName").value,
+      vCardForm.control("benificiaryName").value,
+      vCardForm.control("accountNo").value,
+      vCardForm.control("ifscCode").value,
+      vCardForm.control("upiId").value,
+      vCardForm.control("accountPayable").value,
+      vCardForm.control("accountReceivable").value,
+      null,
+      1,
+      null,
+      1,
+      vCardForm.control("company").value,
+      vCardForm.control("companyName").value,
+    );
     contactList.add(contact);
     dynamic json = contactList.map((element) => element.toJson()).toList();
     String resp = await _apiService.createContacts(json);
-    clearForm();
+    vCardForm.reset();
     return resp;
   }
 

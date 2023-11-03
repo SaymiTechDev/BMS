@@ -11,6 +11,7 @@ _$UsersImpl _$$UsersImplFromJson(Map<String, dynamic> json) => _$UsersImpl(
       json['userName'] as String?,
       json['password'] as String?,
       json['company'] as String?,
+      json['companyName'] as String?,
       json['createdBy'] as int?,
       json['createdDate'] == null
           ? null
@@ -30,6 +31,7 @@ Map<String, dynamic> _$$UsersImplToJson(_$UsersImpl instance) =>
       'userName': instance.userName,
       'password': instance.password,
       'company': instance.company,
+      'companyName': instance.companyName,
       'createdBy': instance.createdBy,
       'createdDate': instance.createdDate?.toIso8601String(),
       'lastSignedIn': instance.lastSignedIn?.toIso8601String(),

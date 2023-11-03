@@ -15,6 +15,8 @@ class Coa with _$Coa {
     int? createdBy,
     DateTime? createdDate,
     int? isActive,
+    String? company,
+    String? companyName,
   ) = _Coa;
 
   factory Coa.fromJson(Map<String, Object?> json) => _$CoaFromJson(json);

@@ -27,6 +27,8 @@ _$TransDetailImpl _$$TransDetailImplFromJson(Map<String, dynamic> json) =>
       json['createdDate'] == null
           ? null
           : DateTime.parse(json['createdDate'] as String),
+      json['company'] as String?,
+      json['companyName'] as String?,
     );
 
 Map<String, dynamic> _$$TransDetailImplToJson(_$TransDetailImpl instance) =>
@@ -48,4 +50,6 @@ Map<String, dynamic> _$$TransDetailImplToJson(_$TransDetailImpl instance) =>
       'baseLine': instance.baseLine,
       'createdBy': instance.createdBy,
       'createdDate': instance.createdDate?.toIso8601String(),
+      'company': instance.company,
+      'companyName': instance.companyName,
     };

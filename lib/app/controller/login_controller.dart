@@ -1,5 +1,6 @@
 import 'package:bms/app/routes/routes.dart';
 import 'package:bms/app/services/api_service.dart';
+import 'package:bms/app/services/local_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:reactive_forms/reactive_forms.dart';
@@ -7,6 +8,7 @@ import 'package:reactive_forms/reactive_forms.dart';
 class LoginController extends GetxController {
   var isObscure = true.obs;
   final _loginApiService = Get.find<ApiService>();
+  final _localService = Get.find<LocalService>();
 
   final loginForm = FormGroup(
     {
@@ -20,6 +22,10 @@ class LoginController extends GetxController {
         loginForm.control('user').value, loginForm.control('password').value);
     // var resp = loginForm.control('user').value;
     if (resp != null) {
+      _localService.setInt("userId", resp["userId"]);
+      _localService.setString("userName", resp["userName"]);
+      _localService.setString("company", resp["company"]);
+      _localService.setString("companyName", resp["companyName"]);
       Get.offAndToNamed(Routes.dashboard);
     } else {
       Get.dialog(

@@ -118,6 +118,7 @@ class AdminController extends GetxController {
       'user': FormControl<String>(),
       'password': FormControl<String>(),
       'company': FormControl<String>(),
+      'companyName': FormControl<String>(),
       'isActive': FormControl<bool>(value: true),
     },
   );
@@ -161,7 +162,7 @@ class AdminController extends GetxController {
     companyList.add(company);
     dynamic json = companyList.map((element) => element.toJson()).toList();
     String resp = await _apiService.createCompany(json);
-    clearForm();
+    companyForm.reset();
     return resp;
   }
 
@@ -171,6 +172,7 @@ class AdminController extends GetxController {
       userForm.control("user").value,
       userForm.control("password").value,
       userForm.control("company").value,
+      userForm.control("companyName").value,
       1,
       null,
       null,
@@ -180,6 +182,7 @@ class AdminController extends GetxController {
     userList.add(user);
     dynamic json = userList.map((element) => element.toJson()).toList();
     String resp = await _apiService.createUser(json);
+    print(resp);
     userForm.reset();
     return resp;
   }
@@ -204,7 +207,7 @@ class AdminController extends GetxController {
       (index) => PlutoRow(cells: {
             'userId': PlutoCell(value: row[index].userId),
             'userName': PlutoCell(value: row[index].userName),
-            'company': PlutoCell(value: row[index].company),
+            'company': PlutoCell(value: row[index].companyName),
             'lastSignedIn': PlutoCell(value: row[index].lastSignedIn),
             'lastSignedOut': PlutoCell(value: row[index].lastSignedOut),
             'isActive':
@@ -212,14 +215,6 @@ class AdminController extends GetxController {
           }));
 
   clearForm() {
-    companyForm.control("company").value = "";
-    companyForm.control("displayName").value = "";
-    companyForm.control("phone").value = "";
-    companyForm.control("mobile").value = "";
-    companyForm.control("email").value = "";
-    companyForm.control("website").value = "";
-    companyForm.control("gstTreatment").value = "";
-    companyForm.control("gstNo").value = "";
-    companyForm.control("panNo").value = "";
+    companyForm.reset();
   }
 }
