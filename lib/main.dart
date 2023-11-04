@@ -1,3 +1,4 @@
+import 'package:bms/app/controller/main_controller.dart';
 import 'package:bms/app/data/app_colors.dart';
 import 'package:bms/app/routes/routes.dart';
 import 'package:bms/app/services/api_service.dart';
@@ -35,4 +36,5 @@ initServices() async {
   Get.put<ApiService>(ApiService());
   Get.put<LocalService>(LocalService());
   Get.put<PlutoGridController>(PlutoGridController());
+  Get.put<MainController>(MainController());
 }
