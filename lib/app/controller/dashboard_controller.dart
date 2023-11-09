@@ -1,20 +1,19 @@
-import 'package:bms/app/data/companies/companies.dart';
-import 'package:bms/app/services/api_service.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class DashboardController extends GetxController {
-  final _apiService = Get.find<ApiService>();
-  var companyList = <Companies>[].obs;
+  String company = '';
+  String companyName = '';
+  String user = '';
+  int userId = 0;
+
   @override
   onInit() async {
-    var company = await _apiService.getCompanies();
-    var user = await _apiService.getUsers();
-    if (company != null) {
-      company.forEach((json) {
-        companyList.add(Companies.fromJson(json));
-      });
-      print(companyList);
-    }
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    company = prefs.getString('company') ?? '';
+    companyName = prefs.getString("companyName") ?? '';
+    user = prefs.getString("user") ?? '';
+    userId = prefs.getInt("userId") ?? 0;
     super.onInit();
   }
 }

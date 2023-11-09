@@ -4,9 +4,14 @@ import 'package:bms/app/services/api_service.dart';
 import 'package:get/get.dart';
 import 'package:pluto_grid/pluto_grid.dart';
 import 'package:reactive_forms/reactive_forms.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class ContactsController extends GetxController {
   var contactType = ContactType.C;
+  String company = '';
+  String companyName = '';
+  String user = '';
+  int userId = 0;
   final _apiService = Get.find<ApiService>();
   final vCardForm = FormGroup(
     {
@@ -174,9 +179,14 @@ class ContactsController extends GetxController {
   @override
   onInit() async {
     super.onInit();
-    var contacts = await _apiService.getContacts();
-    if (contacts != null) {
-      contacts.forEach((json) {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    company = prefs.getString('company') ?? '';
+    companyName = prefs.getString("companyName") ?? '';
+    user = prefs.getString("user") ?? '';
+    userId = prefs.getInt("userId") ?? 0;
+    var contactsJson = await _apiService.getContacts();
+    if (contactsJson != null) {
+      contactsJson.forEach((json) {
         contactList.add(Contacts.fromJson(json));
       });
       print(contactList);

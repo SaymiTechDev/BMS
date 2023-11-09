@@ -1,5 +1,6 @@
 import 'package:bms/app/controller/main_controller.dart';
 import 'package:bms/app/data/app_colors.dart';
+import 'package:bms/app/data/companies/companies.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -30,19 +31,46 @@ class MainContainer extends GetView<MainController> {
             const SizedBox(
               width: 35,
             ),
-            TextButton(
-              onPressed: () {},
-              child: Obx(() {
-                return Text(controller.companyName.value.toUpperCase(),
-                    style: const TextStyle(
-                        fontWeight: FontWeight.w900, color: Colors.black87));
-              }),
+            DropdownButton(
+              // Initial Value
+              value: controller.companyName.value.toUpperCase(),
+              // Array list of items
+              items: controller.companyList.map((Companies items) {
+                return DropdownMenuItem(
+                  value: items.companyName!,
+                  child: Text(items.companyName!.toUpperCase(),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.w900, color: Colors.black87)),
+                );
+              }).toList(),
+              // After selecting the desired option,it will
+              // change button value to selected value
+              onChanged: (String? newValue) {
+                controller.companyName(newValue!);
+              },
             ),
+            // TextButton(
+            //   onPressed: () {},
+            //   child: Obx(() {
+            //     return Text(controller.companyName.value.toUpperCase(),
+            //         style: const TextStyle(
+            //             fontWeight: FontWeight.w900, color: Colors.black87));
+            //   }),
+            // ),
             const SizedBox(
               width: 35,
             ),
-            TextButton(
-              onPressed: () {},
+
+            PopupMenuButton(
+              onOpened: () {},
+              itemBuilder: (BuildContext context) {
+                return List.generate(controller.menus.length, (index) {
+                  return PopupMenuItem(
+                    value: index,
+                    child: controller.menus[index],
+                  );
+                });
+              },
               child: Row(
                 children: [
                   CircleAvatar(

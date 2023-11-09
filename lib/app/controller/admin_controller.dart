@@ -4,12 +4,17 @@ import 'package:bms/app/services/api_service.dart';
 import 'package:get/get.dart';
 import 'package:pluto_grid/pluto_grid.dart';
 import 'package:reactive_forms/reactive_forms.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AdminController extends GetxController {
   var isCompanyExpand = false.obs;
   var isUserExpand = false.obs;
   var companyList = <Companies>[].obs;
   var userList = <Users>[].obs;
+  String company = '';
+  String companyName = '';
+  String user = '';
+  int userId = 0;
   final _apiService = Get.find<ApiService>();
   final List<PlutoColumn> companyColumns = <PlutoColumn>[
     PlutoColumn(
@@ -125,16 +130,21 @@ class AdminController extends GetxController {
   @override
   onInit() async {
     super.onInit();
-    var company = await _apiService.getCompanies();
-    var user = await _apiService.getUsers();
-    if (company != null) {
-      company.forEach((json) {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    company = prefs.getString('company') ?? '';
+    companyName = prefs.getString("companyName") ?? '';
+    user = prefs.getString("user") ?? '';
+    userId = prefs.getInt("userId") ?? 0;
+    var companyJson = await _apiService.getCompanies();
+    var userJson = await _apiService.getUsers();
+    if (companyJson != null) {
+      companyJson.forEach((json) {
         companyList.add(Companies.fromJson(json));
       });
       print(companyList);
     }
-    if (user != null) {
-      user.forEach((json) {
+    if (userJson != null) {
+      userJson.forEach((json) {
         userList.add(Users.fromJson(json));
       });
       print(userList);

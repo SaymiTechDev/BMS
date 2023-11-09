@@ -11,10 +11,12 @@ class FinanceController extends GetxController {
   var isCoaExpand = false.obs;
   var finYearList = <FYear>[].obs;
   var coaList = <Coa>[].obs;
+
   String company = '';
   String companyName = '';
   String user = '';
   int userId = 0;
+
   final _apiService = Get.find<ApiService>();
   final List<PlutoColumn> coaColumns = <PlutoColumn>[
     PlutoColumn(

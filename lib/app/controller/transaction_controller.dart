@@ -4,9 +4,16 @@ import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:pluto_grid/pluto_grid.dart';
 import 'package:reactive_forms/reactive_forms.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class TransactionController extends GetxController {
   final _apiService = Get.find<ApiService>();
+
+  String company = '';
+  String companyName = '';
+  String user = '';
+  int userId = 0;
+
   final List<PlutoColumn> transactionColumns = <PlutoColumn>[
     PlutoColumn(
       title: 'Id',
@@ -62,6 +69,12 @@ class TransactionController extends GetxController {
   @override
   onInit() async {
     super.onInit();
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    company = prefs.getString('company') ?? '';
+    companyName = prefs.getString("companyName") ?? '';
+    user = prefs.getString("user") ?? '';
+    userId = prefs.getInt("userId") ?? 0;
+
     var trans = await _apiService.getTransHeader();
     if (trans != null) {
       trans.forEach((json) {
