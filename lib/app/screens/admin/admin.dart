@@ -89,6 +89,7 @@ class Admin extends GetView<AdminController> {
                       )),
                 ),
                 isExpanded: controller.isCompanyExpand.value,
+                canTapOnHeader: true,
               ),
               ExpansionPanel(
                 headerBuilder: (BuildContext context, bool isExpanded) {
@@ -130,6 +131,7 @@ class Admin extends GetView<AdminController> {
                       )),
                 ),
                 isExpanded: controller.isUserExpand.value,
+                canTapOnHeader: true,
               ),
             ],
           );

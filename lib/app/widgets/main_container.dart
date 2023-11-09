@@ -33,7 +33,7 @@ class MainContainer extends GetView<MainController> {
             TextButton(
               onPressed: () {},
               child: Obx(() {
-                return Text(controller.companyName.value,
+                return Text(controller.companyName.value.toUpperCase(),
                     style: const TextStyle(
                         fontWeight: FontWeight.w900, color: Colors.black87));
               }),
@@ -50,7 +50,7 @@ class MainContainer extends GetView<MainController> {
                     radius: 20,
                     child: Obx(() {
                       return Text(
-                        controller.companyName.value[0],
+                        controller.user.value[0].toUpperCase(),
                         style: const TextStyle(
                             color: Colors.black87,
                             fontWeight: FontWeight.w900,
@@ -63,7 +63,7 @@ class MainContainer extends GetView<MainController> {
                   ),
                   Obx(() {
                     return Text(
-                      controller.user.value,
+                      controller.user.value.toUpperCase(),
                       style: const TextStyle(
                           fontWeight: FontWeight.w900, color: Colors.black87),
                     );

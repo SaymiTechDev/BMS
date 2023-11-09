@@ -13,7 +13,7 @@ class MainController extends GetxController {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     company(prefs.getString("company"));
     companyName(prefs.getString("companyName"));
-    user(prefs.getString("user"));
+    user(prefs.getString("userName"));
     userId(prefs.getInt("userId"));
   }
 
@@ -21,7 +21,7 @@ class MainController extends GetxController {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     company(prefs.getString("company"));
     companyName(prefs.getString("companyName"));
-    user(prefs.getString("user"));
+    user(prefs.getString("userName"));
     userId(prefs.getInt("userId"));
   }
 }

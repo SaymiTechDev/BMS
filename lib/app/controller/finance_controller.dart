@@ -4,12 +4,17 @@ import 'package:bms/app/services/api_service.dart';
 import 'package:get/get.dart';
 import 'package:pluto_grid/pluto_grid.dart';
 import 'package:reactive_forms/reactive_forms.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class FinanceController extends GetxController {
   var isFinYearExpand = false.obs;
   var isCoaExpand = false.obs;
   var finYearList = <FYear>[].obs;
   var coaList = <Coa>[].obs;
+  String company = '';
+  String companyName = '';
+  String user = '';
+  int userId = 0;
   final _apiService = Get.find<ApiService>();
   final List<PlutoColumn> coaColumns = <PlutoColumn>[
     PlutoColumn(
@@ -91,8 +96,13 @@ class FinanceController extends GetxController {
   @override
   onInit() async {
     super.onInit();
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
     var coa = await _apiService.getCoa();
     var fyr = await _apiService.getFYear();
+    company = prefs.getString('company') ?? '';
+    companyName = prefs.getString("companyName") ?? '';
+    user = prefs.getString("user") ?? '';
+    userId = prefs.getInt("userId") ?? 0;
     if (coa != null) {
       coa.forEach((json) {
         coaList.add(Coa.fromJson(json));
@@ -116,11 +126,11 @@ class FinanceController extends GetxController {
       coaForm.control("accountType").value,
       coaForm.control("parentAccount").value,
       "0",
-      1,
+      userId,
       null,
       1,
-      coaForm.control("company").value,
-      coaForm.control("companyName").value,
+      company,
+      companyName,
     );
     coaList.add(coa);
     dynamic json = coaList.map((element) => element.toJson()).toList();
@@ -135,7 +145,7 @@ class FinanceController extends GetxController {
         fYearForm.control("fYear").value,
         fYearForm.control("startDate").value,
         fYearForm.control("endDate").value,
-        1,
+        userId,
         null,
         1);
     finYearList.add(fyr);

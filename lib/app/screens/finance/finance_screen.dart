@@ -89,6 +89,7 @@ class FinanceScreen extends GetView<FinanceController> {
                       )),
                 ),
                 isExpanded: controller.isFinYearExpand.value,
+                canTapOnHeader: true,
               ),
               ExpansionPanel(
                 headerBuilder: (BuildContext context, bool isExpanded) {
@@ -130,6 +131,7 @@ class FinanceScreen extends GetView<FinanceController> {
                       )),
                 ),
                 isExpanded: controller.isCoaExpand.value,
+                canTapOnHeader: true,
               ),
             ],
           );
