@@ -166,7 +166,7 @@ class AdminController extends GetxController {
         companyForm.control("panNo").value,
         null,
         null,
-        1,
+        userId,
         null,
         1);
     companyList.add(company);
@@ -183,7 +183,7 @@ class AdminController extends GetxController {
       userForm.control("password").value,
       userForm.control("company").value,
       userForm.control("companyName").value,
-      1,
+      userId,
       null,
       null,
       null,

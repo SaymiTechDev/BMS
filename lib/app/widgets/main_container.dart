@@ -24,6 +24,7 @@ class MainContainer extends GetView<MainController> {
             color: Colors.black87, //change your color here
           ),
           actions: [
+            paddingOnly(right: 10),
             IconButton(
               icon: const Icon(Icons.notifications),
               onPressed: () {},
@@ -38,29 +39,24 @@ class MainContainer extends GetView<MainController> {
               items: controller.companyList.map((Companies items) {
                 return DropdownMenuItem(
                   value: items.companyName!,
-                  child: Text(items.companyName!.toUpperCase(),
-                      style: const TextStyle(
-                          fontWeight: FontWeight.w900, color: Colors.black87)),
+                  child: Obx(() {
+                    return Text(items.companyName!.toUpperCase(),
+                        style: const TextStyle(
+                            fontWeight: FontWeight.w900,
+                            color: Colors.black87));
+                  }),
                 );
               }).toList(),
               // After selecting the desired option,it will
+              underline: const SizedBox(),
               // change button value to selected value
               onChanged: (String? newValue) {
                 controller.companyName(newValue!);
               },
             ),
-            // TextButton(
-            //   onPressed: () {},
-            //   child: Obx(() {
-            //     return Text(controller.companyName.value.toUpperCase(),
-            //         style: const TextStyle(
-            //             fontWeight: FontWeight.w900, color: Colors.black87));
-            //   }),
-            // ),
             const SizedBox(
               width: 35,
             ),
-
             PopupMenuButton(
               onOpened: () {},
               itemBuilder: (BuildContext context) {

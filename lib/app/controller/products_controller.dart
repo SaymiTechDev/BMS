@@ -114,12 +114,12 @@ class ProductsController extends GetxController {
       productForm.control("uom").value,
       productForm.control("spu").value,
       productForm.control("hsnCode").value,
-      1,
+      userId,
       null,
       productForm.control("isActive").value ? 1 : 0,
       productForm.control("isStock").value ? 1 : 0,
-      productForm.control("company").value,
-      productForm.control("companyName").value,
+      company,
+      companyName,
     );
     productList.add(products);
     dynamic json = productList.map((element) => element.toJson()).toList();

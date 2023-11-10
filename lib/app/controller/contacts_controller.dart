@@ -219,11 +219,11 @@ class ContactsController extends GetxController {
       vCardForm.control("accountPayable").value,
       vCardForm.control("accountReceivable").value,
       null,
-      1,
+      userId,
       null,
       1,
-      vCardForm.control("company").value,
-      vCardForm.control("companyName").value,
+      company,
+      companyName,
     );
     contactList.add(contact);
     dynamic json = contactList.map((element) => element.toJson()).toList();
