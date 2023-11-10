@@ -1,6 +1,7 @@
 import 'package:bms/app/controller/main_controller.dart';
 import 'package:bms/app/data/app_colors.dart';
 import 'package:bms/app/data/companies/companies.dart';
+import 'package:bms/app/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -51,6 +52,7 @@ class MainContainer extends GetView<MainController> {
               underline: const SizedBox(),
               // change button value to selected value
               onChanged: (String? newValue) {
+                Get.offAllNamed(Routes.dashboard);
                 controller.companyName(newValue!);
               },
             ),
