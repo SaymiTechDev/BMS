@@ -37,6 +37,7 @@ class MainContainer extends GetView<MainController> {
                 // Initial Value
                 value: controller.companyName.value.toUpperCase(),
                 // Array list of items
+                icon: const Visibility(visible: false,child: Icon(Icons.arrow_drop_down_sharp),),
                 items: controller.companyList.map((Companies items) {
                   return DropdownMenuItem(
                     value: items.companyName!,
@@ -59,7 +60,7 @@ class MainContainer extends GetView<MainController> {
               width: 35,
             ),
             PopupMenuButton(
-              onOpened: () {},
+              offset: const Offset(0, 45),
               itemBuilder: (BuildContext context) {
                 return List.generate(controller.menus.length, (index) {
                   return PopupMenuItem(
@@ -69,7 +70,7 @@ class MainContainer extends GetView<MainController> {
                 });
               },
               child: Padding(
-                padding: const EdgeInsets.only(right: 8.0),
+                padding: const EdgeInsets.only(right: 15.0),
                 child: Row(
                   children: [
                     CircleAvatar(

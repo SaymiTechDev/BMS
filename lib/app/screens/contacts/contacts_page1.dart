@@ -41,7 +41,7 @@ class ContactsPage1 extends GetView<ContactsController> {
                       backgroundColor: AppColors.blue,
                       textStyle: const TextStyle(
                           fontSize: 15, fontWeight: FontWeight.bold)),
-                  child: const Row(
+                  child:  const Row(
                     children: [
                       Icon(
                         Icons.add,
