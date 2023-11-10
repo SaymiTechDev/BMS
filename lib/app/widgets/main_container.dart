@@ -25,7 +25,6 @@ class MainContainer extends GetView<MainController> {
             color: Colors.black87, //change your color here
           ),
           actions: [
-            paddingOnly(right: 10),
             IconButton(
               icon: const Icon(Icons.notifications),
               onPressed: () {},
@@ -40,12 +39,9 @@ class MainContainer extends GetView<MainController> {
               items: controller.companyList.map((Companies items) {
                 return DropdownMenuItem(
                   value: items.companyName!,
-                  child: Obx(() {
-                    return Text(items.companyName!.toUpperCase(),
-                        style: const TextStyle(
-                            fontWeight: FontWeight.w900,
-                            color: Colors.black87));
-                  }),
+                  child: Text(items.companyName!.toUpperCase(),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.w900, color: Colors.black87)),
                 );
               }).toList(),
               // After selecting the desired option,it will
@@ -69,32 +65,35 @@ class MainContainer extends GetView<MainController> {
                   );
                 });
               },
-              child: Row(
-                children: [
-                  CircleAvatar(
-                    backgroundColor: AppColors.white,
-                    radius: 20,
-                    child: Obx(() {
+              child: Padding(
+                padding: const EdgeInsets.only(right: 8.0),
+                child: Row(
+                  children: [
+                    CircleAvatar(
+                      backgroundColor: AppColors.white,
+                      radius: 20,
+                      child: Obx(() {
+                        return Text(
+                          controller.user.value[0].toUpperCase(),
+                          style: const TextStyle(
+                              color: Colors.black87,
+                              fontWeight: FontWeight.w900,
+                              fontSize: 20),
+                        );
+                      }),
+                    ),
+                    const SizedBox(
+                      width: 15,
+                    ),
+                    Obx(() {
                       return Text(
-                        controller.user.value[0].toUpperCase(),
+                        controller.user.value.toUpperCase(),
                         style: const TextStyle(
-                            color: Colors.black87,
-                            fontWeight: FontWeight.w900,
-                            fontSize: 20),
+                            fontWeight: FontWeight.w900, color: Colors.black87),
                       );
                     }),
-                  ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  Obx(() {
-                    return Text(
-                      controller.user.value.toUpperCase(),
-                      style: const TextStyle(
-                          fontWeight: FontWeight.w900, color: Colors.black87),
-                    );
-                  }),
-                ],
+                  ],
+                ),
               ),
             ),
           ],
