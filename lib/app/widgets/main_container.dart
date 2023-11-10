@@ -32,26 +32,29 @@ class MainContainer extends GetView<MainController> {
             const SizedBox(
               width: 35,
             ),
-            DropdownButton(
-              // Initial Value
-              value: controller.companyName.value.toUpperCase(),
-              // Array list of items
-              items: controller.companyList.map((Companies items) {
-                return DropdownMenuItem(
-                  value: items.companyName!,
-                  child: Text(items.companyName!.toUpperCase(),
-                      style: const TextStyle(
-                          fontWeight: FontWeight.w900, color: Colors.black87)),
-                );
-              }).toList(),
-              // After selecting the desired option,it will
-              underline: const SizedBox(),
-              // change button value to selected value
-              onChanged: (String? newValue) {
-                Get.offAllNamed(Routes.dashboard);
-                controller.companyName(newValue!);
-              },
-            ),
+            Obx(() {
+              return DropdownButton(
+                // Initial Value
+                value: controller.companyName.value.toUpperCase(),
+                // Array list of items
+                items: controller.companyList.map((Companies items) {
+                  return DropdownMenuItem(
+                    value: items.companyName!,
+                    child: Text(items.companyName!.toUpperCase(),
+                        style: const TextStyle(
+                            fontWeight: FontWeight.w900,
+                            color: Colors.black87)),
+                  );
+                }).toList(),
+                // After selecting the desired option,it will
+                underline: const SizedBox(),
+                // change button value to selected value
+                onChanged: (String? newValue) {
+                  Get.offAllNamed(Routes.dashboard);
+                  controller.companyName(newValue!);
+                },
+              );
+            }),
             const SizedBox(
               width: 35,
             ),
